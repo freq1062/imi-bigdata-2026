@@ -1,0 +1,38 @@
+# Data directory
+data/
+*.csv
+*.csv.gz
+*.zip
+
+# Model files
+*.pth
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Environment
+venv/
+env/
+ENV/
+.venv
+
+# Generated HTML visualizations
+*.html
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
