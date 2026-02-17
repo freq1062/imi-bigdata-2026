@@ -1,22 +1,44 @@
+# ============================================================================
+# FRAUD DETECTION NOTEBOOK - REQUIRED PACKAGES
+# ============================================================================
+# Install with: pip install -r requirements.txt
+#
+# This file contains all dependencies needed for the Graph Attention Network
+# fraud detection model using BankSim and Scotiabank transaction data.
+# ============================================================================
+
 # Core Data Science Libraries
 pandas>=2.0.0
 numpy>=1.24.0
 
-# PyTorch and PyTorch Geometric
+# Deep Learning Framework
 torch>=2.0.0
-torch-geometric>=2.3.0
 
-# Machine Learning
+# PyTorch Geometric for Graph Neural Networks
+torch-geometric>=2.3.0
+torch-scatter>=2.1.0
+torch-sparse>=0.6.0
+
+# Machine Learning and Evaluation
 scikit-learn>=1.3.0
 
 # Visualization
 matplotlib>=3.7.0
-networkx>=3.1
+seaborn>=0.12.0
+networkx>=3.1.0
 pyvis>=0.3.2
 
-# Utilities
+# Progress Bars
 tqdm>=4.65.0
 
-# Jupyter (if needed)
+# Data Download Tools
+gdown>=4.7.1
+kagglehub>=0.2.0
+
+# Jupyter Environment (optional - for notebook support)
 jupyter>=1.0.0
 ipykernel>=6.25.0
+ipywidgets>=8.0.0
+
+# File Compression (usually included in Python standard library)
+# No additional packages needed - uses built-in gzip module
