@@ -1,0 +1,26 @@
+{
+  "feature_names": [
+    "age",
+    "income",
+    "tenure",
+    "sales",
+    "emp_count",
+    "is_biz",
+    "avg_txn_amount",
+    "max_txn_amount",
+    "std_txn_amount",
+    "txn_count",
+    "cash_rate",
+    "ecom_rate",
+    "avg_24h_velocity",
+    "unique_cities",
+    "unique_categories",
+    "min_time_delta",
+    "time_span_hours",
+    "geo_velocity"
+  ],
+  "shap_base_value": 0.4976867947174395,
+  "rf_r2": 0.9999908172635446,
+  "model_type": "GraphSAGE",
+  "rf_training": "classifier_labels_plus_synthetic"
+}
