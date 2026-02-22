@@ -1,5 +1,7 @@
 # ============================================================================
 # FRAUD DETECTION NOTEBOOK - ROBUST MULTI-VERSION REQUIREMENTS
+# NOTE: RECOMMENDED TO RUN THE SETUP SCRIPT AT THE TOP OF TRAINING.IPYNB.
+# THIS IS BECAUSE PIP MAY TRY TO INSTALL TORCH BEFORE TORCH-SCATTER, ETC. CAUSING ERRORS.
 # ============================================================================
 
 # Core Data Science Libraries
