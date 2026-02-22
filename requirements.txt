@@ -1,51 +1,46 @@
 # ============================================================================
-# FRAUD DETECTION NOTEBOOK - REQUIRED PACKAGES
-# ============================================================================
-# Install with: pip install -r requirements.txt
-#
-# This file contains all dependencies needed for the Graph Attention Network
-# fraud detection model using BankSim and Scotiabank transaction data.
+# FRAUD DETECTION NOTEBOOK - ROBUST MULTI-VERSION REQUIREMENTS
 # ============================================================================
 
 # Core Data Science Libraries
 pandas>=2.0.0
 numpy>=1.24.0
 
-# Deep Learning Framework
-torch>=2.0.0
+# --- Deep Learning Foundation ---
+# Standard versions for Python 3.10/3.11
+torch==2.1.0; python_version < '3.12'
+# Python 3.12 requires 2.2.0+ for binary compatibility
+torch==2.2.0; python_version >= '3.12'
 
-# PyTorch Geometric for Graph Neural Networks
+# --- PyTorch Geometric (GNN) Extensions ---
 torch-geometric>=2.3.0
-torch-scatter>=2.1.0
-torch-sparse>=0.6.0
 
-# Machine Learning and Evaluation
+# Note: We use exact matches for extensions to ensure they align with the torch binary
+torch-scatter==2.1.2; python_version < '3.12'
+torch-sparse==0.6.17; python_version < '3.12'
+
+# Force compatible 3.12 versions (avoids the undefined symbol error)
+torch-scatter==2.1.2; python_version >= '3.12'
+torch-sparse==0.6.18; python_version >= '3.12'
+
+# --- Machine Learning & Explainability ---
 scikit-learn>=1.3.0
+shap>=0.44.0
+joblib>=1.3.0
 
-# Visualization
+# --- Visualization & Apps ---
+streamlit>=1.32.0
 matplotlib>=3.7.0
 seaborn>=0.12.0
 networkx>=3.1.0
 pyvis>=0.3.2
 
-# Web application
-streamlit>=1.32.0
-
-# Explainability
-shap>=0.44.0
-joblib>=1.3.0
-
-# Progress Bars
+# --- Utilities ---
 tqdm>=4.65.0
-
-# Data Download Tools
 gdown>=4.7.1
 kagglehub>=0.2.0
 
-# Jupyter Environment (optional - for notebook support)
+# --- Jupyter Environment ---
 jupyter>=1.0.0
 ipykernel>=6.25.0
 ipywidgets>=8.0.0
-
-# File Compression (usually included in Python standard library)
-# No additional packages needed - uses built-in gzip module
