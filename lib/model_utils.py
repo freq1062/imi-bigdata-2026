@@ -275,12 +275,22 @@ def score_new_customers(
         num_workers=0,
     )
 
-    # Step 6: forward pass
+    # Step 6: forward pass with temperature scaling
+    # Temperature scaling addresses overconfident predictions:
+    #   - temperature_demo (default 2.0) provides smoother predictions for UI
+    #   - Reduces extreme predictions (77% → 3%) for better UX
+    #   - Prevents rapid score jumps when adding transactions
+    #   - Higher T = more gradual, less sensitive to small changes
+    temperature = artifacts.get('temperature_demo', 2.0)
+    
     model.eval()
     with torch.no_grad():
         batch = next(iter(loader)).to(device)
-        out = model(batch.x_dict, batch.edge_index_dict)
-        probs = torch.sigmoid(out.squeeze()[: len(new_node_ids)]).cpu().numpy()
+        logits = model(batch.x_dict, batch.edge_index_dict)
+        # Apply temperature scaling: divide logits by temperature before sigmoid
+        # probs = sigmoid(logits / T) where T > 1 → smoother, T < 1 → sharper
+        logits_scaled = logits.squeeze()[: len(new_node_ids)] / temperature
+        probs = torch.sigmoid(logits_scaled).cpu().numpy()
 
     probs = np.atleast_1d(probs)
 

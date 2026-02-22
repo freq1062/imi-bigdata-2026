@@ -7,6 +7,7 @@ data/
 
 # Model files
 *.pth
+rf_model_sage/
 
 # Python cache
 __pycache__/
@@ -24,8 +25,9 @@ env/
 ENV/
 .venv
 
-# Generated HTML visualizations
+# Generated HTML visualizations and pictures
 *.html
+*.png
 
 # OS files
 .DS_Store

@@ -364,17 +364,23 @@ def _load_customer_transactions(cid: str) -> pd.DataFrame:
     result = result.sort_values("datetime", na_position="last").reset_index(drop=True)
     return result
 
-
 output_df = _load_output()
 expl_df = _load_explanations()
 edge_count = _get_edge_count()
 graph_data = _load_graph_data()
 
-# Merge on customer_id (inner — expl_df is the richer source)
-merged = expl_df.copy()
-for col in ["predicted_label"]:
-    if col not in merged.columns and col in output_df.columns:
-        merged = merged.merge(output_df[["customer_id", col]], on="customer_id", how="left")
+# Merge to include customer_id, predicted_label, risk_score, explanation
+merged = pd.merge(
+    output_df[["customer_id", "predicted_label", "risk_score"]],
+    expl_df[["customer_id", "explanation"]],
+    on="customer_id",
+    how="inner"
+)
+
+# Add risk_tier column
+merged["risk_tier"] = merged["risk_score"].apply(
+    lambda x: "HIGH" if x > 0.7 else ("LOW" if x < 0.4 else "MEDIUM")
+)
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Session state: human review decisions
@@ -579,7 +585,7 @@ def _render_customer_card(row: pd.Series, key_prefix: str = ""):
     cid = str(row["customer_id"])
     risk_score = float(row["risk_score"])
     risk_tier = str(row.get("risk_tier", "LOW"))
-    narrative = str(row.get("narrative", ""))
+    narrative = str(row.get("explanation", ""))
     drivers = _drivers_from_row(row)
     review_state = st.session_state["mo_reviews"].get(cid)
 
