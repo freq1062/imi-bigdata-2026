@@ -40,3 +40,4 @@ Thumbs.db
 
 # GitHub prompts
 .github/prompts/
+sage_artifacts.pkl
