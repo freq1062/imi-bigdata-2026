@@ -82,8 +82,12 @@ def setup_all_resources():
         os.remove(ZIP_DATA)
 
 # --- Streamlit UI ---
+from lib.components import header_with_logo
+
 st.set_page_config(layout="wide", page_title="Team 76 AML Detection")
-st.title("AI-Driven AML / ML-TF Detection")
+
+# Render header with logo to the right
+header_with_logo("AI-Driven AML / ML-TF Detection", img_width=260)
 
 # Trigger Initialization
 if not os.path.exists("setup_complete.txt") or not os.path.isdir(DATA_DIR):

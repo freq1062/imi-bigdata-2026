@@ -27,6 +27,102 @@ import streamlit.components.v1 as st_components
 from pyvis.network import Network
 
 
+def show_nav_logo(filename: str = "project_aegis.png", width: int = 40) -> bool:
+    """Attempt to display a logo image in the Streamlit sidebar.
+
+    Searches several likely locations under the repository root for the
+    provided filename. If found, the image is displayed and the function
+    returns True. If no file is found, a textual fallback is written to
+    the sidebar and the function returns False.
+    """
+    base = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    candidates = [
+        os.path.join(base, filename),
+        os.path.join(base, "assets", filename),
+        os.path.join(base, "static", filename),
+        os.path.join(base, "images", filename),
+        os.path.join(base, "pages", filename),
+        os.path.join(base, "lib", filename),
+    ]
+    for p in candidates:
+        if os.path.exists(p):
+            try:
+                # Render as a sticky, centered element so it appears at the
+                # top of the sidebar even when Streamlit inserts the page
+                # navigation above normal sidebar content.
+                with open(p, "rb") as f:
+                    import base64
+
+                    data = base64.b64encode(f.read()).decode("utf-8")
+
+                img_html = (
+                    "<div style='position:sticky;top:0;z-index:9999;"
+                    "background:transparent;padding:8px 0;display:flex;justify-content:center;'>"
+                    f"<img src=\"data:image/png;base64,{data}\" "
+                    f"style=\"width:{width}px;max-width:100%;border-radius:8px;\"/>"
+                    "</div>"
+                )
+                st.sidebar.markdown(img_html, unsafe_allow_html=True)
+                return True
+            except Exception:
+                break
+
+    # Fallback: simple centered title in sidebar if image isn't available
+    st.sidebar.markdown("<div style='text-align:center;padding:8px 0;'><strong>Team 76 AML Detection</strong></div>", unsafe_allow_html=True)
+    return False
+
+
+def header_with_logo(title: str, filename: str = "project_aegis.png", img_width: int = 220):
+    """Render a page header with the given `title` and the logo placed to the right.
+
+    The function searches the repository for `filename`. If found the image is
+    embedded inline as base64 and displayed to the right of the title. If the
+    image is not found the title is rendered normally.
+    """
+    base = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    candidates = [
+        os.path.join(base, filename),
+        os.path.join(base, "assets", filename),
+        os.path.join(base, "static", filename),
+        os.path.join(base, "images", filename),
+        os.path.join(base, "pages", filename),
+        os.path.join(base, "lib", filename),
+    ]
+
+    img_data = None
+    for p in candidates:
+        if os.path.exists(p):
+            try:
+                with open(p, "rb") as f:
+                    import base64
+
+                    img_data = base64.b64encode(f.read()).decode("utf-8")
+                break
+            except Exception:
+                img_data = None
+                break
+
+    if img_data:
+        # Use relative container with absolutely-positioned image so the
+        # logo doesn't push or reflow other page content. Title is white
+        # for visibility on dark backgrounds.
+        html = (
+            "<div style='position:relative;width:100%;margin:0;padding:0;'>"
+            f"<div style='padding-right:{int(img_width*0.6)}px;'>"
+            f"<h1 style='margin:0;padding:0;color:#ffffff;font-size:2.4rem;'>{title}</h1>"
+            f"</div>"
+            f"<div style='position:absolute;right:0;top:50%;transform:translateY(-50%);"
+            f" aria-hidden='true'>"
+            f"<img src=\"data:image/png;base64,{img_data}\" "
+            f"style=\"width:{img_width}px;max-width:35vw;border-radius:12px;\"/>"
+            f"</div>"
+            "</div>"
+        )
+        st.markdown(html, unsafe_allow_html=True)
+    else:
+        st.title(title)
+
+
 @functools.lru_cache(maxsize=1)
 def _load_industry_lookup() -> dict:
     """Return dict of industry_code (str) → industry_name (str)."""

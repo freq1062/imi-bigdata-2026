@@ -22,7 +22,6 @@ https://data.pyg.org/whl/torch-2.2.0%2Bcpu/torch_sparse-0.6.18%2Bpt22cpu-cp312-c
 
 # --- Remaining Project Requirements ---
 torch-geometric>=2.3.0
-pandas>=2.0.0
 
 # --- Machine Learning & Explainability ---
 scikit-learn>=1.3.0

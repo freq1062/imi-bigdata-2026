@@ -42,6 +42,8 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
+# (sidebar logo removed — header displays logo on Home page)
+
 # ─────────────────────────────────────────────────────────────────────────────
 # Model loading  (cached — loaded once per server session)
 # ─────────────────────────────────────────────────────────────────────────────
