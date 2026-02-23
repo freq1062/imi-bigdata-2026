@@ -3,22 +3,26 @@
 # ============================================================================
 
 # --- Core Data Science Libraries ---
-# Pinned to 1.26.4 to resolve "Numpy is not available" runtime errors
 numpy==1.26.4
 pandas>=2.0.0
 
 # --- Deep Learning Foundation ---
-# Standard versions for Python 3.10/3.11
+--extra-index-url https://download.pytorch.org/whl/cpu
 torch==2.1.0; python_version < '3.12'
-# Python 3.12 requires 2.2.0+ for binary compatibility
 torch==2.2.0; python_version >= '3.12'
 
-# --- PyTorch Geometric (GNN) Extensions ---
+# --- Direct Binary Links ---
+# For Python 3.10
+https://data.pyg.org/whl/torch-2.1.0%2Bcpu/torch_scatter-2.1.2%2Bpt21cpu-cp310-cp310-linux_x86_64.whl; python_version < '3.11'
+https://data.pyg.org/whl/torch-2.1.0%2Bcpu/torch_sparse-0.6.18%2Bpt21cpu-cp310-cp310-linux_x86_64.whl; python_version < '3.11'
+
+# For Python 3.12
+https://data.pyg.org/whl/torch-2.2.0%2Bcpu/torch_scatter-2.1.2%2Bpt22cpu-cp312-cp312-linux_x86_64.whl; python_version >= '3.12'
+https://data.pyg.org/whl/torch-2.2.0%2Bcpu/torch_sparse-0.6.18%2Bpt22cpu-cp312-cp312-linux_x86_64.whl; python_version >= '3.12'
+
+# --- Remaining Project Requirements ---
 torch-geometric>=2.3.0
-torch-scatter==2.1.2; python_version < '3.12'
-torch-sparse==0.6.18; python_version < '3.12'
-torch-scatter==2.1.2; python_version >= '3.12'
-torch-sparse==0.6.18; python_version >= '3.12'
+pandas>=2.0.0
 
 # --- Machine Learning & Explainability ---
 scikit-learn>=1.3.0
