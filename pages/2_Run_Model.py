@@ -287,7 +287,7 @@ with st.sidebar:
         st.session_state["_rm_kyc_hash"] = _kyc_hash
         _run_scoring()
 
-    if st.button("Reset", use_container_width=True, key="sid_reset"):
+    if st.button("Reset", width="content", key="sid_reset"):
         for k in [k for k in st.session_state if k.startswith("rm_")]:
             del st.session_state[k]
         _init_state()
@@ -319,22 +319,20 @@ with col_input:
             index=0,
             help="Applies to CARD transactions. Non-card types (ATM, CHEQUE, etc.) use their own category for the model.",
         )
-        cat_custom = st.text_input("...or enter custom industry code", value="")
         city = st.selectbox("City", CANADIAN_CITIES, index=0)
-        city_custom = st.text_input("...or enter custom city name", value="")
         is_ecom = st.checkbox("E-Commerce Transaction")
         debit_credit = st.radio("Debit / Credit", ["debit", "credit"], horizontal=True)
         submitted = st.form_submit_button(
-            "Add Transaction & Score", use_container_width=True, type="primary"
+            "Add Transaction & Score", width="content", type="primary"
         )
 
     if submitted:
         is_cash = txn_type == "ATM_WITHDRAWAL"
         if txn_type == "CARD":
-            model_cat = cat_custom.strip() if cat_custom.strip() else cat_choice.split(" \u2013 ")[0]
+            model_cat = cat_choice.split(" \u2013 ")[0]
         else:
             model_cat = txn_type
-        final_city = city_custom.strip() if city_custom.strip() else city
+        final_city = city
         txn_iso = _dt.datetime.combine(txn_date, txn_time_val).isoformat()
         st.session_state["rm_transactions"].append({
             "amount": float(amount),
@@ -366,11 +364,11 @@ with col_input:
             }
             for i, t in enumerate(txns)
         ]
-        st.dataframe(pd.DataFrame(tx_display), use_container_width=True, hide_index=True)
+        st.dataframe(pd.DataFrame(tx_display), width="content", hide_index=True)
 
         col_rm, col_clr = st.columns(2)
         with col_rm:
-            if st.button("↩ Remove Last", use_container_width=True):
+            if st.button("↩ Remove Last", width="content"):
                 st.session_state["rm_transactions"].pop()
                 if st.session_state["rm_transactions"]:
                     _run_scoring()
@@ -379,7 +377,7 @@ with col_input:
                     st.session_state["rm_last_rf"] = None
                 st.rerun()
         with col_clr:
-            if st.button("Clear All", use_container_width=True):
+            if st.button("Clear All", width="content"):
                 st.session_state["rm_transactions"].clear()
                 st.session_state["rm_last_result"] = None
                 st.session_state["rm_last_rf"] = None
