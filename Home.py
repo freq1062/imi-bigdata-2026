@@ -3,82 +3,80 @@ import os
 import zipfile
 import shutil
 import gdown
+import gzip
 
 # --- Configuration & Resource Setup ---
-FILE_ID = '1geTbVi3oyaGYAcZjuq_LV4uI8iQnZe82'
-DRIVE_URL = f'https://drive.google.com/uc?id={FILE_ID}'
-ZIP_NAME = 'model_resources.zip'
+MODEL_FILE_ID = '1geTbVi3oyaGYAcZjuq_LV4uI8iQnZe82'
+DATA_FILE_ID = '1A7w3GqZTCVsv-A8gXj5NKV2FNc0zoduG'
+
+ZIP_MODEL = 'model_resources.zip'
+ZIP_DATA = 'data.zip'
+DATA_DIR = 'data'
+
+def csv_to_gzip(file_path):
+    """Compresses a CSV file to .csv.gz and removes the original."""
+    with open(file_path, 'rb') as f_in:
+        with gzip.open(file_path + '.gz', 'wb') as f_out:
+            shutil.copyfileobj(f_in, f_out)
+    os.remove(file_path)
 
 def extract_and_cleanup(zip_path, target_dir='.'):
-    """
-    Unzips a file, moves all contents to the parent directory,
-    and deletes the original zip and the empty folder.
-    """
+    """Unzips, moves contents to parent, and cleans up zip/temp folders."""
     if not os.path.exists(zip_path):
         return
-
-    # 1. Unzip the file
     with zipfile.ZipFile(zip_path, 'r') as zip_ref:
-        temp_dir = 'temp_extraction'
+        temp_dir = f'temp_{zip_path}'
         zip_ref.extractall(temp_dir)
-
-    # 2. Move files to the parent (target_dir)
-    extracted_items = os.listdir(temp_dir)
     
-    # If the zip contained a single nested folder, navigate into it
-    if len(extracted_items) == 1 and os.path.isdir(os.path.join(temp_dir, extracted_items[0])):
-        source_dir = os.path.join(temp_dir, extracted_items[0])
-    else:
-        source_dir = temp_dir
+    extracted_items = os.listdir(temp_dir)
+    source_dir = os.path.join(temp_dir, extracted_items[0]) if len(extracted_items) == 1 and os.path.isdir(os.path.join(temp_dir, extracted_items[0])) else temp_dir
 
     for item in os.listdir(source_dir):
-        s = os.path.join(source_dir, item)
-        d = os.path.join(target_dir, item)
+        s, d = os.path.join(source_dir, item), os.path.join(target_dir, item)
         if os.path.exists(d):
-            if os.path.isdir(d):
-                shutil.rmtree(d)
-            else:
-                os.remove(d)
+            shutil.rmtree(d) if os.path.isdir(d) else os.remove(d)
         shutil.move(s, d)
-
-    # 3. Final Cleanup
     shutil.rmtree(temp_dir)
     os.remove(zip_path)
 
-def initialize_resources():
-    """
-    Checks for a marker file; if missing, downloads and extracts the model resources.
-    """
-    # A marker file is used to prevent redundant downloads across app refreshes
-    marker = "setup_complete.txt"
-    if not os.path.exists(marker):
-        with st.spinner("Initializing application resources... This may take a moment."):
-            try:
-                gdown.download(DRIVE_URL, ZIP_NAME, quiet=False)
-                extract_and_cleanup(ZIP_NAME)
-                with open(marker, "w") as f:
-                    f.write("Resources extracted successfully.")
-            except Exception as e:
-                st.error(f"Initialization failed: {e}")
+def setup_all_resources():
+    """Downloads and prepares both models and data."""
+    # 1. Handle Model Resources
+    if not os.path.exists("setup_complete.txt"):
+        st.write("📥 Fetching Model Weights...")
+        gdown.download(id=MODEL_FILE_ID, output=ZIP_MODEL, quiet=False)
+        extract_and_cleanup(ZIP_MODEL)
+        with open("setup_complete.txt", "w") as f: f.write("Models ready.")
 
-# --- Streamlit UI START ---
-st.set_page_config(layout="wide")
+    # 2. Handle Data Resources
+    files_to_check = [f"{DATA_DIR}/labels.csv.gz", f"{DATA_DIR}/card.csv.gz"]
+    if not all(os.path.exists(f) for f in files_to_check):
+        st.write("📥 Fetching Scotiabank/BankSim Dataset...")
+        gdown.download(id=DATA_FILE_ID, output=ZIP_DATA, quiet=False)
+        with zipfile.ZipFile(ZIP_DATA, 'r') as zip_ref:
+            zip_ref.extractall(DATA_DIR)
+        
+        st.write("🗜 Compressing data for optimal AML library usage...")
+        for filename in os.listdir(DATA_DIR):
+            if filename.endswith('.csv'):
+                csv_to_gzip(os.path.join(DATA_DIR, filename))
+        os.remove(ZIP_DATA)
 
+# --- Streamlit UI ---
+st.set_page_config(layout="wide", page_title="Team 76 AML Detection")
 st.title("AI-Driven AML / ML-TF Detection")
 
-# Move the resource check here so the user sees a progress bar in the browser
-if not os.path.exists("setup_complete.txt"):
-    with st.status("Downloading and extracting model resources...", expanded=True) as status:
-        st.write("Connecting to Google Drive...")
-        initialize_resources()
-        status.update(label="Setup complete!", state="complete", expanded=False)
+# Trigger Initialization
+if not os.path.exists("setup_complete.txt") or not os.path.isdir(DATA_DIR):
+    with st.status("Initializing System Resources...", expanded=True) as status:
+        setup_all_resources()
+        status.update(label="✅ All Resources Ready!", state="complete")
 
 st.markdown("""
 ### Real-Time Financial Crime Risk Detection
-
-- **Risk Scoring**: High-precision detection of suspicious patterns.
-- **Explainable AI**: Transparent insights into model decisions.
-- **Regulatory-Aligned Typologies**: Built-in support for standard compliance frameworks.
+- **Risk Scoring**: GraphSAGE-based detection for Scotiabank data.
+- **Explainable AI**: Narrative generation via Llama 3.2.
+- **Regulatory Alignment**: Automated SAR-lite reporting.
 """)
 
 col1, col2, col3 = st.columns(3)
