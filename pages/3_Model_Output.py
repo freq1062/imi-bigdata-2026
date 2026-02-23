@@ -495,7 +495,7 @@ def _render_transaction_table(
         )
     with fcol7:
         st.markdown("&nbsp;", unsafe_allow_html=True)
-        if st.button("Clear Filters", key=f"clf_{key_prefix}_{cid}", use_container_width=True):
+        if st.button("Clear Filters", key=f"clf_{key_prefix}_{cid}", width="content"):
             for k in (sk_cats, sk_cities, sk_types, sk_sort, sk_asc):
                 st.session_state.pop(k, None)
             st.rerun()
@@ -566,7 +566,7 @@ def _render_transaction_table(
     })
     st.dataframe(
         display,
-        use_container_width=True,
+        width="content",
         hide_index=True,
         column_config={
             "Amount (CAD)": st.column_config.TextColumn(width="small"),
@@ -626,16 +626,72 @@ def _render_customer_card(row: pd.Series, key_prefix: str = ""):
                 f"{n_cities} cit{'y' if n_cities == 1 else 'ies'}, "
                 f"{total_txns} transaction edge{'s' if total_txns != 1 else ''}"
             )
+            # Use fixed graph height (380px) and make the narrative column
+            # scrollable if it exceeds this height.
+            graph_h_px = 380
             nb_html = GraphVisualizer.build_neighborhood_graph(
-                cid, risk_score, cat_counts, city_counts, height="380px"
+                cid, risk_score, cat_counts, city_counts, height=f"{graph_h_px}px"
             )
-            st_components.html(nb_html, height=380, scrolling=False)
+            st_components.html(nb_html, height=graph_h_px, scrolling=False)
         else:
             st.caption("Customer not found in training graph — no neighborhood to display.")
     with col_info:
-        ctx = {"narrative": narrative, "customer_id": cid}
-        card.render_narrative(risk_tier, risk_score, drivers, context=ctx)
-        card.render_drivers(drivers)
+        # Render narrative + drivers into one scrollable HTML block so that
+        # the right column gets a scrollbar if it exceeds the graph height.
+        # Narrative comes from `narrative` (precomputed by PrecomputedNarrative).
+        narr_html = f"""
+        <div style="max-height:{graph_h_px + 40}px; overflow:auto; padding-right:8px;">
+        """
+
+        # Narrative block (reuse styles from CustomerInfoCard.render_narrative)
+        narr_html += (
+            f"<div style='background:#1e293b;border-left:4px solid {risk_color(risk_score)};"
+            "border-radius:6px;padding:14px 18px;margin-bottom:12px;color:#e2e8f0;"
+            "font-size:0.95rem;line-height:1.6;'>"
+            + (narrative or "")
+            + "</div>"
+        )
+
+        # Drivers block (replicating CustomerInfoCard.render_drivers styling)
+        if drivers:
+            narr_html += "<div><strong>Top Risk Drivers (SHAP)</strong></div>"
+            for d in drivers:
+                feat = d.get("feature", "")
+                desc = d.get("description", feat)
+                try:
+                    shap_val = float(d.get("shap_value", 0.0))
+                except Exception:
+                    shap_val = 0.0
+                bar_pct = min(100, int(abs(shap_val) * 1200))
+                bar_color = "#ef4444" if shap_val > 0 else "#3b82f6"
+                raw = d.get("raw_value", None)
+                raw_str = f" = {raw:.2f}" if raw is not None else ""
+
+                geo_badge = ""
+                if feat == "geo_velocity" and raw is not None:
+                    try:
+                        if float(raw) > 3.0:
+                            geo_badge = (
+                                " &nbsp;<span style='background:#7f1d1d;color:#fca5a5;"
+                                "border-radius:4px;padding:1px 6px;font-size:0.75rem;'>🌍 geo-impossible</span>"
+                            )
+                    except Exception:
+                        pass
+
+                narr_html += (
+                    "<div style='margin-bottom:8px;'>"
+                    "<div style='display:flex;justify-content:space-between;"
+                    "font-size:0.85rem;color:#94a3b8;margin-bottom:3px;'>"
+                    f"<span>{desc}{raw_str}{geo_badge}</span>"
+                    f"<span style='color:{bar_color};font-weight:600;'>{shap_val:+.4f}</span>"
+                    "</div>"
+                    "<div style='background:#334155;border-radius:4px;height:6px;'>"
+                    f"<div style='width:{bar_pct}%;background:{bar_color};height:6px;border-radius:4px;'></div>"
+                    "</div></div>"
+                )
+
+        narr_html += "</div>"
+        st.markdown(narr_html, unsafe_allow_html=True)
 
     # ── Transactions section ─────────────────────────────────────────────────
     txns_df = _load_customer_transactions(cid)
@@ -664,7 +720,7 @@ def _render_customer_card(row: pd.Series, key_prefix: str = ""):
                 if st.button(
                     f"{icon} {short}  ×{count}",
                     key=f"pill_{key_prefix}_{cid}_{ntype}_{i}",
-                    use_container_width=True,
+                    width="content",
                 ):
                     if ntype == "cat":
                         st.session_state[sk_cats]   = [name]
@@ -693,7 +749,7 @@ def _render_customer_card(row: pd.Series, key_prefix: str = ""):
         if st.button(
             "Confirm Fraud",
             key=f"{key_prefix}_fraud_{cid}",
-            use_container_width=True,
+            width="content",
             type="primary" if review_state != "fraud" else "secondary",
         ):
             st.session_state["mo_reviews"][cid] = (
@@ -704,7 +760,7 @@ def _render_customer_card(row: pd.Series, key_prefix: str = ""):
         if st.button(
             "Clear / Not Fraud",
             key=f"{key_prefix}_clear_{cid}",
-            use_container_width=True,
+            width="content",
         ):
             st.session_state["mo_reviews"][cid] = (
                 None if review_state == "clear" else "clear"
@@ -792,7 +848,7 @@ with tab_topk:
             lb["risk_score"] = lb["risk_score"].map("{:.2%}".format)
         if "narrative" in lb.columns:
             lb["narrative"] = lb["narrative"].str[:80] + "…"
-        st.dataframe(lb, use_container_width=True, hide_index=True)
+        st.dataframe(lb, width="content", hide_index=True)
         st.divider()
 
         # Expandable cards
@@ -860,7 +916,7 @@ with st.sidebar:
 
     if reviews:
         st.divider()
-        if st.button("Export Review Decisions", use_container_width=True):
+        if st.button("Export Review Decisions", width="content"):
             review_df = pd.DataFrame(
                 [{"customer_id": k, "decision": v} for k, v in reviews.items()]
             )
@@ -870,8 +926,8 @@ with st.sidebar:
                 data=csv_bytes,
                 file_name="investigator_reviews.csv",
                 mime="text/csv",
-                use_container_width=True,
+                width="content",
             )
-        if st.button("Clear All Reviews", use_container_width=True):
+        if st.button("Clear All Reviews", width="content"):
             st.session_state["mo_reviews"] = {}
             st.rerun()
