@@ -36,6 +36,23 @@ To solve the "Black Box" problem of Graph Networks, we built a dual-layer explan
 
     Example: " Customer exhibits behavior consistent with Project Guardian (Synthetic Opioids) or Project Protect (Human Trafficking). Further investigation and analysis are required to confirm these findings and determine the specific risk profile."
 
+## How to run
+
+1. Ensure you have Python 3.10 - 3.12. Run the setup script at the top of `train.ipynb` and confirm that all packages are installed correctly. If not, you may need to clear the existing versions to make torch, numpy, torch-scatter, etc. compatible with each other by running the following commands:
+
+`pip uninstall torch torch-scatter torch-sparse numpy scipy -y`
+`pip cache purge`
+Then run the installation cell again.
+2. Simply run the rest of the cells! A fresh model will be trained and the Streamlit web app will open at `localhost:8502`(For some reason it says localhost:8501.) You can also run `streamlit run Home.py` from the root directory of the project. 
+
+            If you run the Streamlit app before train.ipynb, the model and necessary assets will be downloaded automatically. But that's not nearly as cool. 
+
+3. Within the web app, navigate using the side panel on the left.
+   
+       The "Knowledge Library" tab is an interactive database of AML/TF research we have conducted with sources.
+       The "Run Model" tab allows you to add transactions to a customer and see what risk score the model would output, with explanations in real time.
+       The "Model Output" tab shows the top K highest risk customers from the dataset with full graph visualizations, explanations, and options to view past transactions for human analysts to review. Decisions can be exported to csv.
+
 ## Performance & Results
 
 We evaluated the model using two primary metrics to account for the heavy class imbalance:
