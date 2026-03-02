@@ -70,3 +70,4 @@ Inductive Inference: The Streamlit app runs inference on the CPU using pre-compu
 In AML, individual behaviour is easy to hide, while relationships are not. 
 Creating a robust startup script is really hard, getting things to work between different machines and versions of Python took a lot of time and effort, especially with the torch-sparse library.
 Research is incredibly important, 90% of the total competition time we had was spent looking at different approaches to the problem, watching YouTube videos, and gradually piecing an idea together.
+Having a solid understanding of the problem was critical to be able to find an effective solution for it.
