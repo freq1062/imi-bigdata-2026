@@ -96,7 +96,7 @@ if not os.path.exists("setup_complete.txt") or not os.path.isdir(DATA_DIR):
         status.update(label="✅ All Resources Ready!", state="complete")
 
 st.markdown("""
-### Real-Time Financial Crime Risk Detection
+## Real-Time Financial Crime Risk Detection
 - **Risk Scoring**: GraphSAGE-based detection for Scotiabank data.
 - **Explainable AI**: Narrative generation via Llama 3.2.
 - **Regulatory Alignment**: Automated SAR-lite reporting.
