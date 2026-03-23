@@ -41,6 +41,9 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded",
 )
+st.markdown("<style>h1 { color: #7b68ee !important; }</style>", unsafe_allow_html=True)
+from lib.components import apply_sidebar_styles
+apply_sidebar_styles()
 
 # (sidebar logo removed — header displays logo on Home page)
 
