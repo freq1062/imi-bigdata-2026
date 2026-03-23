@@ -1,11 +1,23 @@
 import streamlit as st
 import pandas as pd
+from lib.components import apply_sidebar_styles
 
 st.set_page_config(layout="wide")
-st.title("AML Knowledge Intelligence Library")
+st.markdown("<style>h1 { color: #7b68ee !important; }</style>", unsafe_allow_html=True)
+apply_sidebar_styles()
+st.markdown("""
+<style>
+/* "Navigate Modules" heading only */
+[data-testid="stSidebar"] [data-testid="stWidgetLabel"] p {
+    color: #7b68ee !important;
+    font-weight: 700;
+}
+</style>
+""", unsafe_allow_html=True)
+st.title("AML Knowledge Library")
 
 section = st.sidebar.radio(
-    "Navigate Intelligence Modules",
+    "Navigate Modules",
     [
         "Core Intelligence & Risk Patterns",
         "Red Flag Indicator Library",
@@ -30,13 +42,20 @@ if section == "Core Intelligence & Risk Patterns":
 
         st.subheader("Mechanism")
         st.write("""
-        • Funds transferred to 'money mule' accounts (students, homemakers).
-        • Mules purchase assets (real estate, vehicles, securities).
-        • Funds integrated into formal economy.
+        • Funds transferred to 'money mule' accounts (students, homemakers).\n
+        • Mules purchase assets (real estate, vehicles, securities).\n
+        • Funds integrated into formal economy.\n
         """)
 
         st.subheader("Key Sectors Exploited")
-        st.write("Real Estate | Automotive | Securities | Legal Professionals")
+        st.markdown("""
+<div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:4px;">
+    <span style="background-color:#2a2a4a; border:1px solid #7b68ee; border-radius:8px; padding:8px 18px; color:#c9b8ff; font-weight:600; font-size:0.9rem; pointer-events:none;">Real Estate</span>
+    <span style="background-color:#2a2a4a; border:1px solid #7b68ee; border-radius:8px; padding:8px 18px; color:#c9b8ff; font-weight:600; font-size:0.9rem; pointer-events:none;">Automotive</span>
+    <span style="background-color:#2a2a4a; border:1px solid #7b68ee; border-radius:8px; padding:8px 18px; color:#c9b8ff; font-weight:600; font-size:0.9rem; pointer-events:none;">Securities</span>
+    <span style="background-color:#2a2a4a; border:1px solid #7b68ee; border-radius:8px; padding:8px 18px; color:#c9b8ff; font-weight:600; font-size:0.9rem; pointer-events:none;">Legal Professionals</span>
+</div>
+""", unsafe_allow_html=True)
 
         st.subheader("Model Detection Mapping")
         st.write("""
@@ -52,22 +71,22 @@ if section == "Core Intelligence & Risk Patterns":
 
         st.subheader("Production Phase")
         st.write("""
-        • Import of precursor chemicals and pill presses from China.
-        • Payments via virtual currency or wire transfers.
-        • Intermediary jurisdictions: Singapore, Hong Kong.
+        • Import of precursor chemicals and pill presses from China.\n
+        • Payments via virtual currency or wire transfers.\n
+        • Intermediary jurisdictions: Singapore, Hong Kong.\n
         """)
 
         st.subheader("Distribution Phase")
         st.write("""
-        • Drug corridors (Vancouver → Calgary/Toronto).
-        • Use of legitimate freight/logistics channels.
+        • Drug corridors (Vancouver → Calgary/Toronto).\n
+        • Use of legitimate freight/logistics channels.\n
         """)
 
         st.subheader("Laundering Mechanisms")
         st.write("""
-        • Cash smurfing
-        • Online gambling platforms
-        • Front companies (pharma/supplement labs)
+        • Cash smurfing\n
+        • Online gambling platforms\n
+        • Front companies (pharma/supplement labs)\n
         """)
 
         st.subheader("Model Detection Mapping")
@@ -84,23 +103,23 @@ if section == "Core Intelligence & Risk Patterns":
 
         st.subheader("Business Models")
         st.write("""
-        • Short-stay hotels
-        • Private apartments
-        • Illicit storefront massage businesses
+        • Short-stay hotels\n
+        • Private apartments\n
+        • Illicit storefront massage businesses\n
         """)
 
         st.subheader("Financial Profile")
         st.write("""
-        • Funnel accounts (victims)
-        • High-volume incoming EMTs
-        • Immediate depletion of funds
+        • Funnel accounts (victims)\n
+        • High-volume incoming EMTs\n
+        • Immediate depletion of funds\n
         """)
 
         st.subheader("Lavish Lifestyle Indicators")
         st.write("""
-        • Luxury retail
-        • Cosmetic surgery clinics
-        • High-end restaurants
+        • Luxury retail\n
+        • Cosmetic surgery clinics\n
+        • High-end restaurants\n
         """)
 
         st.subheader("Model Detection Mapping")
@@ -119,7 +138,7 @@ if section == "Red Flag Indicator Library":
 
     st.subheader("Transactional & Behavioral Patterns")
 
-    st.table({
+    st.dataframe({
         "Indicator": [
             "Flow-Through Activity",
             "Atypical Velocity",
@@ -138,7 +157,7 @@ if section == "Red Flag Indicator Library":
             "Branch Deposit Pattern Scoring",
             "Threshold Proximity Index"
         ]
-    })
+    }, hide_index=True, use_container_width=True)
 
     st.write("""Source: https://fintrac-canafe.canada.ca/guidance-directives/transaction-operation/indicators-indicateurs/fin_mltf-eng""")
 
@@ -220,7 +239,7 @@ if section == "Red Flag Indicator Library":
 
     st.subheader("Virtual Currency Indicators")
 
-    st.table({
+    st.dataframe({
         "Indicator": [
             "Darknet Exposure",
             "Mixing Services",
@@ -239,7 +258,7 @@ if section == "Red Flag Indicator Library":
             "Exchange Concentration Ratio",
             "Merchant Risk Classification"
         ]
-    })
+    }, hide_index=True, use_container_width=True)
 
     st.write("""Source: https://fintrac-canafe.canada.ca/intel/operation/iso-osi-eng""")
 

@@ -72,55 +72,36 @@ def show_nav_logo(filename: str = "project_aegis.png", width: int = 40) -> bool:
     return False
 
 
+def apply_sidebar_styles() -> None:
+    """Inject shared sidebar nav CSS (purple text, light-purple highlight) into the page."""
+    st.markdown("""
+<style>
+[data-testid="stSidebarNav"] a span {
+    color: #7b68ee !important;
+    font-size: 1.05rem !important;
+}
+[data-testid="stSidebarNav"] a[aria-selected="true"],
+[data-testid="stSidebarNav"] li[aria-selected="true"] > a {
+    background-color: #e8e0ff !important;
+    border-left: 3px solid #7b68ee;
+}
+[data-testid="stSidebarNav"] a[aria-selected="true"] span,
+[data-testid="stSidebarNav"] li[aria-selected="true"] > a span {
+    color: #7b68ee !important;
+}
+[data-testid="stSidebarNav"] a:hover { background-color: #e8e0ff !important; }
+[data-testid="stSidebarNav"] a:hover span { color: #7b68ee !important; }
+</style>
+""", unsafe_allow_html=True)
+
+
 def header_with_logo(title: str, filename: str = "project_aegis.png", img_width: int = 220):
-    """Render a page header with the given `title` and the logo placed to the right.
-
-    The function searches the repository for `filename`. If found the image is
-    embedded inline as base64 and displayed to the right of the title. If the
-    image is not found the title is rendered normally.
-    """
-    base = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    candidates = [
-        os.path.join(base, filename),
-        os.path.join(base, "assets", filename),
-        os.path.join(base, "static", filename),
-        os.path.join(base, "images", filename),
-        os.path.join(base, "pages", filename),
-        os.path.join(base, "lib", filename),
-    ]
-
-    img_data = None
-    for p in candidates:
-        if os.path.exists(p):
-            try:
-                with open(p, "rb") as f:
-                    import base64
-
-                    img_data = base64.b64encode(f.read()).decode("utf-8")
-                break
-            except Exception:
-                img_data = None
-                break
-
-    if img_data:
-        # Use relative container with absolutely-positioned image so the
-        # logo doesn't push or reflow other page content. Title is white
-        # for visibility on dark backgrounds.
-        html = (
-            "<div style='position:relative;width:100%;margin:0;padding:0;'>"
-            f"<div style='padding-right:{int(img_width*0.6)}px;'>"
-            f"<h1 style='margin:0;padding:0;color:#ffffff;font-size:2.4rem;'>{title}</h1>"
-            f"</div>"
-            f"<div style='position:absolute;right:0;top:50%;transform:translateY(-50%);"
-            f" aria-hidden='true'>"
-            f"<img src=\"data:image/png;base64,{img_data}\" "
-            f"style=\"width:{img_width}px;max-width:35vw;border-radius:12px;\"/>"
-            f"</div>"
-            "</div>"
-        )
-        st.markdown(html, unsafe_allow_html=True)
-    else:
-        st.title(title)
+    """Render a purple page header title and apply shared sidebar styles."""
+    apply_sidebar_styles()
+    st.markdown(
+        f"<h1 style='margin:0;padding:0;color:#7b68ee;font-size:2.4rem;'>{title}</h1>",
+        unsafe_allow_html=True,
+    )
 
 
 @functools.lru_cache(maxsize=1)
