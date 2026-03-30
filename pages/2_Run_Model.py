@@ -50,15 +50,15 @@ st.set_page_config(
 
 @st.cache_resource(show_spinner="Loading GraphSAGE artifacts…")
 def _load_artifacts():
-    return load_artifacts("sage_artifacts.pkl")
+    return load_artifacts("outputs/sage_artifacts.pkl")
 
 @st.cache_resource(show_spinner="Loading GraphSAGE model…")
 def _load_model(_artifacts):
-    return load_sage_model("fraud_sage_model.pth", artifacts=_artifacts)
+    return load_sage_model("outputs/fraud_sage_model.pth", artifacts=_artifacts)
 
 @st.cache_resource(show_spinner="Loading RF proxy…")
 def _load_rf():
-    return load_rf_model("rf_model_sage")
+    return load_rf_model("outputs/rf_model_sage")
 
 
 def _try_load_all():

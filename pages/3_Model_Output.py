@@ -40,19 +40,19 @@ st.set_page_config(
 
 @st.cache_data(show_spinner="Loading model output…")
 def _load_output():
-    df = pd.read_csv("model_output.csv")
+    df = pd.read_csv("outputs/model_output.csv")
     return df
 
 @st.cache_data(show_spinner="Loading explanations…")
 def _load_explanations():
-    df = pd.read_csv("model_output_explanations.csv")
+    df = pd.read_csv("outputs/model_output_explanations.csv")
     return df
 
 # Edge count: try to pull from sage artifacts, else fall back to a csv if available
 @st.cache_data(show_spinner=False)
 def _get_edge_count():
     try:
-        with open("sage_artifacts.pkl", "rb") as f:
+        with open("outputs/sage_artifacts.pkl", "rb") as f:
             arts = pickle.load(f)
         ei_cc = arts.get("edge_cust_cat")
         ei_ct = arts.get("edge_cust_city")
@@ -74,7 +74,7 @@ def _load_graph_data():
     Arrays are stored as plain numpy to keep the cache serialisable.
     """
     try:
-        with open("sage_artifacts.pkl", "rb") as f:
+        with open("outputs/sage_artifacts.pkl", "rb") as f:
             arts = pickle.load(f)
         return {
             "cust_map": arts["cust_map"],

@@ -1,0 +1,228 @@
+{
+  "0": [
+    {
+      "feature": "std_amount",
+      "delta_z": 13.491374813413392
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": 6.978834846410511
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 2.4747004620585047
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 2.4502584916107613
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 2.0368025790681625
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 1.928503357379153
+    }
+  ],
+  "1": [
+    {
+      "feature": "std_amount",
+      "delta_z": 15.084669908262507
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": 9.014596160253584
+    }
+  ],
+  "7": [
+    {
+      "feature": "txn_count",
+      "delta_z": 1.779180455726975
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 1.7621826248578436
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 1.7524491786629355
+    }
+  ],
+  "9": [
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 36.16823898073372
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 33.0547294493317
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 31.937973645044764
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 25.975861868662047
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": 1.7246387753070291
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": -1.6562684140597066
+    }
+  ],
+  "10": [
+    {
+      "feature": "std_amount",
+      "delta_z": 15.172725641631034
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": 12.160884520651992
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 2.9416071857115496
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 2.1323765896407325
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": -1.6873835050477826
+    }
+  ],
+  "11": [
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 24.408017972946936
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 21.151852038078562
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 20.30343693460769
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 17.062651656007564
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": 1.9468152578422684
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": -1.6390001421773888
+    }
+  ],
+  "12": [
+    {
+      "feature": "std_amount",
+      "delta_z": 7.409941516737531
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 2.201231109831751
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 1.7785355966958836
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 1.703056472450547
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 1.6602829874877059
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 1.5502817532478732
+    }
+  ],
+  "13": [
+    {
+      "feature": "mean_amount",
+      "delta_z": 197.85841561933555
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 37.08180206496023
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 17.5595569699845
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": -1.6873835050477826
+    }
+  ],
+  "15": [
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 54.38395718321613
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 47.56166493912839
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 46.04776865553264
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 40.14545172212224
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": 3.1561893059719823
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": -1.6516386784436332
+    }
+  ],
+  "16": [
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 18.590531014753882
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 16.17936427056118
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 15.675091264258599
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 13.613914480006503
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": -1.631840363557777
+    }
+  ],
+  "17": [
+    {
+      "feature": "std_amount",
+      "delta_z": 23.265210510222904
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": 7.77577786541269
+    }
+  ]
+}

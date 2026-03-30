@@ -22,7 +22,8 @@ warnings.filterwarnings("ignore", message=".*do not occur as destination type.*"
 # ── FraudSAGE architecture (must match training exactly) ─────────────────────
 
 try:
-    from torch_geometric.nn import SAGEConv, HeteroConv, Linear
+    from torch_geometric.nn import HeteroConv, Linear
+    from lib.fraud_sage import MaxPoolConcatSAGEConv
     from torch_geometric.data import HeteroData
     from torch_geometric.loader import NeighborLoader
     import torch_geometric.transforms as T
@@ -44,11 +45,11 @@ class FraudSAGE(nn.Module):
 
         self.conv1 = HeteroConv(
             {
-                ("category", "rev_purchases_at", "customer"): SAGEConv(
-                    (-1, -1), hidden_channels, aggr="mean"
+                ("category", "rev_purchases_at", "customer"): MaxPoolConcatSAGEConv(
+                    (-1, -1), hidden_channels
                 ),
-                ("city", "rev_transacts_in", "customer"): SAGEConv(
-                    (-1, -1), hidden_channels, aggr="mean"
+                ("city", "rev_transacts_in", "customer"): MaxPoolConcatSAGEConv(
+                    (-1, -1), hidden_channels
                 ),
             },
             aggr="sum",
@@ -57,11 +58,11 @@ class FraudSAGE(nn.Module):
 
         self.conv2 = HeteroConv(
             {
-                ("customer", "purchases_at", "category"): SAGEConv(
-                    (-1, -1), hidden_channels, aggr="mean"
+                ("customer", "purchases_at", "category"): MaxPoolConcatSAGEConv(
+                    (-1, -1), hidden_channels
                 ),
-                ("customer", "transacts_in", "city"): SAGEConv(
-                    (-1, -1), hidden_channels, aggr="mean"
+                ("customer", "transacts_in", "city"): MaxPoolConcatSAGEConv(
+                    (-1, -1), hidden_channels
                 ),
             },
             aggr="sum",
@@ -69,11 +70,11 @@ class FraudSAGE(nn.Module):
 
         self.conv3 = HeteroConv(
             {
-                ("category", "rev_purchases_at", "customer"): SAGEConv(
-                    (-1, -1), hidden_channels, aggr="mean"
+                ("category", "rev_purchases_at", "customer"): MaxPoolConcatSAGEConv(
+                    (-1, -1), hidden_channels
                 ),
-                ("city", "rev_transacts_in", "customer"): SAGEConv(
-                    (-1, -1), hidden_channels, aggr="mean"
+                ("city", "rev_transacts_in", "customer"): MaxPoolConcatSAGEConv(
+                    (-1, -1), hidden_channels
                 ),
             },
             aggr="sum",
@@ -108,7 +109,7 @@ class FraudSAGE(nn.Module):
 
 # ── Artifact loading with Streamlit caching ───────────────────────────────────
 
-def load_sage_model(model_path: str = "fraud_sage_model.pth", artifacts: dict = None):
+def load_sage_model(model_path: str = "outputs/fraud_sage_model.pth", artifacts: dict = None):
     """Load FraudSAGE weights into model. Returns model on eval mode."""
     if not TORCH_GEO_AVAILABLE:
         return None
@@ -144,13 +145,13 @@ def load_sage_model(model_path: str = "fraud_sage_model.pth", artifacts: dict = 
     return model
 
 
-def load_artifacts(artifacts_path: str = "sage_artifacts.pkl") -> dict:
+def load_artifacts(artifacts_path: str = "outputs/sage_artifacts.pkl") -> dict:
     """Load inference artifacts (scaler, maps, embeddings, edge tensors)."""
     with open(artifacts_path, "rb") as f:
         return pickle.load(f)
 
 
-def load_rf_model(rf_dir: str = "rf_model_sage"):
+def load_rf_model(rf_dir: str = "outputs/rf_model_sage"):
     """Load the RF proxy model and SHAP explainer."""
     rf = joblib.load(os.path.join(rf_dir, "rf_proxy.joblib"))
     explainer = joblib.load(os.path.join(rf_dir, "shap_explainer.joblib"))

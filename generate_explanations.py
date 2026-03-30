@@ -149,9 +149,9 @@ def generate_high_risk_batch(batch_df: pd.DataFrame, ollama_url: str = "http://l
 # ─────────────────────────────────────────────────────────────────────────────
 
 def generate_all_explanations(
-    input_csv: str = "model_output.csv",
-    sage_csv: str = "model_output_explanations_sage.csv",
-    output_csv: str = "model_output_explanations.csv",
+    input_csv: str = "outputs/model_output.csv",
+    sage_csv: str = "outputs/model_output_explanations_sage.csv",
+    output_csv: str = "outputs/model_output_explanations.csv",
     risk_threshold: float = 0.4,
     batch_size: int = 5,  # Process 5 customers per batch (each gets individual LLM call)
     ollama_url: str = "http://localhost:11434"

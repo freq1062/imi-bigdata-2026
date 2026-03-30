@@ -1,0 +1,92 @@
+{
+  "0": {
+    "name": "Eft-Dominant Pattern",
+    "risk": "Medium",
+    "logic": "Assigned Medium risk from fraud-anchor prior and magnitude of significant behavioral deltas."
+  },
+  "1": {
+    "name": "Eft-Dominant Pattern",
+    "risk": "Medium",
+    "logic": "Assigned Medium risk from fraud-anchor prior and magnitude of significant behavioral deltas."
+  },
+  "2": {
+    "name": "Eft-Dominant Pattern",
+    "risk": "Low",
+    "logic": "Assigned Low risk from fraud-anchor prior and magnitude of significant behavioral deltas."
+  },
+  "3": {
+    "name": "Emt-Dominant Pattern",
+    "risk": "Low",
+    "logic": "Assigned Low risk from fraud-anchor prior and magnitude of significant behavioral deltas."
+  },
+  "4": {
+    "name": "Emt-Dominant Pattern",
+    "risk": "Low",
+    "logic": "Assigned Low risk from fraud-anchor prior and magnitude of significant behavioral deltas."
+  },
+  "5": {
+    "name": "Emt-Dominant Pattern",
+    "risk": "Low",
+    "logic": "Assigned Low risk from fraud-anchor prior and magnitude of significant behavioral deltas."
+  },
+  "6": {
+    "name": "Eft-Dominant Pattern",
+    "risk": "Low",
+    "logic": "Assigned Low risk from fraud-anchor prior and magnitude of significant behavioral deltas."
+  },
+  "7": {
+    "name": "Emt-Dominant Pattern",
+    "risk": "Low",
+    "logic": "Assigned Low risk from fraud-anchor prior and magnitude of significant behavioral deltas."
+  },
+  "8": {
+    "name": "Eft-Dominant Pattern",
+    "risk": "Low",
+    "logic": "Assigned Low risk from fraud-anchor prior and magnitude of significant behavioral deltas."
+  },
+  "9": {
+    "name": "Eft-Dominant Pattern",
+    "risk": "Medium",
+    "logic": "Assigned Medium risk from fraud-anchor prior and magnitude of significant behavioral deltas."
+  },
+  "10": {
+    "name": "Eft-Dominant Pattern",
+    "risk": "Medium",
+    "logic": "Assigned Medium risk from fraud-anchor prior and magnitude of significant behavioral deltas."
+  },
+  "11": {
+    "name": "Eft-Dominant Pattern",
+    "risk": "Medium",
+    "logic": "Assigned Medium risk from fraud-anchor prior and magnitude of significant behavioral deltas."
+  },
+  "12": {
+    "name": "Emt-Dominant Pattern",
+    "risk": "Medium",
+    "logic": "Assigned Medium risk from fraud-anchor prior and magnitude of significant behavioral deltas."
+  },
+  "13": {
+    "name": "Wire-Dominant Pattern",
+    "risk": "Medium",
+    "logic": "Assigned Medium risk from fraud-anchor prior and magnitude of significant behavioral deltas."
+  },
+  "14": {
+    "name": "Eft-Dominant Pattern",
+    "risk": "Low",
+    "logic": "Assigned Low risk from fraud-anchor prior and magnitude of significant behavioral deltas."
+  },
+  "15": {
+    "name": "Eft-Dominant Pattern",
+    "risk": "Medium",
+    "logic": "Assigned Medium risk from fraud-anchor prior and magnitude of significant behavioral deltas."
+  },
+  "16": {
+    "name": "Eft-Dominant Pattern",
+    "risk": "Medium",
+    "logic": "Assigned Medium risk from fraud-anchor prior and magnitude of significant behavioral deltas."
+  },
+  "17": {
+    "name": "Cheque-Dominant Pattern",
+    "risk": "Medium",
+    "logic": "Assigned Medium risk from fraud-anchor prior and magnitude of significant behavioral deltas."
+  }
+}
