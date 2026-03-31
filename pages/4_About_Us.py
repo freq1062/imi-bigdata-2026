@@ -61,7 +61,7 @@ with col2:
     
     He is excited to be a part of project Aegis and to contribute his skills and creativity to the development of Aegis' AI-driven AML/ML-TF detection 
     system. He worked on creating the Streamlit Web App, as well as created the AML Knowledge Library for the project. He also assisted with brainstorming,
-    debugging and problem solving for the Machline Learning model development and feature engineering.
+    debugging and problem solving for the Machine Learning model development and feature engineering.
              
     In his free time, Marcus enjoys playing and developing video games, playing drums in his rock/metal band, reading fantasy and Sci-Fi, 
     and playing complicated board games and Magic the Gathering with his friends. 
