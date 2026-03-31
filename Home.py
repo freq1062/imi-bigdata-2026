@@ -89,7 +89,7 @@ st.markdown("""
 <style>
 /* Larger body text everywhere except headings */
 p, li, .stMarkdown p, .stAlert p, label, .stInfo, div[data-testid="stText"] {
-    font-size: 1.1rem !important;
+    font-size: 1.35rem !important;
     line-height: 1.7 !important;
 }
 </style>
@@ -255,13 +255,13 @@ st.markdown("""
     margin-bottom: 8px;
 }
 .hiw-title {
-    font-size: 1rem;
+    font-size: 1.3rem;
     font-weight: 700;
     color: #e0e0f0;
     margin-bottom: 6px;
 }
 .hiw-desc {
-    font-size: 1.05rem;
+    font-size: 1.3rem;
     color: #a0a0c0;
     line-height: 1.7;
 }
@@ -292,3 +292,206 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 st.info("System initialized and model resources loaded from secure storage.")
+
+st.divider()
+
+st.subheader("How to Navigate This App")
+
+st.markdown("""
+<style>
+.nav-main-section {
+    background-color: #1a1a2e;
+    border: 1px solid #3a3a5c;
+    border-radius: 12px;
+    padding: 28px 28px 24px 28px;
+    margin-bottom: 28px;
+    transition: border-color 0.2s;
+}
+.nav-main-section:hover { border-color: #7b68ee; }
+.nav-section-subtitle {
+    font-size: 0.8rem;
+    color: #7b68ee;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 6px;
+}
+.nav-section-title {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #e0e0f0;
+    margin-bottom: 8px;
+}
+.nav-section-desc {
+    font-size: 1.25rem;
+    color: #a0a0c0;
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+.nav-feature-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 18px;
+}
+.nav-feature-panel {
+    flex: 1 1 calc(33% - 12px);
+    min-width: 190px;
+    background-color: #22223a;
+    border: 1px solid #3a3a5c;
+    border-radius: 8px;
+    padding: 16px 18px;
+    transition: background-color 0.2s, border-color 0.2s, transform 0.15s;
+    box-sizing: border-box;
+}
+.nav-feature-panel:hover {
+    background-color: #2c2c50;
+    border-color: #7b68ee;
+    transform: translateY(-2px);
+}
+.nav-panel-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #7b68ee;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 6px;
+}
+.nav-panel-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #c9b8ff;
+    margin-bottom: 8px;
+}
+.nav-panel-body {
+    font-size: 1.2rem;
+    color: #a0a0c0;
+    line-height: 1.65;
+}
+.nav-badge {
+    display: inline-block;
+    background-color: #2a2a4a;
+    border: 1px solid #7b68ee;
+    border-radius: 6px;
+    padding: 2px 10px;
+    color: #c9b8ff;
+    font-size: 0.82rem;
+    font-weight: 700;
+    vertical-align: middle;
+}
+</style>
+
+<!-- ── Page 1: Knowledge Library ── -->
+<div class="nav-main-section">
+    <div class="nav-section-title">Knowledge Library</div>
+    <div class="nav-section-desc">An educational reference containing the AML typologies, risk patterns, and regulatory intelligence that underpin the detection model.</div>
+    <div class="nav-feature-grid">
+        <div class="nav-feature-panel">
+            <div class="nav-panel-label">Sidebar</div>
+            <div class="nav-panel-title">Module Navigation</div>
+            <div class="nav-panel-body">Use the sidebar radio menu to switch between the five modules: <em>Core Intelligence &amp; Risk Patterns</em>, <em>Red Flag Indicator Library</em>, <em>Risk Clusters for Modelling</em>, <em>LLM &amp; NLP Opportunities</em>, and <em>Source Index</em>.</div>
+        </div>
+        <div class="nav-feature-panel">
+            <div class="nav-panel-label">Main Panel</div>
+            <div class="nav-panel-title">Expandable Sections</div>
+            <div class="nav-panel-body">Each module is organised into expandable section headers. Click any header to reveal detailed typology breakdowns, mechanism descriptions, and detection logic.</div>
+        </div>
+        <div class="nav-feature-panel">
+            <div class="nav-panel-label">Usage</div>
+            <div class="nav-panel-title">Read-Only Reference</div>
+            <div class="nav-panel-body">No inputs are required on this page. Browse freely to build context on the fraud patterns and regulations the model is built around.</div>
+        </div>
+    </div>
+</div>
+
+<!-- ── Page 2: Run Model ── -->
+<div class="nav-main-section">
+    <div class="nav-section-title">Run Model</div>
+    <div class="nav-section-desc">Interactively assess a new customer in real time. The GraphSAGE model rescores the customer after every change you make.</div>
+    <div class="nav-feature-grid">
+        <div class="nav-feature-panel">
+            <div class="nav-panel-label">Sidebar</div>
+            <div class="nav-panel-title">Customer Profile</div>
+            <div class="nav-panel-body">Enter a Customer ID, age, annual income (CAD), account tenure (months), and customer type. For business accounts, employee count and annual sales fields will appear automatically.</div>
+        </div>
+        <div class="nav-feature-panel">
+            <div class="nav-panel-label">Main Panel</div>
+            <div class="nav-panel-title">Add Transaction</div>
+            <div class="nav-panel-body">Fill in the amount, transaction type, merchant category, city, and debit/credit direction, then click <strong>Add Transaction</strong>. The risk score and graph update immediately after each addition.</div>
+        </div>
+        <div class="nav-feature-panel">
+            <div class="nav-panel-label">Main Panel</div>
+            <div class="nav-panel-title">Transaction Graph</div>
+            <div class="nav-panel-body">The graph renders the customer node (colour reflects risk level), merchant-category hub nodes (blue), and city hub nodes (orange). Edge labels show the transaction amount and type.</div>
+        </div>
+        <div class="nav-feature-panel">
+            <div class="nav-panel-label">Button</div>
+            <div class="nav-panel-title"><span class="nav-badge">Remove Last</span></div>
+            <div class="nav-panel-body">Removes the most recently added transaction and immediately rescores the customer, letting you undo a single entry without clearing everything.</div>
+        </div>
+        <div class="nav-feature-panel">
+            <div class="nav-panel-label">Button</div>
+            <div class="nav-panel-title"><span class="nav-badge">Clear All</span></div>
+            <div class="nav-panel-body">Removes all transactions for the current customer in one action, while keeping the customer profile fields intact so you can start a fresh transaction set.</div>
+        </div>
+        <div class="nav-feature-panel">
+            <div class="nav-panel-label">Sidebar Button</div>
+            <div class="nav-panel-title"><span class="nav-badge">Reset</span></div>
+            <div class="nav-panel-body">Clears the entire customer profile and all associated transactions, returning the page to its initial blank state ready for a new assessment.</div>
+        </div>
+    </div>
+</div>
+
+<!-- ── Page 3: Model Output ── -->
+<div class="nav-main-section">
+    <div class="nav-section-title">Model Output</div>
+    <div class="nav-section-desc">Review pre-computed AML risk scores for the full customer database. Use this page to triage and action flagged accounts.</div>
+    <div class="nav-feature-grid">
+        <div class="nav-feature-panel">
+            <div class="nav-panel-label">Top of Page</div>
+            <div class="nav-panel-title">Database Statistics</div>
+            <div class="nav-panel-body">Opening metrics show total customers ingested, the number flagged as high-risk, and the total number of graph edges in the transaction network.</div>
+        </div>
+        <div class="nav-feature-panel">
+            <div class="nav-panel-label">Navigation</div>
+            <div class="nav-panel-title">Tabs: Top Suspicious / Search</div>
+            <div class="nav-panel-body">The <strong>Top Suspicious Customers</strong> tab lists the highest-risk profiles ranked by score. The <strong>Search</strong> tab lets you look up any customer directly by Customer ID or Transaction ID.</div>
+        </div>
+        <div class="nav-feature-panel">
+            <div class="nav-panel-label">Customer Card</div>
+            <div class="nav-panel-title">Risk Details</div>
+            <div class="nav-panel-body">Each card shows the risk score, a SHAP-driven narrative explanation, an interactive transaction graph, and a filterable transaction table.</div>
+        </div>
+        <div class="nav-feature-panel">
+            <div class="nav-panel-label">Filter Pills</div>
+            <div class="nav-panel-title">Category &amp; City Filters</div>
+            <div class="nav-panel-body">Click the blue category or orange city pill buttons above the graph to filter the transaction table to that specific merchant category or city.</div>
+        </div>
+        <div class="nav-feature-panel">
+            <div class="nav-panel-label">Button</div>
+            <div class="nav-panel-title"><span class="nav-badge">Clear Filters</span></div>
+            <div class="nav-panel-body">Resets any active category or city filter, restoring the full transaction table for the current customer card.</div>
+        </div>
+        <div class="nav-feature-panel">
+            <div class="nav-panel-label">Button</div>
+            <div class="nav-panel-title"><span class="nav-badge">Confirm Fraud</span></div>
+            <div class="nav-panel-body">Marks the customer as confirmed fraud in the investigator review log. Click again on a marked customer to remove the confirmation.</div>
+        </div>
+        <div class="nav-feature-panel">
+            <div class="nav-panel-label">Button</div>
+            <div class="nav-panel-title"><span class="nav-badge">Clear / Not Fraud</span></div>
+            <div class="nav-panel-body">Marks the customer as reviewed and cleared. Click again to remove the cleared status if your assessment changes.</div>
+        </div>
+        <div class="nav-feature-panel">
+            <div class="nav-panel-label">Sidebar</div>
+            <div class="nav-panel-title">Review Summary</div>
+            <div class="nav-panel-body">Displays a live running count of confirmed-fraud and cleared decisions made in the current session so you can track review progress at a glance.</div>
+        </div>
+        <div class="nav-feature-panel">
+            <div class="nav-panel-label">Sidebar Buttons</div>
+            <div class="nav-panel-title"><span class="nav-badge">Export</span> &amp; <span class="nav-badge">Clear All Reviews</span></div>
+            <div class="nav-panel-body"><strong>Export Review Decisions</strong> downloads a CSV of all decisions made this session. <strong>Clear All Reviews</strong> resets every investigator decision, starting the review log fresh.</div>
+        </div>
+    </div>
+</div>
+""", unsafe_allow_html=True)
