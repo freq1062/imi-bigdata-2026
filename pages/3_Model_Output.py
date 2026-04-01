@@ -712,35 +712,6 @@ def _render_customer_card(row: pd.Series, key_prefix: str = ""):
     sk_cats   = f"mo_txn_cats_{key_prefix}_{cid}"
     sk_cities = f"mo_txn_cities_{key_prefix}_{cid}"
 
-    # Quick-filter pills: top graph nodes as one-click filter shortcuts.
-    # Clicking a pill sets the corresponding filter in session state and reruns,
-    # which causes the Transactions expander to auto-open.
-    if (cat_counts or city_counts) and n_txns > 0:
-        top_items = (
-            [(name, "cat",  n) for name, n in sorted(cat_counts.items(),  key=lambda x: -x[1])[:5]]
-          + [(name, "city", n) for name, n in sorted(city_counts.items(), key=lambda x: -x[1])[:3]]
-        )
-        st.caption(
-            "🔵 **Category** · 🟠 **City** — click a node to filter the transaction table:"
-        )
-        pcols = st.columns(min(len(top_items), 8), gap="small")
-        for i, (name, ntype, count) in enumerate(top_items):
-            icon  = "🔵" if ntype == "cat" else "🟠"
-            short = (name[:13] + "…") if len(name) > 13 else name
-            with pcols[i]:
-                if st.button(
-                    f"{icon} {short}  ×{count}",
-                    key=f"pill_{key_prefix}_{cid}_{ntype}_{i}",
-                    width="content",
-                ):
-                    if ntype == "cat":
-                        st.session_state[sk_cats]   = [name]
-                        st.session_state.pop(sk_cities, None)
-                    else:
-                        st.session_state[sk_cities] = [name]
-                        st.session_state.pop(sk_cats, None)
-                    st.rerun()
-
     has_filter = bool(
         st.session_state.get(sk_cats) or st.session_state.get(sk_cities)
     )

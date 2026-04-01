@@ -463,9 +463,9 @@ st.markdown("""
             <div class="nav-panel-body">Each card shows the risk score, a SHAP-driven narrative explanation, an interactive transaction graph, and a filterable transaction table.</div>
         </div>
         <div class="nav-feature-panel">
-            <div class="nav-panel-label">Filter Pills</div>
-            <div class="nav-panel-title">Category &amp; City Filters</div>
-            <div class="nav-panel-body">Click the blue category or orange city pill buttons above the graph to filter the transaction table to that specific merchant category or city.</div>
+            <div class="nav-panel-label">Transaction Table</div>
+            <div class="nav-panel-title">Display and Filter Transactions</div>
+            <div class="nav-panel-body">Click the Transaction drop down button to display a table with all the customers transactions. Filter by category, type, city, and date range.</div>
         </div>
         <div class="nav-feature-panel">
             <div class="nav-panel-label">Button</div>
