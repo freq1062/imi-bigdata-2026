@@ -138,7 +138,7 @@ st.markdown("""
             </svg>
         </div>
         <div class="feature-title">Explainable AI</div>
-        <div class="feature-desc">Every prediction is paired with a human-readable narrative via Llama 3.2, making model decisions traceable and audit-ready.</div>
+        <div class="feature-desc">Every prediction is paired with a human-readable narrative via Gemma 2b, making model decisions traceable and audit-ready.</div>
     </div>
     <div class="feature-card">
         <div class="feature-icon">
@@ -182,16 +182,16 @@ components.html("""
 </style>
 <div class="stats-belt">
   <div class="stat-item">
-    <div class="stat-value">99%</div>
+    <div class="stat-value">98%</div>
     <div class="stat-label">Detection Accuracy</div>
-  </div>
-  <div class="stat-item">
-    <div class="stat-value">18</div>
-    <div class="stat-label">Typologies Covered</div>
   </div>
   <div class="stat-item">
     <div class="stat-value">100%</div>
     <div class="stat-label">Explainability Coverage</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-value">18</div>
+    <div class="stat-label">AML Typologies Covered</div>
   </div>
 </div>
 """, height=130)
