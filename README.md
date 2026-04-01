@@ -8,31 +8,41 @@ Project Aegis is an end-to-end Anti-Money Laundering (AML) solution. While tradi
 
 ## How It's Made
 
-**Tech used:** Python, PyTorch Geometric, Streamlit, Llama 3.2 (via Ollama), Scikit-Learn.
+**Tech used:** Python, PyTorch Geometric, Streamlit, Llama 3.2 (via Ollama), Scikit-Learn, LightGBM.
 
-**Model:** Inductive GraphSAGE
+**Model:** Multi-Stage Graph-Based Pipeline
 
-We implemented a GraphSAGE (SAmple and aggreGatE) architecture. Unlike standard Graph Attention Networks (GATs) that are transductive (can only score nodes they've seen before), GraphSAGE learns an aggregation function.
+Aegis uses a five-stage pipeline where each component feeds into the next, progressively refining the fraud signal from raw transactions to a calibrated risk score.
 
-    This allows our model to score "unseen" customers or new merchants in real-time without retraining the entire graph.
+**Stage 1 — Transaction Autoencoder**
 
-    We represented Customers, Locations, and Merchant Categories as nodes, with the over 6 million transactions connecting them as edges.
+Before the graph is built, a symmetric MLP autoencoder is trained unsupervised on all transactions to reconstruct 15 behavioral features (velocity bursts, geo-impossibility, structuring signals, etc.). After a supervised fine-tuning pass on labeled fraud, the per-transaction reconstruction error becomes a risk signal. High reconstruction error means the transaction looks nothing like normal behavior. The mean error per customer is then carried forward as a node feature in the graph.
 
-With labeled fraud at only ~1% in the original dataset, we utilized two advanced techniques:
+**Stage 2 — Heterogeneous GraphSAGE with DGI Pre-Training**
 
-    Integrated the BankSim agent-based simulation dataset to boost our initial fraud signal to ~6%.
+We implemented a GraphSAGE (SAmple and aggreGatE) architecture on a heterogeneous graph with three node types: Customers, Merchant Categories, and Cities. Unlike transductive methods (e.g., standard GATs), GraphSAGE learns an aggregation function, allowing it to score new, previously unseen customers at inference time without retraining.
 
-    Iterative Pseudo-Labeling: The model was trained on high-confidence "initially labeled" cases, then allowed to label the rest of the 6-million-transaction dataset as it gained confidence, effectively turning our unlabeled data into a massive training resource.
+To address the severe label scarcity (~1% fraud), the encoder is first pre-trained using Deep Graph Infomax (DGI) — an unsupervised objective that trains the model to distinguish real node embeddings from those on corrupted graphs. This forces the encoder to capture meaningful behavioral and structural patterns before it ever sees a fraud label. The model is then fine-tuned on a small set of high-confidence labeled cases using Focal Loss to handle class imbalance.
 
-**Explainability:** The "Shadow" Random Forest
+Each customer node carries 18 features derived from KYC data, transaction aggregates, graph structural metrics, and the autoencoder risk score from Stage 1.
 
-To solve the "Black Box" problem of Graph Networks, we built a dual-layer explanation system:
+**Stage 3 — GMM Clustering**
 
-    Proxy Modeling: A Random Forest model was trained to mimic the GraphSAGE's decision-making process using processed customer features.
+A Gaussian Mixture Model (GMM) is fit on the 64-dimensional customer embeddings produced by the GraphSAGE encoder. This clusters customers into behavioral archetypes in the embedding space. For each customer, the GMM provides a cluster assignment and a membership confidence score. Customers with low likelihood under all mixture components — those that don't fit any learned behavioral pattern — receive a high anomaly score. These cluster-level statistics become features for the final ranker.
 
-    SHAP Analysis: We used Shapley values to extract exactly which features (e.g., "Transactions in last 24h" or "Cash %") triggered the flag.
+**Stage 4 — LightGBM Ranker**
 
-    LLM Narratives: These SHAP values were fed into Llama 3.2:3b to generate human-readable SAR (Suspicious Activity Report) narratives and connected to possible organization types identified in our AML Knowledge Library.
+A LightGBM classifier is trained on ~30 embedding-derived features: PCA projections of the 64-d GNN embedding, GMM cluster statistics, k-NN proximity to known fraud/legit centroids, the DGI anomaly score, the autoencoder risk signal, and anchor proximity scores. The final `review_priority_score` is a weighted ensemble combining the LightGBM probability, cluster consensus, DGI anomaly, autoencoder risk, and anchor proximity.
+
+**Explainability:** GNNExplainer + SHAP
+
+To solve the "Black Box" problem of Graph Networks, we built a two-layer explanation system:
+
+    GNNExplainer: We use PyG's GNNExplainer to generate per-customer edge relevance masks, identifying which specific Merchant Category and City connections were most influential in the GraphSAGE encoder's scoring of a flagged customer.
+
+    SHAP Analysis: A SHAP TreeExplainer is run on the LightGBM model to produce per-feature attributions, pinpointing exactly which behavioral signals (e.g., "DGI anomaly score", "Autoencoder risk", "Cluster fraud rate") drove the final risk score.
+
+    LLM Narratives: These SHAP values were fed into Gemma 2b to generate human-readable SAR (Suspicious Activity Report) narratives and connected to possible organization types identified in our AML Knowledge Library.
 
     Example: " Customer exhibits behavior consistent with Project Guardian (Synthetic Opioids) or Project Protect (Human Trafficking). Further investigation and analysis are required to confirm these findings and determine the specific risk profile."
 
