@@ -190,8 +190,8 @@ components.html("""
     <div class="stat-label">Explainability Coverage</div>
   </div>
   <div class="stat-item">
-    <div class="stat-value">18</div>
-    <div class="stat-label">AML Typologies Covered</div>
+    <div class="stat-value">~6M</div>
+    <div class="stat-label">Transactions Analyzed</div>
   </div>
 </div>
 """, height=130)
