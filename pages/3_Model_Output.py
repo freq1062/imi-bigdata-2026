@@ -23,6 +23,7 @@ if _ROOT not in sys.path:
 import streamlit as st
 import pandas as pd
 
+from lib.resource_paths import resolve_output_path, resolve_data_path
 from lib.components import CustomerInfoCard, PrecomputedNarrative, GraphVisualizer, _load_industry_lookup
 import streamlit.components.v1 as st_components
 
@@ -43,19 +44,26 @@ apply_sidebar_styles()
 
 @st.cache_data(show_spinner="Loading model output…")
 def _load_output():
-    df = pd.read_csv("model_output.csv")
+    df = pd.read_csv(resolve_output_path("model_output.csv"))
     return df
 
 @st.cache_data(show_spinner="Loading explanations…")
 def _load_explanations():
-    df = pd.read_csv("model_output_explanations.csv")
-    return df
+    for candidate in [
+        resolve_output_path("model_output_explanations.csv.gz"),
+        resolve_output_path("model_output_explanations.csv"),
+    ]:
+        try:
+            return pd.read_csv(candidate)
+        except FileNotFoundError:
+            continue
+    return pd.DataFrame(columns=["customer_id", "explanation"])
 
 # Edge count: try to pull from sage artifacts, else fall back to a csv if available
 @st.cache_data(show_spinner=False)
 def _get_edge_count():
     try:
-        with open("sage_artifacts.pkl", "rb") as f:
+        with open(resolve_output_path("sage_artifacts.pkl"), "rb") as f:
             arts = pickle.load(f)
         ei_cc = arts.get("edge_cust_cat")
         ei_ct = arts.get("edge_cust_city")
@@ -77,7 +85,7 @@ def _load_graph_data():
     Arrays are stored as plain numpy to keep the cache serialisable.
     """
     try:
-        with open("sage_artifacts.pkl", "rb") as f:
+        with open(resolve_output_path("sage_artifacts.pkl"), "rb") as f:
             arts = pickle.load(f)
         return {
             "cust_map": arts["cust_map"],
@@ -274,7 +282,6 @@ def _load_customer_transactions(cid: str) -> pd.DataFrame:
     Cached per customer_id (LRU, up to 50 entries).
     Returns a normalised DataFrame ready to display.
     """
-    data_dir = os.path.join(_ROOT, "data")
     # Build a combined code→name lookup: MCC codes first, then kyc_industry_codes
     kyc_lookup = _load_industry_lookup()
     ind_lookup = {**kyc_lookup, **_MCC_LOOKUP}  # MCC names win on overlap
@@ -289,20 +296,38 @@ def _load_customer_transactions(cid: str) -> pd.DataFrame:
         ("cheque.csv.gz", "CHEQUE", False, False, False),
     ]
 
+    cid_norm = str(cid).strip().upper().removesuffix(".0")
+
     dfs: list[pd.DataFrame] = []
     for fname, txn_type, has_loc, has_ecom, has_cash in specs:
-        path = os.path.join(data_dir, fname)
+        path = resolve_data_path(fname)
         try:
             chunks = []
             for chunk in pd.read_csv(
                 path, compression="gzip", chunksize=100_000, low_memory=False
             ):
-                matched = chunk[chunk["customer_id"] == cid]
+                if "customer_id" not in chunk.columns:
+                    continue
+                chunk_ids = (
+                    chunk["customer_id"]
+                    .astype(str)
+                    .str.strip()
+                    .str.upper()
+                    .str.replace(r"\.0$", "", regex=True)
+                )
+                matched = chunk[chunk_ids == cid_norm]
                 if not matched.empty:
                     chunks.append(matched)
             if not chunks:
                 continue
             df = pd.concat(chunks, ignore_index=True)
+
+            # Keep transaction IDs as strings so Arrow serialization doesn't
+            # fail on mixed int/str object columns.
+            if "transaction_id" in df.columns:
+                df["transaction_id"] = df["transaction_id"].astype("string").fillna("")
+            else:
+                df["transaction_id"] = ""
 
             df["txn_type"] = txn_type
             df["amount"] = pd.to_numeric(df.get("amount_cad"), errors="coerce")
@@ -375,6 +400,10 @@ edge_count = _get_edge_count()
 graph_data = _load_graph_data()
 
 # Merge to include customer_id, predicted_label, risk_score, explanation
+output_df["risk_score"] = output_df.get("risk_score",
+    output_df.get("fraud_score",
+    output_df.get("lgb_fraud_prob",
+    output_df.get("review_priority_score", 0.0))))
 merged = pd.merge(
     output_df[["customer_id", "predicted_label", "risk_score"]],
     expl_df[["customer_id", "explanation"]],
@@ -559,6 +588,7 @@ def _render_transaction_table(
 
     # ── Display table ───────────────────────────────────────────────────────
     display = filtered.copy()
+    display["transaction_id"] = display["transaction_id"].astype("string").fillna("")
     display["datetime"] = display["datetime"].dt.strftime("%Y-%m-%d %H:%M")
     display["amount"]   = display["amount"].apply(
         lambda x: f"${x:,.2f}" if pd.notna(x) else ""

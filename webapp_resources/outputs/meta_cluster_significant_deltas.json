@@ -1,0 +1,10002 @@
+{
+  "0": [
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.2875
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -0.2418
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -0.2418
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.239
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": -0.2208
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.181
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.1753
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": 0.1674
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.1589
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.156
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": 0.1237
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.0994
+    }
+  ],
+  "1": [
+    {
+      "feature": "category_entropy",
+      "delta_z": -1.0459
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.7756
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.6007
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.5917
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.5582
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.5285
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.5285
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.4772
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.1818
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.0594
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.013
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": 0.0022
+    }
+  ],
+  "2": [
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.4079
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.4079
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": -0.3058
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.2181
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.1422
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.1287
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.1277
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.1102
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.0448
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": 0.0367
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.0243
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": 0.0045
+    }
+  ],
+  "3": [
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -1.5857
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -1.5857
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.7233
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.7092
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.7079
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.5602
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.4727
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.3815
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.262
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.2265
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": 0.0141
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": 0.0105
+    }
+  ],
+  "4": [
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 1.1877
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 1.0307
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 1.0105
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 1.0095
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 0.9598
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 0.7856
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -0.74
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -0.74
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.2594
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0659
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.062
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.0407
+    }
+  ],
+  "5": [
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 0.6592
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.5759
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 0.4977
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 0.4885
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 0.4675
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.4657
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.4657
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 0.4122
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.2115
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0544
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.0511
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0462
+    }
+  ],
+  "6": [
+    {
+      "feature": "category_entropy",
+      "delta_z": -0.7987
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.7238
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.5958
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.5892
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.5721
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.4423
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.4231
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.4231
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.1213
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0626
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0333
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.0288
+    }
+  ],
+  "7": [
+    {
+      "feature": "mean_amount",
+      "delta_z": 197.8568
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 37.0815
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 17.5594
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": -1.6874
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.9762
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.9243
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.9202
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.9143
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.6566
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.5888
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.5888
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.1108
+    }
+  ],
+  "8": [
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -0.8538
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -0.8538
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.6949
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.3528
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.3459
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.3353
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.2457
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.1951
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.1085
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.0729
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0396
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0073
+    }
+  ],
+  "9": [
+    {
+      "feature": "category_entropy",
+      "delta_z": 1.0571
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 0.7998
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 0.5536
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 0.5412
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 0.5002
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 0.4633
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -0.3293
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -0.3293
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.1576
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.1316
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0553
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0541
+    }
+  ],
+  "10": [
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -1.8137
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -1.8137
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 1.556
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 1.5556
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 1.5305
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 1.4986
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 1.2597
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 1.0162
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.2737
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0578
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0386
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.0114
+    }
+  ],
+  "11": [
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.8352
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 0.6233
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 0.364
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 0.3621
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 0.3277
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 0.2923
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.2608
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.1111
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.1111
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.0876
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.069
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0585
+    }
+  ],
+  "12": [
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.3274
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.2245
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.205
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.1972
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.191
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.191
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.1675
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.1368
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.1115
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.0688
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0196
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.019
+    }
+  ],
+  "13": [
+    {
+      "feature": "category_entropy",
+      "delta_z": -1.0701
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.844
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.7578
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.7459
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.7315
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.5524
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.3874
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.3874
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.1939
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.0502
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0399
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0148
+    }
+  ],
+  "14": [
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -0.6624
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -0.6624
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.5763
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.2968
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.2394
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.218
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.2128
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.102
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0824
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0633
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.0537
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.0264
+    }
+  ],
+  "15": [
+    {
+      "feature": "txn_count",
+      "delta_z": -0.6213
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.6095
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.5889
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.4513
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.4512
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.4512
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.4417
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": -0.3372
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.2369
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0504
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.0355
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0309
+    }
+  ],
+  "16": [
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 2.3337
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -2.2263
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -2.2263
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 0.3934
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.3911
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 0.2912
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 0.2779
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 0.2449
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.1481
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.1458
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.056
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0459
+    }
+  ],
+  "17": [
+    {
+      "feature": "std_amount",
+      "delta_z": 23.265
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": 7.7757
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -5.5255
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -5.5255
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": -1.0571
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.9762
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.6566
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.5222
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.3856
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.3705
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.1354
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.1207
+    }
+  ],
+  "18": [
+    {
+      "feature": "std_amount",
+      "delta_z": 18.5744
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": 11.4567
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -5.5255
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -5.5255
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": -1.6874
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.9762
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.9482
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.9143
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.8037
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.7786
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.6566
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.4287
+    }
+  ],
+  "19": [
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 0.6463
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.6425
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 0.4397
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 0.4387
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 0.4161
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 0.3617
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.2977
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.2977
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.143
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0471
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0423
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.0337
+    }
+  ],
+  "20": [
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 1.601
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 1.5729
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 1.5676
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 1.5174
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 1.2856
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 1.035
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.3306
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.059
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0522
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.0093
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.0038
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.0038
+    }
+  ],
+  "21": [
+    {
+      "feature": "category_entropy",
+      "delta_z": -1.0014
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.7537
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.5967
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.5942
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.594
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.4411
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.4407
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.4407
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.1095
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.1031
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.064
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0396
+    }
+  ],
+  "22": [
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 54.3835
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 47.5613
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 46.0474
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 40.1451
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": 3.1562
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": -1.6516
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.9762
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.7834
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.5888
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.5888
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.4836
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": 0.3859
+    }
+  ],
+  "23": [
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.6829
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 0.4798
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.1974
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 0.1938
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 0.1914
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 0.1872
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 0.1343
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.0435
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0413
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.0402
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.0402
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0268
+    }
+  ],
+  "24": [
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.539
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.539
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.4087
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.4061
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.4022
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.3208
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": -0.2256
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.213
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.1098
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.0773
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0659
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0375
+    }
+  ],
+  "25": [
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 1.0455
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.9405
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 0.7628
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 0.7619
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 0.7205
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 0.5871
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.1842
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.1842
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.1699
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0573
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.056
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.0487
+    }
+  ],
+  "26": [
+    {
+      "feature": "category_entropy",
+      "delta_z": -0.3132
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.2906
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.2906
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.2525
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.1785
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.1748
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.1654
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.1453
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.0777
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0578
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.051
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0378
+    }
+  ],
+  "27": [
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -1.2238
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -1.2238
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.6912
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.1599
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.1573
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.1523
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.1002
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 0.05
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.0479
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": 0.0333
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": 0.0213
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.0112
+    }
+  ],
+  "28": [
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 0.3858
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.3665
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.3665
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.3516
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 0.1603
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.1569
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 0.1555
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 0.152
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 0.0987
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.0893
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0345
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0205
+    }
+  ],
+  "29": [
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 36.1679
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 33.0545
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 31.9377
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 25.9757
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -5.5255
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -5.5255
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": 1.7246
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": -1.6563
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.9762
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.699
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.3978
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": 0.3611
+    }
+  ],
+  "30": [
+    {
+      "feature": "std_amount",
+      "delta_z": 15.1726
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": 12.1608
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 2.9416
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 2.1324
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": -1.6874
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.9762
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.8758
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.8466
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.8196
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.6566
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.5888
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.5888
+    }
+  ],
+  "31": [
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.5285
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": -0.4581
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.4369
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.4264
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.4169
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.38
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.38
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.3732
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.175
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.101
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0466
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0262
+    }
+  ],
+  "32": [
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 1.042
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 0.9143
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 0.9084
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 0.8737
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.782
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 0.7413
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.4611
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.4611
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.2344
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.0509
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0508
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0465
+    }
+  ],
+  "33": [
+    {
+      "feature": "txn_count",
+      "delta_z": 0.9174
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 0.903
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 0.8937
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 0.7721
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 0.645
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.4186
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.3265
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.2353
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.2353
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.1341
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0341
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0149
+    }
+  ],
+  "34": [
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.9222
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 0.7769
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 0.5022
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 0.5021
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 0.466
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 0.425
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.1208
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.0879
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0622
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0595
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -0.0409
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -0.0409
+    }
+  ],
+  "35": [
+    {
+      "feature": "category_entropy",
+      "delta_z": -1.3552
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.9393
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.8615
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.848
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.8356
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.6128
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.421
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.2251
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0701
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.023
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -0.0024
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -0.0024
+    }
+  ],
+  "36": [
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.423
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.4181
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.4167
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.4043
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.2604
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.2511
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.2464
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.2289
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.2289
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.1254
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.062
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0508
+    }
+  ],
+  "37": [
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.7427
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 0.4368
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 0.1431
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 0.1387
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 0.1336
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 0.1179
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0715
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0588
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.051
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.051
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.0492
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.0412
+    }
+  ],
+  "38": [
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.4953
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.4953
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.2913
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.2896
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.2784
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.2644
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.1639
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.0888
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0302
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0294
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.0186
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.016
+    }
+  ],
+  "39": [
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -1.1389
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -1.1389
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.6513
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.634
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.6195
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.6138
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.5381
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.4648
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0661
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": -0.0504
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0441
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.0391
+    }
+  ],
+  "40": [
+    {
+      "feature": "std_amount",
+      "delta_z": 10.8534
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": 4.2989
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 3.0834
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 3.0359
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 2.6514
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 2.5463
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": -0.9137
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.4928
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.4928
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.4249
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.3424
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.093
+    }
+  ],
+  "41": [
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.3242
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.3242
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.3235
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.3227
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.3061
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.2377
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.1381
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.1371
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.1251
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.0703
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0246
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0124
+    }
+  ],
+  "42": [
+    {
+      "feature": "txn_count",
+      "delta_z": -0.2974
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.2863
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.2551
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.2379
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.2319
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.1197
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.0913
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.0913
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.0834
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.0302
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0255
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0244
+    }
+  ],
+  "43": [
+    {
+      "feature": "category_entropy",
+      "delta_z": 1.0428
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 0.6806
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -0.5575
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -0.5575
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 0.5554
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 0.5385
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 0.5021
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 0.4767
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.0798
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.071
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0632
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.0014
+    }
+  ],
+  "44": [
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.7864
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.7531
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.7366
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.7253
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": -0.5918
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.5391
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.5214
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.3271
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.3271
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.1203
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0477
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0111
+    }
+  ],
+  "45": [
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 0.4451
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 0.3782
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 0.3759
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 0.3613
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.3302
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.3302
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 0.2637
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.2396
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.0642
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.0482
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": 0.0471
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": 0.0082
+    }
+  ],
+  "46": [
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 0.9649
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 0.9078
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 0.8966
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 0.8786
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 0.7268
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.6555
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.3804
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.3804
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.2023
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.0387
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0337
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": 0.0192
+    }
+  ],
+  "47": [
+    {
+      "feature": "txn_count",
+      "delta_z": -0.4808
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.477
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.4597
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.3538
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.3083
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.2294
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.2294
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": -0.1372
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.1098
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.1031
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0407
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0255
+    }
+  ],
+  "48": [
+    {
+      "feature": "category_entropy",
+      "delta_z": -1.0008
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.8059
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -0.6026
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -0.6026
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.5197
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.5133
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.4747
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.3923
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.3257
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": 0.3212
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": 0.2554
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.0052
+    }
+  ],
+  "49": [
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -0.5619
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -0.5619
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.5026
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.4981
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.4975
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.4145
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.3466
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.3159
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.1731
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.1034
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0565
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0449
+    }
+  ],
+  "50": [
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.5189
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.5189
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.5071
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.4202
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": -0.4192
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.4152
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.4082
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.3647
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.1051
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.0189
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0181
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0159
+    }
+  ],
+  "51": [
+    {
+      "feature": "txn_count",
+      "delta_z": 0.9827
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 0.9704
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 0.9546
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 0.8146
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 0.6608
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.393
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.3375
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.3375
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.2002
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.0491
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0309
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0092
+    }
+  ],
+  "52": [
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 9.3487
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 8.7685
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 8.6132
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 6.227
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": -0.9398
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.5651
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": 0.5426
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.4405
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 0.3017
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": 0.1396
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.0822
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.0822
+    }
+  ],
+  "53": [
+    {
+      "feature": "category_entropy",
+      "delta_z": -0.8705
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.8051
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.6657
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.6531
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.6289
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.5135
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.4518
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.2748
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.2748
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.2131
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0367
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0068
+    }
+  ],
+  "54": [
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.9862
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 0.4407
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 0.2123
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 0.1987
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 0.1964
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 0.1706
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.0919
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.0919
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0704
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0641
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.0398
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.0244
+    }
+  ],
+  "55": [
+    {
+      "feature": "category_entropy",
+      "delta_z": -1.014
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.7529
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.5574
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.5415
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.5415
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.5411
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.5101
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.4651
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.2359
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": 0.0144
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": 0.0115
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.0074
+    }
+  ],
+  "56": [
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.3277
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.3236
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.3155
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.2635
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.2422
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.2117
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.2117
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.1198
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.1181
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.0088
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": 0.0044
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": 0.0023
+    }
+  ],
+  "57": [
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 1.4564
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 1.3441
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 1.3396
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 1.278
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 1.0814
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 1.0723
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -0.9976
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -0.9976
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.3078
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0683
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0635
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.0396
+    }
+  ],
+  "58": [
+    {
+      "feature": "category_entropy",
+      "delta_z": -0.8058
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.5952
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.4985
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.4985
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.4917
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.4842
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.4555
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.363
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.2816
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.1179
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": 0.0633
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": 0.0503
+    }
+  ],
+  "59": [
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.8554
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 0.8303
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 0.7136
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 0.711
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 0.6687
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 0.6018
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -0.4614
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -0.4614
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.2468
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0596
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0595
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.0117
+    }
+  ],
+  "60": [
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.9044
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 0.8908
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 0.614
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 0.6049
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 0.57
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 0.5061
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.2107
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.2107
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.1764
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0607
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0541
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.0457
+    }
+  ],
+  "61": [
+    {
+      "feature": "category_entropy",
+      "delta_z": -1.0898
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.8547
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.7554
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.7494
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.7407
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.5641
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.4307
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.4307
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.2338
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.0469
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0216
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": 0.0139
+    }
+  ],
+  "62": [
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -5.5249
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -5.5249
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.8668
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.4313
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 0.2344
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 0.2319
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 0.2234
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": -0.2138
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 0.2069
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0916
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.0909
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0595
+    }
+  ],
+  "63": [
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.4456
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.4456
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.224
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.1653
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.1618
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.1572
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 0.1224
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.1139
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.0921
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.05
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0397
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.0055
+    }
+  ],
+  "64": [
+    {
+      "feature": "std_amount",
+      "delta_z": 11.5947
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": 6.5724
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -5.525
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -5.525
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.8477
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.7722
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.7592
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.7575
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.6883
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.6566
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": -0.1715
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.139
+    }
+  ],
+  "65": [
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 0.5828
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 0.5695
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 0.5633
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 0.5631
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.4867
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 0.3046
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.214
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -0.1769
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -0.1769
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": 0.0508
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.0013
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": 0.0008
+    }
+  ],
+  "66": [
+    {
+      "feature": "category_entropy",
+      "delta_z": -0.8368
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.7607
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.4696
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.4034
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.4008
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.3848
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": 0.3374
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.2763
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.2641
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": 0.2346
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.0073
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.0073
+    }
+  ],
+  "67": [
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 3.1142
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 3.114
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 3.0405
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 2.5134
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -2.2834
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -2.2834
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 2.2598
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 1.0937
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.4083
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.0807
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0522
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.014
+    }
+  ],
+  "68": [
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -3.2712
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -3.2712
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 1.2168
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 1.1955
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 1.1928
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 1.1663
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 0.9768
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.9344
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.2115
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0401
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0122
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.0029
+    }
+  ],
+  "69": [
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 0.8171
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.8014
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 0.629
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 0.6253
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 0.595
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 0.5427
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.42
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.42
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.1272
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.1035
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.033
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": 0.0111
+    }
+  ],
+  "70": [
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 1.0628
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.9165
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 0.803
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 0.8009
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 0.7712
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -0.7473
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -0.7473
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 0.6502
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.3123
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0578
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0564
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.0226
+    }
+  ],
+  "71": [
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.3666
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.3666
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.264
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.1865
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 0.1813
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.0628
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0579
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.0479
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0442
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.0371
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.0315
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.0272
+    }
+  ],
+  "72": [
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 1.3893
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 1.2259
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 1.2253
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 1.1711
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 1.08
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 0.9638
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -0.5936
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -0.5936
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.2874
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0641
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0621
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.0033
+    }
+  ],
+  "73": [
+    {
+      "feature": "txn_count",
+      "delta_z": -0.6172
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.6089
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.6048
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.5973
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.4732
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.4297
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.4297
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.3231
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": -0.3066
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.1429
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": 0.0349
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": 0.0236
+    }
+  ],
+  "74": [
+    {
+      "feature": "category_entropy",
+      "delta_z": -0.5575
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.5071
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.4716
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.4716
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.187
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.1681
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.1513
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.1444
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.1433
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0553
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.0423
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0334
+    }
+  ],
+  "75": [
+    {
+      "feature": "category_entropy",
+      "delta_z": -1.1189
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.8403
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.6815
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.6768
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.6408
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.5294
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.476
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.476
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.3085
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.052
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0395
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0087
+    }
+  ],
+  "76": [
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -0.8599
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -0.8599
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.3754
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.3375
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.3329
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.2614
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.2264
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.1938
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.0977
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0339
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0321
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": -0.006
+    }
+  ],
+  "77": [
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -1.345
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -1.345
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": -1.294
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.9296
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.8929
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.8843
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.8761
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.7785
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.6357
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.2209
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0648
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": 0.01
+    }
+  ],
+  "78": [
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -3.8552
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -3.8552
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.6707
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 0.538
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 0.3684
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 0.3599
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 0.353
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 0.3478
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.1061
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.0696
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0483
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0398
+    }
+  ],
+  "79": [
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.5485
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -0.5186
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -0.5186
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.4402
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.4345
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.4237
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.2888
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.254
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.1779
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.0665
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0087
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": 0.0032
+    }
+  ],
+  "80": [
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.5286
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 0.3977
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 0.2037
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 0.2002
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 0.1839
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 0.1603
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.1375
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.1375
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.1082
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0641
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0497
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.0395
+    }
+  ],
+  "81": [
+    {
+      "feature": "txn_count",
+      "delta_z": 1.1137
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 1.1011
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 1.0897
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 1.0173
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 0.8129
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.7047
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.2764
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -0.0476
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -0.0476
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.034
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0308
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0014
+    }
+  ],
+  "82": [
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.3648
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.3648
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.3554
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.3546
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.3504
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.2765
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.2764
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.1941
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.1329
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.0912
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0128
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0096
+    }
+  ],
+  "83": [
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 1.3934
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 1.2909
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 1.2892
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 1.2449
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 1.0256
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.9873
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.2958
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.1008
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.1008
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0541
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0357
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.0051
+    }
+  ],
+  "84": [
+    {
+      "feature": "category_entropy",
+      "delta_z": -1.2191
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.915
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.8412
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.8316
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.8249
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -0.8155
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -0.8155
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.6102
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.1538
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": 0.1343
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.0971
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": 0.0765
+    }
+  ],
+  "85": [
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.5017
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.5017
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.302
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.2916
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.2848
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.2488
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.1473
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": -0.1335
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.079
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.044
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": 0.0149
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0004
+    }
+  ],
+  "86": [
+    {
+      "feature": "category_entropy",
+      "delta_z": -1.4243
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.9748
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.808
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.8001
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.7877
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.5925
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.397
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.397
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.3154
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0469
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.0026
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": 0.0016
+    }
+  ],
+  "87": [
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.4786
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.4786
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.3439
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.3414
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.3325
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.3033
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.2273
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.0696
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": -0.0605
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0579
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0373
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.0014
+    }
+  ],
+  "88": [
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.8526
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.135
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.1262
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.1095
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 0.0958
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.0915
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0758
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.0736
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.0685
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0625
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -0.0318
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -0.0318
+    }
+  ],
+  "89": [
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -3.9596
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -3.9596
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.5587
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 0.4959
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 0.4445
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 0.429
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 0.4103
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 0.4041
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": 0.0912
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": 0.0372
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.0311
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.0155
+    }
+  ],
+  "90": [
+    {
+      "feature": "txn_count",
+      "delta_z": -0.4668
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.4537
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.449
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.3987
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.3366
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.313
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -0.2915
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -0.2915
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.2523
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.0518
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0486
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0371
+    }
+  ],
+  "91": [
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -1.1063
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -1.1063
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.6493
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.6365
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.6322
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.539
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.451
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.3339
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.1045
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.099
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0735
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0592
+    }
+  ],
+  "92": [
+    {
+      "feature": "category_entropy",
+      "delta_z": -1.0092
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.7319
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.5307
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.5307
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.4701
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.4491
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.4019
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.3994
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.177
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.0212
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0156
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.001
+    }
+  ],
+  "93": [
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -1.2299
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -1.2299
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 0.9153
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.827
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 0.7065
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 0.7021
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 0.679
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 0.5569
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.2274
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.055
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0509
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.0079
+    }
+  ],
+  "94": [
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 1.8929
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": 1.2983
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": 1.019
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": -0.995
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.8993
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.7516
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.7428
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.7254
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.6358
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.4591
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.4591
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.208
+    }
+  ],
+  "95": [
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.6577
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 0.5107
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.2429
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.2429
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 0.1939
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 0.1915
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.1712
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 0.168
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 0.1217
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0651
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0527
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.0425
+    }
+  ],
+  "96": [
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -3.219
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -3.219
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.8562
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.8469
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.841
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.835
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.7126
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.6168
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": -0.5635
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.2404
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0893
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0631
+    }
+  ],
+  "97": [
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.3768
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 0.1958
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.1123
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.0619
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.055
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0454
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.0429
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.0397
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0395
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.0378
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.0211
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.0211
+    }
+  ],
+  "98": [
+    {
+      "feature": "std_amount",
+      "delta_z": 3.5654
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": 2.2578
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.9607
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": -0.8654
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.7005
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.6932
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.6863
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.6369
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.6286
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.5887
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.5887
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.4492
+    }
+  ],
+  "99": [
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.5407
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.5407
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.218
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.2147
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.2138
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": -0.1829
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.1649
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.0918
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 0.0682
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.043
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": 0.029
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": 0.027
+    }
+  ],
+  "100": [
+    {
+      "feature": "txn_count",
+      "delta_z": -0.7934
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.7815
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.781
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.7359
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": -0.6308
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.5726
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.4435
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -0.3073
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -0.3073
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.0788
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": 0.0195
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0096
+    }
+  ],
+  "101": [
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.5542
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.5451
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.5445
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.5186
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.4104
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.3887
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.3328
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -0.1161
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -0.1161
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0829
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0634
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.0157
+    }
+  ],
+  "102": [
+    {
+      "feature": "txn_count",
+      "delta_z": -0.7077
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.6876
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.6747
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.5691
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.4961
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": -0.2905
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.2843
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -0.2734
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -0.2734
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.0481
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0303
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0094
+    }
+  ],
+  "103": [
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -0.7407
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -0.7407
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.4246
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.4174
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.4171
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.355
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.2913
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.2161
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.0841
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0555
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0439
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.0431
+    }
+  ],
+  "104": [
+    {
+      "feature": "category_entropy",
+      "delta_z": -1.1604
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.926
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.7831
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.7715
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.7442
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -0.6222
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -0.6222
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.5696
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": 0.2397
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.2254
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": 0.2043
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.0452
+    }
+  ],
+  "105": [
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.3967
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.3967
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": -0.1178
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.0976
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.0755
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.07
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.0678
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.0676
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.0608
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.046
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0394
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.0175
+    }
+  ],
+  "106": [
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -2.2298
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -2.2298
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 1.0275
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.9853
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 0.9029
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 0.89
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 0.8464
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 0.711
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.2528
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0688
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0618
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.0489
+    }
+  ],
+  "107": [
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.5088
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.5088
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.3617
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.3545
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.3533
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.3186
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.2713
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.0753
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.03
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.0219
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.021
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.017
+    }
+  ],
+  "108": [
+    {
+      "feature": "category_entropy",
+      "delta_z": -0.9631
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.7475
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.5592
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.5473
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.5256
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.5256
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.5234
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.469
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.21
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.0427
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.021
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0
+    }
+  ],
+  "109": [
+    {
+      "feature": "category_entropy",
+      "delta_z": -1.0575
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.8656
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.6832
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.6789
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.6563
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.5337
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.3857
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.3492
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.3492
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.2794
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": 0.2543
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": 0.2285
+    }
+  ],
+  "110": [
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 1.1551
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 1.0154
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 0.9869
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 0.9819
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 0.9392
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 0.7821
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -0.7785
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -0.7785
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.3011
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0712
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0641
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.0122
+    }
+  ],
+  "111": [
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.445
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.445
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.2507
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.2484
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.2473
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.2326
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.0798
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0593
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0432
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.0222
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.0195
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": -0.0133
+    }
+  ],
+  "112": [
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 23.6792
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 20.682
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 20.0124
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 17.0156
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": -1.6616
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": 1.6605
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.9762
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.7542
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.5719
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.5719
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.4607
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": 0.329
+    }
+  ],
+  "113": [
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.573
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.573
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.5049
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.4958
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.4955
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.3511
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.3273
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": -0.3041
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.299
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.2513
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0504
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0348
+    }
+  ],
+  "114": [
+    {
+      "feature": "category_entropy",
+      "delta_z": -0.7582
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.7538
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.6103
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.6063
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.5865
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.4511
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.4309
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.4309
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": 0.2744
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.1993
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": 0.155
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.0634
+    }
+  ],
+  "115": [
+    {
+      "feature": "category_entropy",
+      "delta_z": -0.7865
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.5323
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.3817
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.3817
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.3316
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.3169
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.2694
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.2101
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.1901
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": 0.123
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": 0.0701
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.0401
+    }
+  ],
+  "116": [
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.5823
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.5803
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.5738
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.5379
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.5379
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.4039
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.4037
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": -0.2089
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.0955
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0612
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0387
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.0127
+    }
+  ],
+  "117": [
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.5973
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.5198
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.5198
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.5157
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.515
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.5033
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": -0.4763
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.4278
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.2165
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.0893
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0431
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0241
+    }
+  ],
+  "118": [
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -1.4843
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -1.4843
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.7223
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.3496
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.3477
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.3369
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.2076
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.0909
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0661
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0539
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.0171
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.0103
+    }
+  ],
+  "119": [
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.5647
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 0.3849
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 0.1516
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 0.1514
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 0.1476
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.1279
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 0.1128
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.0602
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0475
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0458
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -0.0354
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -0.0354
+    }
+  ],
+  "120": [
+    {
+      "feature": "txn_count",
+      "delta_z": -0.5609
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.5572
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.5389
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.5283
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.4347
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.373
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.373
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": -0.3265
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.1155
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.0439
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0067
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0037
+    }
+  ],
+  "121": [
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -1.5659
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -1.5659
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.4822
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.2403
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.2392
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.2334
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.1606
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.1256
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.1148
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": 0.0969
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": 0.0599
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.041
+    }
+  ],
+  "122": [
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 1.0635
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 0.9667
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 0.9611
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.9391
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 0.9121
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 0.8033
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.4214
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.4214
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.2436
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0503
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.024
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.0037
+    }
+  ],
+  "123": [
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.4069
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.3972
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.3972
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.3969
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.3939
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.2808
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.1854
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.1008
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0595
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0439
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.0389
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.034
+    }
+  ],
+  "124": [
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.4375
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.3574
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.3574
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.1498
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.119
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.1059
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.0998
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.0985
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.0809
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 0.0491
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0176
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": 0.0061
+    }
+  ],
+  "125": [
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -0.7292
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -0.7292
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.5262
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.5205
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.5149
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.4206
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.4057
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.2836
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.0843
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0772
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0507
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.0437
+    }
+  ],
+  "126": [
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.4235
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.4235
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.2728
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 0.2422
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.1379
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0657
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 0.0531
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 0.0523
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 0.0496
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0486
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.0433
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 0.0208
+    }
+  ],
+  "127": [
+    {
+      "feature": "txn_count",
+      "delta_z": -0.7562
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.742
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.7291
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.6625
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -0.5822
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -0.5822
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.5532
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": -0.4107
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.113
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.062
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0273
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.0171
+    }
+  ],
+  "128": [
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -1.0169
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -1.0169
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 1.0044
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 0.7129
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 0.4349
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 0.4245
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 0.3972
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 0.3666
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.1298
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.1161
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0369
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0057
+    }
+  ],
+  "129": [
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.7268
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -0.3705
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -0.3705
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 0.1476
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.0799
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0701
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.0687
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0571
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.0542
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.0466
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.0265
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.0187
+    }
+  ],
+  "130": [
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 0.8828
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 0.6933
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 0.6873
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 0.6632
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 0.5727
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.5205
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.3739
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.3739
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.2912
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0299
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0286
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.004
+    }
+  ],
+  "131": [
+    {
+      "feature": "std_amount",
+      "delta_z": 3.7847
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": 3.1503
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 2.743
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -1.4098
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -1.4098
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": -0.978
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.8624
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.8058
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.3116
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.2334
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.2318
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.1733
+    }
+  ],
+  "132": [
+    {
+      "feature": "category_entropy",
+      "delta_z": 1.1253
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 0.9955
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 0.9196
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 0.9054
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 0.8559
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 0.7734
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -0.2822
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -0.2822
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.1797
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.0788
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0764
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0694
+    }
+  ],
+  "133": [
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.6987
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.3135
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.3135
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 0.1505
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.0893
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.0828
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.0783
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0745
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.0723
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.0633
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0614
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.0189
+    }
+  ],
+  "134": [
+    {
+      "feature": "category_entropy",
+      "delta_z": -0.6831
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.5315
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.5309
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.5309
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.4212
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.4101
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.3711
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.3428
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.1754
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.0682
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": 0.0051
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.002
+    }
+  ],
+  "135": [
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 1.7013
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 1.6246
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 1.6178
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 1.5557
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 1.2566
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 1.1216
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.3649
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0593
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0348
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -0.0323
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -0.0323
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.0044
+    }
+  ],
+  "136": [
+    {
+      "feature": "category_entropy",
+      "delta_z": -0.9497
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.645
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.319
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.319
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": 0.1957
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 0.1924
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.1742
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.0855
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": 0.0763
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 0.0714
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 0.0395
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 0.0231
+    }
+  ],
+  "137": [
+    {
+      "feature": "category_entropy",
+      "delta_z": -1.4274
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.9754
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.7994
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.7984
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.7658
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.5861
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.2781
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.2781
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.2563
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.0675
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0501
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": 0.003
+    }
+  ],
+  "138": [
+    {
+      "feature": "category_entropy",
+      "delta_z": -1.4323
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.948
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.8549
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.8468
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.8301
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.6161
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.4121
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.3216
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.3216
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": 0.1568
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": 0.12
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.0234
+    }
+  ],
+  "139": [
+    {
+      "feature": "txn_count",
+      "delta_z": -0.4373
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.4345
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.4276
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.3577
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.3516
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.2702
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.2702
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.1786
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.0259
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": 0.0193
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": 0.0164
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.0017
+    }
+  ],
+  "140": [
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -2.9115
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -2.9115
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.8082
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 0.7905
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 0.6791
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 0.6739
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 0.6475
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 0.5684
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.2237
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.073
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0487
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0303
+    }
+  ],
+  "141": [
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.4205
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.4205
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.2103
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.2068
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.1991
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.1578
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.0601
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": 0.0266
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0169
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.0151
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": -0.0059
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.0052
+    }
+  ],
+  "142": [
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.5235
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.5235
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": -0.2056
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.0685
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0615
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0428
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 0.0359
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 0.0332
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.0268
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 0.0263
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 0.0196
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 0.0148
+    }
+  ],
+  "143": [
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.7591
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.7518
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.7452
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.7406
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": -0.6947
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.5703
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.2538
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.1809
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.1745
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.1745
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": 0.1056
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": 0.095
+    }
+  ],
+  "144": [
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 1.1963
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 1.0921
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -1.0582
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -1.0582
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 1.0283
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 1.0242
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 0.9735
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 0.8508
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.2802
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0564
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0389
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.0141
+    }
+  ],
+  "145": [
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 3.6948
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 3.2848
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 3.177
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 2.3509
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": -1.3223
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": 0.7644
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.5554
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.4932
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": 0.2692
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.2683
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.2683
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.2388
+    }
+  ],
+  "146": [
+    {
+      "feature": "txn_count",
+      "delta_z": -0.5473
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.5359
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.5317
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.4188
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.365
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.2552
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.2072
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.2053
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.2053
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.1791
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.059
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0477
+    }
+  ],
+  "147": [
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 0.4961
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.4941
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.4941
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.3109
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 0.2887
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 0.2839
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 0.2779
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 0.2093
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.1845
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0384
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0382
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.02
+    }
+  ],
+  "148": [
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 2.0633
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": -1.3082
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": 1.2715
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.9359
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": 0.9029
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.8559
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.8443
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.8255
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.6176
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.3169
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -0.2939
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -0.2939
+    }
+  ],
+  "149": [
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 0.9868
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 0.9648
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 0.9621
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 0.9203
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 0.7424
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.7143
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.3672
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.3672
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.2235
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.0625
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0237
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0182
+    }
+  ],
+  "150": [
+    {
+      "feature": "category_entropy",
+      "delta_z": -0.8087
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.6991
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": 0.345
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.2827
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.2369
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.2294
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.2017
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": 0.188
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.17
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.17
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.1221
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.1138
+    }
+  ],
+  "151": [
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.3439
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.3439
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.2781
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.2683
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.2666
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.2629
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.2015
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.1582
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0362
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0354
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.0323
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.0202
+    }
+  ],
+  "152": [
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -1.075
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -1.075
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.9131
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 0.2083
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0714
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.061
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.0515
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 0.0368
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.0228
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 0.0221
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.0113
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 0.0071
+    }
+  ],
+  "153": [
+    {
+      "feature": "category_entropy",
+      "delta_z": -0.9363
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.7018
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.508
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.508
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.4715
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.4645
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.4632
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.3666
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.0939
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.0937
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0628
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0362
+    }
+  ],
+  "154": [
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 1.1422
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 1.0113
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 0.9766
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 0.9719
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 0.9298
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 0.7476
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.2575
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0546
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -0.0517
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -0.0517
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0424
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.0043
+    }
+  ],
+  "155": [
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -2.1989
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -2.1989
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.6224
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.6181
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.6142
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.4747
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.4521
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.3232
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.2624
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": 0.1743
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.048
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": 0.0333
+    }
+  ],
+  "156": [
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.5599
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.5557
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.5557
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": -0.5185
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.3847
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.3738
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.366
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.3427
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.1892
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0583
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.0561
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0334
+    }
+  ],
+  "157": [
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.8975
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 0.7541
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 0.4126
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 0.4072
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -0.3904
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -0.3904
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 0.3848
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 0.3196
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.2032
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0543
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0521
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.0288
+    }
+  ],
+  "158": [
+    {
+      "feature": "txn_count",
+      "delta_z": -0.6664
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.6486
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.6337
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.5194
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.4561
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.41
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.41
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": -0.268
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.2083
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.1568
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0656
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0331
+    }
+  ],
+  "159": [
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.8151
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": -0.724
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.7218
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.7119
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.706
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.5629
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.355
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.1545
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.1545
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.0804
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0411
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0067
+    }
+  ],
+  "160": [
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.8705
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 0.4532
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 0.2513
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 0.2377
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 0.215
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.1993
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 0.1965
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.0866
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0522
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0382
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.0052
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.0052
+    }
+  ],
+  "161": [
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -1.0597
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -1.0597
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.5443
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.3058
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.2993
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.2927
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.2518
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.21
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.1261
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.0803
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0753
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0554
+    }
+  ],
+  "162": [
+    {
+      "feature": "txn_count",
+      "delta_z": 1.5456
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 1.5297
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 1.5142
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 0.973
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 0.95
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.4216
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.3426
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.3426
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": 0.1289
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.0961
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": 0.0325
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.0218
+    }
+  ],
+  "163": [
+    {
+      "feature": "category_entropy",
+      "delta_z": -0.7259
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.5536
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.4965
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.4965
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.2457
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.2356
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.2352
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.209
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0617
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.0602
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0396
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.0245
+    }
+  ],
+  "164": [
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.5947
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": -0.5067
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.4639
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.4615
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.4341
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.412
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.3835
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.3835
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.077
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0456
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0239
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.0189
+    }
+  ],
+  "165": [
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.7262
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 0.2398
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.055
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0517
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -0.0269
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -0.0269
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.0245
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.0242
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.0186
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 0.0108
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.0065
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.0005
+    }
+  ],
+  "166": [
+    {
+      "feature": "category_entropy",
+      "delta_z": -0.8158
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.7027
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.6193
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.6158
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.579
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.5045
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.5045
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.4678
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.1666
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.0873
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.047
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0194
+    }
+  ],
+  "167": [
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 1.0079
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.9404
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 0.684
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 0.6788
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 0.6491
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 0.5287
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.2859
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -0.2212
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -0.2212
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0598
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0573
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.0252
+    }
+  ],
+  "168": [
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.4229
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 0.3599
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.16
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 0.1234
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 0.1211
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 0.1078
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.0973
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.0973
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.0736
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 0.0613
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0383
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0289
+    }
+  ],
+  "169": [
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.5082
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.3624
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.3624
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 0.2739
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.1182
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 0.0755
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 0.072
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0583
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 0.0577
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0461
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.0428
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 0.0298
+    }
+  ],
+  "170": [
+    {
+      "feature": "category_entropy",
+      "delta_z": -0.6717
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.5381
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.5381
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.5185
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.2601
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.2535
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.2528
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.2272
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.0611
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0568
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0372
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.0361
+    }
+  ],
+  "171": [
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.516
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.32
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.32
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 0.1453
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.1011
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.0801
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0395
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0365
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.0194
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.0091
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.0069
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.001
+    }
+  ],
+  "172": [
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.5226
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.5226
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.4854
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.4853
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.4844
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.3872
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.2997
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.1301
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": -0.1277
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0457
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0289
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.0225
+    }
+  ],
+  "173": [
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 1.3456
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 1.2448
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 1.2342
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 1.1953
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 0.9436
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.8868
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.3163
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -0.2792
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -0.2792
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0471
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.0306
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0273
+    }
+  ],
+  "174": [
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -1.9221
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -1.9221
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 1.5471
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 1.5351
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 1.5281
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 1.4522
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 1.2335
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 1.0786
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.3184
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0652
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0611
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.0003
+    }
+  ],
+  "175": [
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.4193
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 0.2796
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.1542
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 0.1207
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 0.1206
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 0.1185
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 0.0317
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0206
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.0145
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.0145
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": 0.008
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.0013
+    }
+  ],
+  "176": [
+    {
+      "feature": "std_amount",
+      "delta_z": 1.1063
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": -0.8788
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.736
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": 0.6395
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.3372
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.2274
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.2148
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.2139
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.1701
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.0763
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.0763
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.0609
+    }
+  ],
+  "177": [
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.4877
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": -0.4632
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.4052
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.4052
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.3296
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.3165
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.3026
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.2826
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.0539
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.0505
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0369
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0244
+    }
+  ],
+  "178": [
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.2942
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.2874
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.2874
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.1576
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.1534
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.1503
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.1497
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.1137
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.0707
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 0.0552
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0447
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0381
+    }
+  ],
+  "179": [
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -1.2778
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -1.2778
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.8434
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 0.5298
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 0.3079
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 0.3001
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 0.2858
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 0.2675
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.1542
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0332
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.0107
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0089
+    }
+  ],
+  "180": [
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -2.3881
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -2.3881
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.7379
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 0.5959
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 0.378
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 0.3699
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 0.353
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 0.3047
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.2361
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0618
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0534
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.0472
+    }
+  ],
+  "181": [
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 0.808
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.7742
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 0.636
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 0.6331
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 0.5911
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 0.5235
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.3827
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.3827
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.1788
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.0679
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0457
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0324
+    }
+  ],
+  "182": [
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -2.0966
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -2.0966
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.767
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.7568
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.7545
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.7097
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.5353
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.3866
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.1959
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0692
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": -0.051
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0391
+    }
+  ],
+  "183": [
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 0.8036
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 0.6747
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 0.6703
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 0.6486
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.5913
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 0.5116
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.302
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.302
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.1185
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.0478
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0322
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0202
+    }
+  ],
+  "184": [
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.368
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.3095
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.3095
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": -0.298
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.2948
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.2915
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.2724
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.2562
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.0967
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0234
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0213
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.0046
+    }
+  ],
+  "185": [
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 1.5605
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 1.4377
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 1.4326
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 1.3745
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 1.1407
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 1.0246
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.301
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -0.063
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -0.063
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0585
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0426
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.0202
+    }
+  ],
+  "186": [
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 2.129
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 1.8362
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 1.7755
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 1.4456
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": -1.0162
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.3698
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.3661
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": 0.3517
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.2127
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": 0.1691
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.0594
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.0594
+    }
+  ],
+  "187": [
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.8355
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 0.5845
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 0.3097
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 0.3005
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 0.2833
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 0.2697
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.072
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.0685
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0595
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.0534
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.0433
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.0433
+    }
+  ],
+  "188": [
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.5377
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.5377
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": -0.2911
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": 0.1629
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.1057
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 0.0859
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.0798
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": 0.0792
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 0.0431
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 0.0398
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.0376
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 0.0367
+    }
+  ],
+  "189": [
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.9096
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 0.3154
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -0.1526
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -0.1526
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.1147
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 0.0894
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0634
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0582
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.0546
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 0.0477
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": 0.0311
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 0.0273
+    }
+  ],
+  "190": [
+    {
+      "feature": "category_entropy",
+      "delta_z": -0.9229
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.7214
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.5194
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.5194
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.5089
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.4924
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.4656
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.4267
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.1707
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": 0.0338
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": 0.021
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.0079
+    }
+  ],
+  "191": [
+    {
+      "feature": "txn_count",
+      "delta_z": -0.456
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.4549
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.4431
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.3473
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.279
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.1745
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.1745
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.1533
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.078
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.0615
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0066
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0015
+    }
+  ],
+  "192": [
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -0.9854
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -0.9854
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.8075
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.8042
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.778
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.7742
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": -0.6989
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.5716
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.2333
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.2302
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0441
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0041
+    }
+  ],
+  "193": [
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.4368
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.411
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.4097
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.388
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.3269
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": -0.2889
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.2611
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.2611
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.0933
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0115
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.0049
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0026
+    }
+  ],
+  "194": [
+    {
+      "feature": "category_entropy",
+      "delta_z": -0.8005
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.6771
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.5343
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.524
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.5209
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.4724
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.4724
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.4023
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.1257
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0433
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0262
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.0124
+    }
+  ],
+  "195": [
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.4427
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.4418
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.4417
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.342
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.2637
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.2605
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -0.1277
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -0.1277
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.1228
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.0867
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0498
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0338
+    }
+  ],
+  "196": [
+    {
+      "feature": "txn_count",
+      "delta_z": -0.3548
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.3485
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.3474
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.3153
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.2341
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -0.1701
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -0.1701
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.1396
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.1014
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0459
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.0422
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.029
+    }
+  ],
+  "197": [
+    {
+      "feature": "txn_count",
+      "delta_z": 1.5379
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": 1.5258
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": 1.4929
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": 1.3815
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": 1.1557
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": 0.8235
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": -0.2699
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": -0.0511
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -0.0326
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -0.0326
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0257
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": 0.0238
+    }
+  ],
+  "198": [
+    {
+      "feature": "txn_count",
+      "delta_z": -0.586
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.5843
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.5675
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.5626
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": -0.4903
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": -0.4903
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.4606
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.2747
+    },
+    {
+      "feature": "category_entropy",
+      "delta_z": -0.1028
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.0569
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": -0.0334
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": -0.0169
+    }
+  ],
+  "199": [
+    {
+      "feature": "category_entropy",
+      "delta_z": -1.1716
+    },
+    {
+      "feature": "mean_geo_velocity_kmph",
+      "delta_z": -0.8745
+    },
+    {
+      "feature": "mean_amount_behavior_z",
+      "delta_z": 0.5375
+    },
+    {
+      "feature": "mean_velocity_7d",
+      "delta_z": -0.4921
+    },
+    {
+      "feature": "txn_count",
+      "delta_z": -0.4859
+    },
+    {
+      "feature": "mean_velocity_24h",
+      "delta_z": -0.4328
+    },
+    {
+      "feature": "std_amount",
+      "delta_z": 0.3896
+    },
+    {
+      "feature": "customer_ae_risk_norm",
+      "delta_z": 0.3796
+    },
+    {
+      "feature": "dgi_anomaly_score",
+      "delta_z": 0.3796
+    },
+    {
+      "feature": "mean_velocity_1h",
+      "delta_z": -0.3538
+    },
+    {
+      "feature": "mean_category_amount_z",
+      "delta_z": 0.3225
+    },
+    {
+      "feature": "mean_amount",
+      "delta_z": 0.2536
+    }
+  ]
+}
