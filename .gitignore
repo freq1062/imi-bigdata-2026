@@ -7,7 +7,7 @@ data/
 
 # Model files
 *.pth
-rf_model_sage/
+/rf_model_sage/
 
 # Python cache
 __pycache__/
@@ -42,7 +42,11 @@ Thumbs.db
 
 # GitHub prompts
 .github/prompts/
-sage_artifacts.pkl
+/sage_artifacts.pkl
 
 # Secrets
+
+# webapp_resources is tracked via git lfs — override the above ignores
+!webapp_resources/
+!webapp_resources/**
 .env

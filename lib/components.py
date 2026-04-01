@@ -777,7 +777,7 @@ class CustomerInfoCard:
         html = GraphVisualizer.build_live_graph(
             customer_id, risk_score, transactions, height=height
         )
-        st_components.html(html, height=int(height.replace("px", "")), scrolling=False)
+        st_components.html(html, height=int(height.rstrip("px")), scrolling=False)
 
     def render_graph_drivers(
         self,
@@ -790,7 +790,7 @@ class CustomerInfoCard:
         html = GraphVisualizer.build_driver_graph(
             customer_id, risk_score, drivers, height=height
         )
-        st_components.html(html, height=int(height.replace("px", "")), scrolling=False)
+        st_components.html(html, height=int(height.rstrip("px")), scrolling=False)
 
     def render_kyc(self, kyc: dict):
         """KYC summary table.
