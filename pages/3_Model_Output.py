@@ -394,6 +394,12 @@ merged["risk_tier"] = merged["risk_score"].apply(
 if "mo_reviews" not in st.session_state:
     st.session_state["mo_reviews"] = {}  # customer_id → "fraud" | "clear" | None
 
+if "mo_page" not in st.session_state:
+    st.session_state["mo_page"] = 0
+
+if "mo_scroll" not in st.session_state:
+    st.session_state["mo_scroll"] = False
+
 # ─────────────────────────────────────────────────────────────────────────────
 # Helper: build drivers list from explanation row
 # ─────────────────────────────────────────────────────────────────────────────
@@ -816,9 +822,8 @@ tab_topk, tab_search = st.tabs(["Top Suspicious Customers", "Search"])
 
 # ── Tab 1: Top K suspicious ───────────────────────────────────────────────────
 with tab_topk:
-    col_k, col_tier, col_exclude = st.columns([1, 1, 2])
-    with col_k:
-        top_k = st.slider("Show Top K customers", min_value=1, max_value=50, value=5)
+    top_k = 5
+    col_tier, col_exclude = st.columns([1, 2])
     with col_tier:
         tier_filter = st.multiselect(
             "Risk Tier Filter",
@@ -838,22 +843,108 @@ with tab_topk:
         }
         filtered = filtered[~filtered["customer_id"].astype(str).isin(cleared_ids)]
 
-    top_df = filtered.sort_values("risk_score", ascending=False).head(top_k)
+    sorted_all = filtered.sort_values("risk_score", ascending=False).reset_index(drop=True)
+    total_pages = max(1, (len(sorted_all) + top_k - 1) // top_k)
+    # Clamp page if filters reduced results
+    page = min(st.session_state["mo_page"], total_pages - 1)
+    st.session_state["mo_page"] = page
+    start = page * top_k
+    top_df = sorted_all.iloc[start : start + top_k]
 
     if top_df.empty:
         st.info("No customers match the current filters.")
     else:
+        # Anchor used by JS scroll-to-top on pagination
+        st.markdown('<div id="cust-top"></div>', unsafe_allow_html=True)
+
+        # Scroll to anchor if a pagination button was just pressed
+        if st.session_state.get("mo_scroll"):
+            st.session_state["mo_scroll"] = False
+            st_components.html(
+                """<script>
+(function(){
+  var el = window.parent.document.getElementById('cust-top');
+  if (el) el.scrollIntoView({behavior:'smooth', block:'start'});
+})();
+</script>""",
+                height=0,
+            )
+
         # Summary leaderboard table
-        st.markdown(f"**{len(top_df)} most suspicious customers** (sorted by risk score)")
-        leaderboard_cols = ["customer_id", "risk_score", "risk_tier",
-                            "driver_1", "driver_2", "narrative"]
-        available = [c for c in leaderboard_cols if c in top_df.columns]
-        lb = top_df[available].copy()
-        if "risk_score" in lb.columns:
-            lb["risk_score"] = lb["risk_score"].map("{:.2%}".format)
-        if "narrative" in lb.columns:
-            lb["narrative"] = lb["narrative"].str[:80] + "…"
-        st.dataframe(lb, width="content", hide_index=True)
+        st.markdown(
+            f"<p style='margin:0 0 10px 0;font-size:1.05rem;color:#ccc;'>"
+            f"Showing <b style='color:#fff'>{start + 1}–{start + len(top_df)}</b> of "
+            f"<b style='color:#fff'>{len(sorted_all):,}</b> customers · sorted by risk score</p>",
+            unsafe_allow_html=True,
+        )
+
+        tier_colors = {"HIGH": "#e05c5c", "MEDIUM": "#e0a84b", "LOW": "#4bcf8a"}
+
+        rows_html = ""
+        for _, row in top_df.iterrows():
+            cid   = str(row.get("customer_id", "—"))
+            score = float(row["risk_score"]) if "risk_score" in row else 0.0
+            tier  = str(row.get("risk_tier", "LOW")).upper()
+            tc    = tier_colors.get(tier, "#888")
+            pct   = score * 100
+            bar_bg = "#2a2a3a"
+            rows_html += f"""
+            <tr style="border-bottom:1px solid #2e2e45;">
+              <td style="padding:14px 10px;font-weight:600;font-size:1rem;color:#e0e0f0;">{cid}</td>
+              <td style="padding:14px 16px;">
+                <div style="display:flex;align-items:center;gap:10px;">
+                  <div style="flex:1;background:{bar_bg};border-radius:6px;height:10px;min-width:90px;">
+                    <div style="width:{pct:.1f}%;background:{tc};height:10px;border-radius:6px;"></div>
+                  </div>
+                  <span style="font-size:1rem;font-weight:700;color:{tc};min-width:48px;">{pct:.1f}%</span>
+                </div>
+              </td>
+              <td style="padding:14px 10px;">
+                <span style="background:{tc}22;color:{tc};border:1px solid {tc};
+                             border-radius:20px;padding:3px 14px;font-size:0.85rem;font-weight:700;
+                             letter-spacing:0.04em;">{tier}</span>
+              </td>
+            </tr>"""
+
+        table_html = f"""
+        <div style="border-radius:14px;overflow:hidden;border:1px solid #2e2e45;
+                    background:#141424;box-shadow:0 4px 24px rgba(0,0,0,0.4);">
+          <table style="width:100%;border-collapse:collapse;">
+            <thead>
+              <tr style="background:#1e1e30;border-bottom:2px solid #3a3a58;">
+                <th style="padding:12px 10px;text-align:left;font-size:0.8rem;
+                            color:#7b68ee;letter-spacing:0.08em;text-transform:uppercase;">Customer ID</th>
+                <th style="padding:12px 16px;text-align:left;font-size:0.8rem;
+                            color:#7b68ee;letter-spacing:0.08em;text-transform:uppercase;">Risk Score</th>
+                <th style="padding:12px 10px;text-align:left;font-size:0.8rem;
+                            color:#7b68ee;letter-spacing:0.08em;text-transform:uppercase;">Tier</th>
+              </tr>
+            </thead>
+            <tbody>{rows_html}</tbody>
+          </table>
+        </div>"""
+        st.markdown(table_html, unsafe_allow_html=True)
+        st.markdown("<div style='height:8px'></div>", unsafe_allow_html=True)
+
+        # Pagination controls (below the leaderboard table)
+        pc1, pc2, pc3 = st.columns([1, 2, 1])
+        with pc1:
+            if st.button("← Previous", disabled=(page == 0), key="mo_prev"):
+                st.session_state["mo_page"] -= 1
+                st.session_state["mo_scroll"] = True
+                st.rerun()
+        with pc2:
+            st.markdown(
+                f"<p style='text-align:center;margin-top:6px;'>"
+                f"Page <b>{page + 1}</b> of <b>{total_pages}</b>"
+                f"&nbsp;·&nbsp;{len(sorted_all):,} customers total</p>",
+                unsafe_allow_html=True,
+            )
+        with pc3:
+            if st.button("Next →", disabled=(page >= total_pages - 1), key="mo_next"):
+                st.session_state["mo_page"] += 1
+                st.session_state["mo_scroll"] = True
+                st.rerun()
         st.divider()
 
         # Expandable cards
@@ -869,6 +960,26 @@ with tab_topk:
                 expanded=(tier == "HIGH" and not review),
             ):
                 _render_customer_card(row, key_prefix="topk")
+
+        # Bottom pagination controls
+        bc1, bc2, bc3 = st.columns([1, 2, 1])
+        with bc1:
+            if st.button("← Previous", disabled=(page == 0), key="mo_prev_bot"):
+                st.session_state["mo_page"] -= 1
+                st.session_state["mo_scroll"] = True
+                st.rerun()
+        with bc2:
+            st.markdown(
+                f"<p style='text-align:center;margin-top:6px;'>"
+                f"Page <b>{page + 1}</b> of <b>{total_pages}</b>"
+                f"&nbsp;·&nbsp;{len(sorted_all):,} customers total</p>",
+                unsafe_allow_html=True,
+            )
+        with bc3:
+            if st.button("Next →", disabled=(page >= total_pages - 1), key="mo_next_bot"):
+                st.session_state["mo_page"] += 1
+                st.session_state["mo_scroll"] = True
+                st.rerun()
 
 # ── Tab 2: Search ─────────────────────────────────────────────────────────────
 with tab_search:
