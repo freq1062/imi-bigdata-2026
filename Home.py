@@ -1,85 +1,44 @@
 import streamlit as st
 import os
-import zipfile
-import shutil
-import gdown
-import gzip
+from pathlib import Path
 
-# --- Configuration & Resource Setup ---
-MODEL_FILE_ID = '1geTbVi3oyaGYAcZjuq_LV4uI8iQnZe82'
-DATA_FILE_ID = '1A7w3GqZTCVsv-A8gXj5NKV2FNc0zoduG'
+from lib.resource_paths import WEBAPP_DATA_DIR, WEBAPP_OUTPUTS_DIR
 
-ZIP_MODEL = 'model_resources.zip'
-ZIP_DATA = 'data.zip'
-DATA_DIR = 'data'
+# Files required for ANY page to function (inference + review)
+def _hard_required() -> list[Path]:
+    return [
+        WEBAPP_OUTPUTS_DIR / "sage_artifacts.pkl",
+        WEBAPP_OUTPUTS_DIR / "fraud_sage_model.pth",
+        WEBAPP_OUTPUTS_DIR / "model_output.csv",
+        WEBAPP_OUTPUTS_DIR / "meta_cluster_assignments.csv.gz",
+        WEBAPP_OUTPUTS_DIR / "rf_model_sage" / "rf_proxy.joblib",
+        WEBAPP_OUTPUTS_DIR / "rf_model_sage" / "meta.json",
+        WEBAPP_DATA_DIR / "kyc_industry_codes.csv.gz",
+        WEBAPP_DATA_DIR / "card.csv.gz",
+        WEBAPP_DATA_DIR / "abm.csv.gz",
+        WEBAPP_DATA_DIR / "eft.csv.gz",
+        WEBAPP_DATA_DIR / "emt.csv.gz",
+        WEBAPP_DATA_DIR / "wire.csv.gz",
+        WEBAPP_DATA_DIR / "cheque.csv.gz",
+    ]
 
-def csv_to_gzip(file_path):
-    """Compresses a CSV file to .csv.gz and removes the original."""
-    with open(file_path, 'rb') as f_in:
-        with gzip.open(file_path + '.gz', 'wb') as f_out:
-            shutil.copyfileobj(f_in, f_out)
-    os.remove(file_path)
+# Files that enhance explanations but are not needed to load the app
+def _soft_required() -> list[Path]:
+    return [
+        WEBAPP_OUTPUTS_DIR / "transaction_autoencoder.pt",
+        WEBAPP_OUTPUTS_DIR / "model_output_explanations.csv.gz",
+        WEBAPP_OUTPUTS_DIR / "meta_cluster_semantic_labels.json",
+        WEBAPP_OUTPUTS_DIR / "meta_cluster_significant_deltas.json",
+        WEBAPP_OUTPUTS_DIR / "meta_cluster_top3_categories.json",
+        WEBAPP_OUTPUTS_DIR / "rf_model_sage" / "shap_explainer.joblib",
+    ]
 
-def extract_and_cleanup(zip_path, target_dir='.'):
-    """
-    Unpacks and intelligently flattens single-folder wrappers while 
-    preserving critical subdirectories like rf_model_sage/.
-    """
-    if not os.path.exists(zip_path):
-        return
-        
-    temp_dir = f'temp_{os.path.basename(zip_path)}'
-    with zipfile.ZipFile(zip_path, 'r') as zip_ref:
-        zip_ref.extractall(temp_dir)
 
-    # 1. Check if the zip has a single 'wrapper' folder
-    items = os.listdir(temp_dir)
-    if len(items) == 1 and os.path.isdir(os.path.join(temp_dir, items[0])):
-        effective_root = os.path.join(temp_dir, items[0])
-    else:
-        effective_root = temp_dir
+def _missing_hard() -> list[str]:
+    return [str(p) for p in _hard_required() if not p.exists()]
 
-    # 2. Move everything from effective_root to target_dir
-    for item in os.listdir(effective_root):
-        source = os.path.join(effective_root, item)
-        dest = os.path.join(target_dir, item)
-        
-        # Move file or entire directory (like rf_model_sage)
-        if os.path.exists(dest):
-            if os.path.isdir(dest):
-                shutil.rmtree(dest)
-            else:
-                os.remove(dest)
-        shutil.move(source, dest)
-        print(f"Moved to root: {item}")
-
-    # 3. Final cleanup
-    shutil.rmtree(temp_dir)
-    os.remove(zip_path)
-    st.success("✅ Resources successfully moved to parent directory!")
-
-def setup_all_resources():
-    """Downloads and prepares both models and data."""
-    # 1. Handle Model Resources
-    if not os.path.exists("setup_complete.txt"):
-        st.write("Fetching Model Weights...")
-        gdown.download(id=MODEL_FILE_ID, output=ZIP_MODEL, quiet=False)
-        extract_and_cleanup(ZIP_MODEL)
-        with open("setup_complete.txt", "w") as f: f.write("Models ready.")
-
-    # 2. Handle Data Resources
-    files_to_check = [f"{DATA_DIR}/labels.csv.gz", f"{DATA_DIR}/card.csv.gz"]
-    if not all(os.path.exists(f) for f in files_to_check):
-        st.write("Fetching Scotiabank/BankSim Dataset...")
-        gdown.download(id=DATA_FILE_ID, output=ZIP_DATA, quiet=False)
-        with zipfile.ZipFile(ZIP_DATA, 'r') as zip_ref:
-            zip_ref.extractall(DATA_DIR)
-        
-        st.write("Compressing data for optimal AML library usage...")
-        for filename in os.listdir(DATA_DIR):
-            if filename.endswith('.csv'):
-                csv_to_gzip(os.path.join(DATA_DIR, filename))
-        os.remove(ZIP_DATA)
+def _missing_soft() -> list[str]:
+    return [str(p) for p in _soft_required() if not p.exists()]
 
 # --- Streamlit UI ---
 from lib.components import header_with_logo
@@ -89,11 +48,25 @@ st.set_page_config(layout="wide", page_title="Team 76 AML Detection")
 # Render header with logo to the right
 header_with_logo("AI-Driven AML / ML-TF Detection", img_width=260)
 
-# Trigger Initialization
-if not os.path.exists("setup_complete.txt") or not os.path.isdir(DATA_DIR):
-    with st.status("Initializing System Resources...", expanded=True) as status:
-        setup_all_resources()
-        status.update(label="✅ All Resources Ready!", state="complete")
+# Resource check — hard missing blocks the app, soft missing shows a warning
+missing_hard = _missing_hard()
+missing_soft = _missing_soft()
+
+if missing_hard:
+    st.error("Required web app resources are missing.")
+    st.markdown(
+        "Run the **training notebook** (`training.ipynb`) through to the final "
+        "**Package Artifacts for Web App** cell, then refresh this page."
+    )
+    with st.expander("Missing files", expanded=True):
+        for item in missing_hard:
+            st.write(f"- `{item}`")
+    st.stop()
+else:
+    if missing_soft:
+        with st.expander("⚠️ Optional explainability resources missing (run explainability notebook to add them)", expanded=False):
+            for item in missing_soft:
+                st.write(f"- `{item}`")
 
 st.markdown("""
 ## Real-Time Financial Crime Risk Detection
@@ -119,4 +92,4 @@ st.write("""
 4. **Explainable Output**: Human-readable narratives for regulatory reporting.
 """)
 
-st.info("System initialized and model resources loaded from secure storage.")
+st.info("System initialized from local webapp_resources (no network download).")
