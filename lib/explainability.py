@@ -17,6 +17,7 @@ from lib.resource_paths import resolve_output_path
 
 
 FEATURE_LABELS = {
+    # Transaction behavioural features
     "amount_behavior_z": "Amount vs baseline",
     "amount_30d_ratio": "Amount / 30d ratio",
     "category_amount_z": "Amount vs category",
@@ -42,6 +43,41 @@ FEATURE_LABELS = {
     "category_entropy": "Category entropy",
     "mean_amount_behavior_z": "Amount behavior z",
     "mean_category_amount_z": "Category amount z",
+    # Graph-embedding PCA components (GNN latent axes)
+    "emb_pca_1": "Network behaviour axis (strongest)",
+    "emb_pca_2": "Merchant diversity axis",
+    "emb_pca_3": "Geographic spread axis",
+    "emb_pca_4": "Transaction velocity axis",
+    "emb_pca_5": "Cash/e-commerce mix axis",
+    "emb_pca_6": "Temporal pattern axis",
+    "emb_pca_7": "Peer-group similarity axis",
+    "emb_pca_8": "Residual anomaly axis",
+    # LGB/ensemble model-wide features
+    "dgi_anomaly_score": "Graph anomaly score",
+    "customer_ae_risk": "Transaction reconstruction risk",
+    "customer_ae_risk_norm": "Transaction reconstruction risk",
+    "gmm_max_prob": "Cluster membership confidence",
+    "component_confidence": "Cluster confidence",
+    "component_train_fraud_rate": "Cluster fraud rate",
+    "cluster_consensus_score": "Multi-cluster consensus",
+    "mlp_fraud_prob": "Neural network fraud score",
+    "km_component_size": "Cluster size",
+    "km_component_train_fraud_rate": "Cluster fraud rate",
+    "km_component_mean_dgi": "Cluster avg graph anomaly",
+    "hdb_component_size": "Density cluster size",
+    "hdb_component_fraud_rate_labeled": "Density cluster fraud rate",
+    "hdb_component_fraud_lift_labeled": "Density cluster fraud lift",
+    "hdb_outlier_score": "Outlier score",
+    "knn_mean_distance": "Avg distance to neighbours",
+    "knn_suspicious_share": "Suspicious-neighbour share",
+    "knn_gold_fraud_count": "Known-fraud neighbours",
+    "dist_to_fraud_centroid": "Distance to fraud centroid",
+    "dist_to_legit_centroid": "Distance to legit centroid",
+    "centroid_margin": "Fraud vs legit margin",
+    "min_dist_to_fraud_anchor": "Proximity to fraud anchor",
+    "mean_dist_to_fraud_anchor": "Avg proximity to fraud anchors",
+    "min_dist_to_legit_anchor": "Proximity to legit anchor",
+    "anchor_proximity_score": "Anchor proximity score",
 }
 
 
@@ -454,6 +490,9 @@ def global_verdict_explainer(
     for d in push:
         d["share_pct"] = 100.0 * d["abs_value"] / total_push
     pull_sorted = sorted(pull, key=lambda x: x["abs_value"], reverse=True)
+    total_pull = sum(d["abs_value"] for d in pull) or 1e-8
+    for d in pull:
+        d["share_pct"] = 100.0 * d["abs_value"] / total_pull
     push_sorted = sorted(push, key=lambda x: x["abs_value"], reverse=True)
 
     clauses = [f"Final Risk {risk_score:.0%}."]

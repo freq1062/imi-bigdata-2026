@@ -23,8 +23,9 @@ import networkx as nx
 import numpy as np
 import pandas as pd
 import streamlit as st
-import streamlit.components.v1 as st_components
+
 from pyvis.network import Network
+import streamlit.components.v1 as _stcomp
 
 
 def show_nav_logo(filename: str = "project_aegis.png", width: int = 40) -> bool:
@@ -496,15 +497,46 @@ class GraphVisualizer:
     # ── Driver graph (Model Output page) ─────────────────────────────────────
 
     @staticmethod
+    def _shap_to_color(shap_val: float, max_abs: float) -> str:
+        """
+        Return a hex colour for a SHAP driver node/edge.
+
+        Risk-raising  (shap_val > 0): interpolates white→deep-red by magnitude.
+        Risk-reducing (shap_val < 0): interpolates white→deep-blue by magnitude.
+        Neutral                      : mid-grey.
+        """
+        if max_abs < 1e-9:
+            return "#94a3b8"
+        t = min(1.0, abs(shap_val) / max_abs)
+        if shap_val > 0:
+            # white → #ef4444 (red)
+            r = int(255)
+            g = int(255 * (1 - t) + 68 * t)
+            b = int(255 * (1 - t) + 68 * t)
+        elif shap_val < 0:
+            # white → #3b82f6 (blue)
+            r = int(255 * (1 - t) + 59 * t)
+            g = int(255 * (1 - t) + 130 * t)
+            b = int(255)
+        else:
+            return "#94a3b8"
+        return f"#{r:02x}{g:02x}{b:02x}"
+
+    @staticmethod
     def build_driver_graph(
         customer_id: str,
         risk_score: float,
         drivers: list[dict],
-        height: str = "340px",
+        height: str = "380px",
     ) -> str:
         """
         Build HTML for customer + SHAP driver feature nodes.
-        Node size = |SHAP value|; color = red (risk-raising) / blue (risk-reducing).
+
+        Colour scale (both nodes AND edges):
+          - Risk-raising drivers (SHAP > 0): white → deep red  (more important = darker red)
+          - Risk-reducing drivers (SHAP < 0): white → deep blue
+        Node size also scales with |SHAP value|.
+        A colour-legend strip is injected below the canvas.
         """
         G = nx.Graph()
         c_color = risk_color(risk_score)
@@ -517,9 +549,11 @@ class GraphVisualizer:
             customer_id,
             label=f"Customer\n{short_id}",
             color=c_color,
-            size=30,
+            size=32,
             title=cust_tip,
         )
+
+        max_abs = max((abs(float(d.get("shap_value", 0.0))) for d in drivers), default=1e-9)
 
         for d in drivers:
             shap_val = float(d.get("shap_value", 0.0))
@@ -527,14 +561,17 @@ class GraphVisualizer:
             feat = d.get("feature", desc)
             raw = d.get("raw_value", None)
 
-            node_color = "#ef4444" if shap_val > 0 else "#3b82f6"
-            node_size = max(10, min(28, abs(shap_val) * 600))
+            node_color = GraphVisualizer._shap_to_color(shap_val, max_abs)
+            edge_color = node_color
+            node_size = max(12, min(30, 12 + abs(shap_val) / max_abs * 18))
+            edge_width = max(1.0, min(6.0, 1.0 + abs(shap_val) / max_abs * 5))
+            direction = "▲ raises risk" if shap_val > 0 else "▼ reduces risk"
             tip = (
                 f"{desc}\n"
-                f"SHAP: {shap_val:+.4f}\n"
-                + (f"Value: {raw:.2f}" if raw is not None else "")
+                f"SHAP: {shap_val:+.4f}  ({direction})\n"
+                + (f"Value: {raw:.4f}" if raw is not None else "")
             )
-            short_feat = desc[:20] + chr(8230) if len(desc) > 20 else desc
+            short_feat = desc[:22] + chr(8230) if len(desc) > 22 else desc
             G.add_node(
                 feat,
                 label=short_feat,
@@ -542,9 +579,23 @@ class GraphVisualizer:
                 size=node_size,
                 title=tip,
             )
-            G.add_edge(customer_id, feat, color="#475569", width=1)
+            G.add_edge(customer_id, feat, color=edge_color, width=edge_width, title=tip)
 
-        return GraphVisualizer._render_pyvis(G, height=height)
+        graph_html = GraphVisualizer._render_pyvis(G, height=height)
+
+        # Inject a compact legend below the canvas
+        legend_html = (
+            "<div style='display:flex;gap:18px;align-items:center;padding:4px 12px;"
+            "font-size:0.75rem;color:#94a3b8;flex-wrap:wrap;margin-top:2px;'>"
+            "<span><span style='display:inline-block;width:12px;height:12px;"
+            "border-radius:50%;background:#ef4444;margin-right:4px;vertical-align:middle;'></span>"
+            "Raises risk (darker = stronger)</span>"
+            "<span><span style='display:inline-block;width:12px;height:12px;"
+            "border-radius:50%;background:#3b82f6;margin-right:4px;vertical-align:middle;'></span>"
+            "Reduces risk (darker = stronger)</span>"
+            "</div>"
+        )
+        return graph_html.replace("</body>", legend_html + "</body>")
 
     # ── Internal renderer ─────────────────────────────────────────────────────
 
@@ -758,20 +809,25 @@ class CustomerInfoCard:
         html = GraphVisualizer.build_live_graph(
             customer_id, risk_score, transactions, height=height
         )
-        st_components.html(html, height=int(height.rstrip("px")), scrolling=False)
+        _stcomp.html(html, height=int(height.rstrip('px')), scrolling=False)
 
     def render_graph_drivers(
         self,
         customer_id: str,
         risk_score: float,
         drivers: list[dict],
-        height: str = "340px",
+        height: str = "380px",
     ):
-        """Interactive graph for the Model Output page (SHAP driver nodes)."""
+        """Interactive graph for the Model Output page (SHAP driver nodes).
+
+        Nodes and edges are colour-coded by SHAP importance:
+        deep red = strongly raises risk, deep blue = strongly reduces risk.
+        A legend is rendered below the canvas.
+        """
         html = GraphVisualizer.build_driver_graph(
             customer_id, risk_score, drivers, height=height
         )
-        st_components.html(html, height=int(height.rstrip("px")), scrolling=False)
+        _stcomp.html(html, height=int(height.rstrip('px')), scrolling=False)
 
     def render_kyc(self, kyc: dict):
         """KYC summary table.

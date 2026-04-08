@@ -32,7 +32,9 @@
     "min_dist_to_legit_anchor",
     "anchor_proximity_score",
     "eft_amount_match_count",
-    "abm_dc_colocated"
+    "abm_dc_colocated",
+    "lgb_fraud_prob",
+    "scarcity_ensemble_prob"
   ],
   "model_type": "RandomForestClassifier",
   "n_features": 35

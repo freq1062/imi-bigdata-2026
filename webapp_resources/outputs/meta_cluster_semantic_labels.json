@@ -1,202 +1,1002 @@
 {
-  "0": "Low-Risk Segment",
-  "1": "Network & Transaction Anomaly",
-  "2": "Low-Risk Segment",
-  "3": "Low-Risk Segment",
-  "4": "Low-Risk Segment",
-  "5": "Network & Transaction Anomaly",
-  "6": "Network & Transaction Anomaly",
-  "7": "Network & Transaction Anomaly",
-  "8": "Low-Risk Segment",
-  "9": "Low-Risk Segment",
-  "10": "Low-Risk Segment",
-  "11": "Low-Risk Segment",
-  "12": "Low-Risk Segment",
-  "13": "Low-Risk Segment",
-  "14": "Low-Risk Segment",
-  "15": "Network & Transaction Anomaly",
-  "16": "Borderline Risk Segment",
-  "17": "Low-Risk Segment",
-  "18": "High-Risk Fraud Cluster",
-  "19": "Borderline Risk Segment",
-  "20": "Borderline Risk Segment",
-  "21": "Network & Transaction Anomaly",
-  "22": "Network & Transaction Anomaly",
-  "23": "Low-Risk Segment",
-  "24": "Network & Transaction Anomaly",
-  "25": "Low-Risk Segment",
-  "26": "Low-Risk Segment",
-  "27": "Low-Risk Segment",
-  "28": "Low-Risk Segment",
-  "29": "Borderline Risk Segment",
-  "30": "Network & Transaction Anomaly",
-  "31": "Low-Risk Segment",
-  "32": "Network & Transaction Anomaly",
-  "33": "Low-Risk Segment",
-  "34": "Low-Risk Segment",
-  "35": "Low-Risk Segment",
-  "36": "Low-Risk Segment",
-  "37": "Low-Risk Segment",
-  "38": "Network & Transaction Anomaly",
-  "39": "Low-Risk Segment",
-  "40": "Network & Transaction Anomaly",
-  "41": "Low-Risk Segment",
-  "42": "Low-Risk Segment",
-  "43": "Low-Risk Segment",
-  "44": "Low-Risk Segment",
-  "45": "Low-Risk Segment",
-  "46": "Borderline Risk Segment",
-  "47": "Low-Risk Segment",
-  "48": "Low-Risk Segment",
-  "49": "Low-Risk Segment",
-  "50": "Network & Transaction Anomaly",
-  "51": "Borderline Risk Segment",
-  "52": "Borderline Risk Segment",
-  "53": "Low-Risk Segment",
-  "54": "Low-Risk Segment",
-  "55": "Network & Transaction Anomaly",
-  "56": "Low-Risk Segment",
-  "57": "Low-Risk Segment",
-  "58": "Network & Transaction Anomaly",
-  "59": "Borderline Risk Segment",
-  "60": "Low-Risk Segment",
-  "61": "Network & Transaction Anomaly",
-  "62": "Low-Risk Segment",
-  "63": "Network & Transaction Anomaly",
-  "64": "Borderline Risk Segment",
-  "65": "Low-Risk Segment",
-  "66": "Low-Risk Segment",
-  "67": "Borderline Risk Segment",
-  "68": "Low-Risk Segment",
-  "69": "Network & Transaction Anomaly",
-  "70": "Low-Risk Segment",
-  "71": "Low-Risk Segment",
-  "72": "Low-Risk Segment",
-  "73": "Network & Transaction Anomaly",
-  "74": "Network & Transaction Anomaly",
-  "75": "Network & Transaction Anomaly",
-  "76": "Low-Risk Segment",
-  "77": "Low-Risk Segment",
-  "78": "Low-Risk Segment",
-  "79": "Low-Risk Segment",
-  "80": "Low-Risk Segment",
-  "81": "Low-Risk Segment",
-  "82": "Low-Risk Segment",
-  "83": "Borderline Risk Segment",
-  "84": "Low-Risk Segment",
-  "85": "Network & Transaction Anomaly",
-  "86": "Low-Risk Segment",
-  "87": "Network & Transaction Anomaly",
-  "88": "Low-Risk Segment",
-  "89": "Low-Risk Segment",
-  "90": "Low-Risk Segment",
-  "91": "Low-Risk Segment",
-  "92": "Network & Transaction Anomaly",
-  "93": "Low-Risk Segment",
-  "94": "Network & Transaction Anomaly",
-  "95": "Low-Risk Segment",
-  "96": "Low-Risk Segment",
-  "97": "Low-Risk Segment",
-  "98": "Network & Transaction Anomaly",
-  "99": "Network & Transaction Anomaly",
-  "100": "Low-Risk Segment",
-  "101": "Low-Risk Segment",
-  "102": "Low-Risk Segment",
-  "103": "Low-Risk Segment",
-  "104": "Low-Risk Segment",
-  "105": "Low-Risk Segment",
-  "106": "Low-Risk Segment",
-  "107": "Network & Transaction Anomaly",
-  "108": "Network & Transaction Anomaly",
-  "109": "Low-Risk Segment",
-  "110": "Low-Risk Segment",
-  "111": "Network & Transaction Anomaly",
-  "112": "Network & Transaction Anomaly",
-  "113": "Network & Transaction Anomaly",
-  "114": "Network & Transaction Anomaly",
-  "115": "Borderline Risk Segment",
-  "116": "Network & Transaction Anomaly",
-  "117": "Network & Transaction Anomaly",
-  "118": "Low-Risk Segment",
-  "119": "Low-Risk Segment",
-  "120": "Low-Risk Segment",
-  "121": "Low-Risk Segment",
-  "122": "Network & Transaction Anomaly",
-  "123": "Borderline Risk Segment",
-  "124": "Low-Risk Segment",
-  "125": "Low-Risk Segment",
-  "126": "Network & Transaction Anomaly",
-  "127": "Low-Risk Segment",
-  "128": "Low-Risk Segment",
-  "129": "Low-Risk Segment",
-  "130": "Borderline Risk Segment",
-  "131": "Low-Risk Segment",
-  "132": "Low-Risk Segment",
-  "133": "Low-Risk Segment",
-  "134": "Network & Transaction Anomaly",
-  "135": "Low-Risk Segment",
-  "136": "Low-Risk Segment",
-  "137": "Low-Risk Segment",
-  "138": "Low-Risk Segment",
-  "139": "Low-Risk Segment",
-  "140": "Low-Risk Segment",
-  "141": "Network & Transaction Anomaly",
-  "142": "Network & Transaction Anomaly",
-  "143": "Low-Risk Segment",
-  "144": "Low-Risk Segment",
-  "145": "Borderline Risk Segment",
-  "146": "Low-Risk Segment",
-  "147": "Network & Transaction Anomaly",
-  "148": "Low-Risk Segment",
-  "149": "Borderline Risk Segment",
-  "150": "Low-Risk Segment",
-  "151": "Low-Risk Segment",
-  "152": "Low-Risk Segment",
-  "153": "Network & Transaction Anomaly",
-  "154": "Low-Risk Segment",
-  "155": "Borderline Risk Segment",
-  "156": "Network & Transaction Anomaly",
-  "157": "Low-Risk Segment",
-  "158": "Low-Risk Segment",
-  "159": "Low-Risk Segment",
-  "160": "Low-Risk Segment",
-  "161": "Low-Risk Segment",
-  "162": "Borderline Risk Segment",
-  "163": "Network & Transaction Anomaly",
-  "164": "Low-Risk Segment",
-  "165": "Low-Risk Segment",
-  "166": "Network & Transaction Anomaly",
-  "167": "Low-Risk Segment",
-  "168": "Low-Risk Segment",
-  "169": "Low-Risk Segment",
-  "170": "Network & Transaction Anomaly",
-  "171": "Low-Risk Segment",
-  "172": "Network & Transaction Anomaly",
-  "173": "Borderline Risk Segment",
-  "174": "Borderline Risk Segment",
-  "175": "Low-Risk Segment",
-  "176": "Low-Risk Segment",
-  "177": "Low-Risk Segment",
-  "178": "Low-Risk Segment",
-  "179": "Low-Risk Segment",
-  "180": "Low-Risk Segment",
-  "181": "Borderline Risk Segment",
-  "182": "Low-Risk Segment",
-  "183": "Borderline Risk Segment",
-  "184": "Low-Risk Segment",
-  "185": "Borderline Risk Segment",
-  "186": "Borderline Risk Segment",
-  "187": "Low-Risk Segment",
-  "188": "Network & Transaction Anomaly",
-  "189": "Low-Risk Segment",
-  "190": "Network & Transaction Anomaly",
-  "191": "Low-Risk Segment",
-  "192": "Low-Risk Segment",
-  "193": "Low-Risk Segment",
-  "194": "Network & Transaction Anomaly",
-  "195": "Low-Risk Segment",
-  "196": "Low-Risk Segment",
-  "197": "Borderline Risk Segment",
-  "198": "Low-Risk Segment",
-  "199": "Low-Risk Segment"
+  "0": {
+    "name": "Low-Risk Cluster 0",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 409 customers; typical behaviour."
+  },
+  "1": {
+    "name": "Low-Risk Cluster 1",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 396 customers; typical behaviour."
+  },
+  "2": {
+    "name": "Low-Risk Cluster 2",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.08; 200 customers; typical behaviour."
+  },
+  "3": {
+    "name": "Low-Risk Cluster 3",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 136 customers; typical behaviour."
+  },
+  "4": {
+    "name": "Low-Risk Cluster 4",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 146 customers; typical behaviour."
+  },
+  "5": {
+    "name": "Low-Risk Cluster 5",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.09; 572 customers; typical behaviour."
+  },
+  "6": {
+    "name": "Low-Risk Cluster 6",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.08; 322 customers; typical behaviour."
+  },
+  "7": {
+    "name": "Low-Risk Cluster 7",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 423 customers; typical behaviour."
+  },
+  "8": {
+    "name": "Low-Risk Cluster 8",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.08; 201 customers; typical behaviour."
+  },
+  "9": {
+    "name": "Low-Risk Cluster 9",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.08; 415 customers; typical behaviour."
+  },
+  "10": {
+    "name": "Low-Risk Cluster 10",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 270 customers; typical behaviour."
+  },
+  "11": {
+    "name": "Low-Risk Cluster 11",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.08; 190 customers; typical behaviour."
+  },
+  "12": {
+    "name": "Low-Risk Cluster 12",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 106 customers; typical behaviour."
+  },
+  "13": {
+    "name": "Low-Risk Cluster 13",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 268 customers; typical behaviour."
+  },
+  "14": {
+    "name": "Low-Risk Cluster 14",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 2 customers; typical behaviour."
+  },
+  "15": {
+    "name": "Low-Risk Cluster 15",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 237 customers; typical behaviour."
+  },
+  "16": {
+    "name": "Low-Risk Cluster 16",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 1 customers; typical behaviour."
+  },
+  "17": {
+    "name": "Low-Risk Cluster 17",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 782 customers; typical behaviour."
+  },
+  "18": {
+    "name": "Low-Risk Cluster 18",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 51 customers; typical behaviour."
+  },
+  "19": {
+    "name": "Low-Risk Cluster 19",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.08; 165 customers; typical behaviour."
+  },
+  "20": {
+    "name": "Low-Risk Cluster 20",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 485 customers; typical behaviour."
+  },
+  "21": {
+    "name": "Low-Risk Cluster 21",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.08; 222 customers; typical behaviour."
+  },
+  "22": {
+    "name": "Low-Risk Cluster 22",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 505 customers; typical behaviour."
+  },
+  "23": {
+    "name": "Low-Risk Cluster 23",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.09; 241 customers; typical behaviour."
+  },
+  "24": {
+    "name": "Low-Risk Cluster 24",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 637 customers; typical behaviour."
+  },
+  "25": {
+    "name": "Low-Risk Cluster 25",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 451 customers; typical behaviour."
+  },
+  "26": {
+    "name": "Low-Risk Cluster 26",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.08; 548 customers; typical behaviour."
+  },
+  "27": {
+    "name": "Low-Risk Cluster 27",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 1 customers; typical behaviour."
+  },
+  "28": {
+    "name": "Low-Risk Cluster 28",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 540 customers; typical behaviour."
+  },
+  "29": {
+    "name": "Low-Risk Cluster 29",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 178 customers; typical behaviour."
+  },
+  "30": {
+    "name": "Low-Risk Cluster 30",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.08; 258 customers; typical behaviour."
+  },
+  "31": {
+    "name": "Low-Risk Cluster 31",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 247 customers; typical behaviour."
+  },
+  "32": {
+    "name": "Low-Risk Cluster 32",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 361 customers; typical behaviour."
+  },
+  "33": {
+    "name": "Low-Risk Cluster 33",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 1 customers; typical behaviour."
+  },
+  "34": {
+    "name": "Low-Risk Cluster 34",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.08; 774 customers; typical behaviour."
+  },
+  "35": {
+    "name": "Low-Risk Cluster 35",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 348 customers; typical behaviour."
+  },
+  "36": {
+    "name": "Low-Risk Cluster 36",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 3 customers; typical behaviour."
+  },
+  "37": {
+    "name": "Low-Risk Cluster 37",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 233 customers; typical behaviour."
+  },
+  "38": {
+    "name": "Low-Risk Cluster 38",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 59 customers; typical behaviour."
+  },
+  "39": {
+    "name": "Low-Risk Cluster 39",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.08; 335 customers; typical behaviour."
+  },
+  "40": {
+    "name": "Low-Risk Cluster 40",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 614 customers; typical behaviour."
+  },
+  "41": {
+    "name": "Low-Risk Cluster 41",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 326 customers; typical behaviour."
+  },
+  "42": {
+    "name": "Low-Risk Cluster 42",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 444 customers; typical behaviour."
+  },
+  "43": {
+    "name": "Low-Risk Cluster 43",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.08; 191 customers; typical behaviour."
+  },
+  "44": {
+    "name": "Low-Risk Cluster 44",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 291 customers; typical behaviour."
+  },
+  "45": {
+    "name": "Low-Risk Cluster 45",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 482 customers; typical behaviour."
+  },
+  "46": {
+    "name": "Low-Risk Cluster 46",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 57 customers; typical behaviour."
+  },
+  "47": {
+    "name": "Low-Risk Cluster 47",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.08; 338 customers; typical behaviour."
+  },
+  "48": {
+    "name": "Low-Risk Cluster 48",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 12 customers; typical behaviour."
+  },
+  "49": {
+    "name": "Low-Risk Cluster 49",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.08; 472 customers; typical behaviour."
+  },
+  "50": {
+    "name": "Low-Risk Cluster 50",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 408 customers; typical behaviour."
+  },
+  "51": {
+    "name": "Low-Risk Cluster 51",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 404 customers; typical behaviour."
+  },
+  "52": {
+    "name": "Low-Risk Cluster 52",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.08; 263 customers; typical behaviour."
+  },
+  "53": {
+    "name": "Low-Risk Cluster 53",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 289 customers; typical behaviour."
+  },
+  "54": {
+    "name": "Low-Risk Cluster 54",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 1 customers; typical behaviour."
+  },
+  "55": {
+    "name": "Low-Risk Cluster 55",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 307 customers; typical behaviour."
+  },
+  "56": {
+    "name": "Low-Risk Cluster 56",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 261 customers; typical behaviour."
+  },
+  "57": {
+    "name": "Low-Risk Cluster 57",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.08; 462 customers; typical behaviour."
+  },
+  "58": {
+    "name": "Low-Risk Cluster 58",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.08; 372 customers; typical behaviour."
+  },
+  "59": {
+    "name": "Low-Risk Cluster 59",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.09; 51 customers; typical behaviour."
+  },
+  "60": {
+    "name": "Low-Risk Cluster 60",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 195 customers; typical behaviour."
+  },
+  "61": {
+    "name": "Low-Risk Cluster 61",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 137 customers; typical behaviour."
+  },
+  "62": {
+    "name": "Low-Risk Cluster 62",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 231 customers; typical behaviour."
+  },
+  "63": {
+    "name": "Low-Risk Cluster 63",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 377 customers; typical behaviour."
+  },
+  "64": {
+    "name": "Low-Risk Cluster 64",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.08; 683 customers; typical behaviour."
+  },
+  "65": {
+    "name": "Low-Risk Cluster 65",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.08; 200 customers; typical behaviour."
+  },
+  "66": {
+    "name": "Low-Risk Cluster 66",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 198 customers; typical behaviour."
+  },
+  "67": {
+    "name": "Low-Risk Cluster 67",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 286 customers; typical behaviour."
+  },
+  "68": {
+    "name": "Low-Risk Cluster 68",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 1 customers; typical behaviour."
+  },
+  "69": {
+    "name": "Low-Risk Cluster 69",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.08; 445 customers; typical behaviour."
+  },
+  "70": {
+    "name": "Low-Risk Cluster 70",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 393 customers; typical behaviour."
+  },
+  "71": {
+    "name": "Low-Risk Cluster 71",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 241 customers; typical behaviour."
+  },
+  "72": {
+    "name": "Low-Risk Cluster 72",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 288 customers; typical behaviour."
+  },
+  "73": {
+    "name": "Low-Risk Cluster 73",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 394 customers; typical behaviour."
+  },
+  "74": {
+    "name": "Low-Risk Cluster 74",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.08; 434 customers; typical behaviour."
+  },
+  "75": {
+    "name": "Low-Risk Cluster 75",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 230 customers; typical behaviour."
+  },
+  "76": {
+    "name": "Low-Risk Cluster 76",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 375 customers; typical behaviour."
+  },
+  "77": {
+    "name": "Low-Risk Cluster 77",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 244 customers; typical behaviour."
+  },
+  "78": {
+    "name": "Low-Risk Cluster 78",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.08; 197 customers; typical behaviour."
+  },
+  "79": {
+    "name": "Low-Risk Cluster 79",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 524 customers; typical behaviour."
+  },
+  "80": {
+    "name": "Low-Risk Cluster 80",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 375 customers; typical behaviour."
+  },
+  "81": {
+    "name": "Low-Risk Cluster 81",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 342 customers; typical behaviour."
+  },
+  "82": {
+    "name": "Low-Risk Cluster 82",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.08; 601 customers; typical behaviour."
+  },
+  "83": {
+    "name": "Low-Risk Cluster 83",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 170 customers; typical behaviour."
+  },
+  "84": {
+    "name": "Low-Risk Cluster 84",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.08; 198 customers; typical behaviour."
+  },
+  "85": {
+    "name": "Low-Risk Cluster 85",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.08; 610 customers; typical behaviour."
+  },
+  "86": {
+    "name": "Low-Risk Cluster 86",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 304 customers; typical behaviour."
+  },
+  "87": {
+    "name": "Low-Risk Cluster 87",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.08; 473 customers; typical behaviour."
+  },
+  "88": {
+    "name": "Low-Risk Cluster 88",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.09; 436 customers; typical behaviour."
+  },
+  "89": {
+    "name": "Low-Risk Cluster 89",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 95 customers; typical behaviour."
+  },
+  "90": {
+    "name": "Low-Risk Cluster 90",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.09; 782 customers; typical behaviour."
+  },
+  "91": {
+    "name": "Low-Risk Cluster 91",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 1 customers; typical behaviour."
+  },
+  "92": {
+    "name": "Low-Risk Cluster 92",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.09; 284 customers; typical behaviour."
+  },
+  "93": {
+    "name": "Low-Risk Cluster 93",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 330 customers; typical behaviour."
+  },
+  "94": {
+    "name": "Low-Risk Cluster 94",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.08; 553 customers; typical behaviour."
+  },
+  "95": {
+    "name": "Low-Risk Cluster 95",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 349 customers; typical behaviour."
+  },
+  "96": {
+    "name": "Low-Risk Cluster 96",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 2 customers; typical behaviour."
+  },
+  "97": {
+    "name": "Low-Risk Cluster 97",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 530 customers; typical behaviour."
+  },
+  "98": {
+    "name": "Low-Risk Cluster 98",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.10; 590 customers; typical behaviour."
+  },
+  "99": {
+    "name": "Low-Risk Cluster 99",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.08; 183 customers; typical behaviour."
+  },
+  "100": {
+    "name": "Low-Risk Cluster 100",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 523 customers; typical behaviour."
+  },
+  "101": {
+    "name": "Low-Risk Cluster 101",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 276 customers; typical behaviour."
+  },
+  "102": {
+    "name": "Low-Risk Cluster 102",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 652 customers; typical behaviour."
+  },
+  "103": {
+    "name": "Low-Risk Cluster 103",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 258 customers; typical behaviour."
+  },
+  "104": {
+    "name": "Low-Risk Cluster 104",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 422 customers; typical behaviour."
+  },
+  "105": {
+    "name": "Low-Risk Cluster 105",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 357 customers; typical behaviour."
+  },
+  "106": {
+    "name": "Low-Risk Cluster 106",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 440 customers; typical behaviour."
+  },
+  "107": {
+    "name": "Low-Risk Cluster 107",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 519 customers; typical behaviour."
+  },
+  "108": {
+    "name": "Low-Risk Cluster 108",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 235 customers; typical behaviour."
+  },
+  "109": {
+    "name": "Low-Risk Cluster 109",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 40 customers; typical behaviour."
+  },
+  "110": {
+    "name": "Low-Risk Cluster 110",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.08; 393 customers; typical behaviour."
+  },
+  "111": {
+    "name": "Low-Risk Cluster 111",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 548 customers; typical behaviour."
+  },
+  "112": {
+    "name": "Low-Risk Cluster 112",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 7 customers; typical behaviour."
+  },
+  "113": {
+    "name": "Low-Risk Cluster 113",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 255 customers; typical behaviour."
+  },
+  "114": {
+    "name": "Low-Risk Cluster 114",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.08; 476 customers; typical behaviour."
+  },
+  "115": {
+    "name": "Low-Risk Cluster 115",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.08; 529 customers; typical behaviour."
+  },
+  "116": {
+    "name": "Low-Risk Cluster 116",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 107 customers; typical behaviour."
+  },
+  "117": {
+    "name": "Low-Risk Cluster 117",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 71 customers; typical behaviour."
+  },
+  "118": {
+    "name": "Low-Risk Cluster 118",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 178 customers; typical behaviour."
+  },
+  "119": {
+    "name": "Low-Risk Cluster 119",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 282 customers; typical behaviour."
+  },
+  "120": {
+    "name": "Low-Risk Cluster 120",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.08; 424 customers; typical behaviour."
+  },
+  "121": {
+    "name": "Low-Risk Cluster 121",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 42 customers; typical behaviour."
+  },
+  "122": {
+    "name": "Low-Risk Cluster 122",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.08; 89 customers; typical behaviour."
+  },
+  "123": {
+    "name": "Low-Risk Cluster 123",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 231 customers; typical behaviour."
+  },
+  "124": {
+    "name": "Low-Risk Cluster 124",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 441 customers; typical behaviour."
+  },
+  "125": {
+    "name": "Low-Risk Cluster 125",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 45 customers; typical behaviour."
+  },
+  "126": {
+    "name": "Low-Risk Cluster 126",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 400 customers; typical behaviour."
+  },
+  "127": {
+    "name": "Low-Risk Cluster 127",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 422 customers; typical behaviour."
+  },
+  "128": {
+    "name": "Low-Risk Cluster 128",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 154 customers; typical behaviour."
+  },
+  "129": {
+    "name": "Low-Risk Cluster 129",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 387 customers; typical behaviour."
+  },
+  "130": {
+    "name": "Low-Risk Cluster 130",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.09; 347 customers; typical behaviour."
+  },
+  "131": {
+    "name": "Low-Risk Cluster 131",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 478 customers; typical behaviour."
+  },
+  "132": {
+    "name": "Low-Risk Cluster 132",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 209 customers; typical behaviour."
+  },
+  "133": {
+    "name": "Low-Risk Cluster 133",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 37 customers; typical behaviour."
+  },
+  "134": {
+    "name": "Low-Risk Cluster 134",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 284 customers; typical behaviour."
+  },
+  "135": {
+    "name": "Low-Risk Cluster 135",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.08; 419 customers; typical behaviour."
+  },
+  "136": {
+    "name": "Low-Risk Cluster 136",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 84 customers; typical behaviour."
+  },
+  "137": {
+    "name": "Low-Risk Cluster 137",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 251 customers; typical behaviour."
+  },
+  "138": {
+    "name": "Low-Risk Cluster 138",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 17 customers; typical behaviour."
+  },
+  "139": {
+    "name": "Low-Risk Cluster 139",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.08; 307 customers; typical behaviour."
+  },
+  "140": {
+    "name": "Low-Risk Cluster 140",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 260 customers; typical behaviour."
+  },
+  "141": {
+    "name": "Low-Risk Cluster 141",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 330 customers; typical behaviour."
+  },
+  "142": {
+    "name": "Low-Risk Cluster 142",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 169 customers; typical behaviour."
+  },
+  "143": {
+    "name": "High-Risk Cluster 143",
+    "risk": "HIGH",
+    "logic": "Avg fraud prob 0.83; 1 customers; elevated AE anomaly scores."
+  },
+  "144": {
+    "name": "Low-Risk Cluster 144",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 116 customers; typical behaviour."
+  },
+  "145": {
+    "name": "Low-Risk Cluster 145",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.08; 482 customers; typical behaviour."
+  },
+  "146": {
+    "name": "Low-Risk Cluster 146",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 173 customers; typical behaviour."
+  },
+  "147": {
+    "name": "Low-Risk Cluster 147",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 756 customers; typical behaviour."
+  },
+  "148": {
+    "name": "Low-Risk Cluster 148",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 160 customers; typical behaviour."
+  },
+  "149": {
+    "name": "Low-Risk Cluster 149",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.08; 464 customers; typical behaviour."
+  },
+  "150": {
+    "name": "Low-Risk Cluster 150",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 295 customers; typical behaviour."
+  },
+  "151": {
+    "name": "Low-Risk Cluster 151",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 121 customers; typical behaviour."
+  },
+  "152": {
+    "name": "Low-Risk Cluster 152",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 228 customers; typical behaviour."
+  },
+  "153": {
+    "name": "Low-Risk Cluster 153",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 95 customers; typical behaviour."
+  },
+  "154": {
+    "name": "Low-Risk Cluster 154",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 449 customers; typical behaviour."
+  },
+  "155": {
+    "name": "Low-Risk Cluster 155",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 643 customers; typical behaviour."
+  },
+  "156": {
+    "name": "Low-Risk Cluster 156",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.08; 420 customers; typical behaviour."
+  },
+  "157": {
+    "name": "Low-Risk Cluster 157",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.08; 367 customers; typical behaviour."
+  },
+  "158": {
+    "name": "Low-Risk Cluster 158",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 220 customers; typical behaviour."
+  },
+  "159": {
+    "name": "Low-Risk Cluster 159",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 236 customers; typical behaviour."
+  },
+  "160": {
+    "name": "Low-Risk Cluster 160",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 6 customers; typical behaviour."
+  },
+  "161": {
+    "name": "Low-Risk Cluster 161",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.08; 641 customers; typical behaviour."
+  },
+  "162": {
+    "name": "Low-Risk Cluster 162",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.08; 424 customers; typical behaviour."
+  },
+  "163": {
+    "name": "Low-Risk Cluster 163",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 297 customers; typical behaviour."
+  },
+  "164": {
+    "name": "Low-Risk Cluster 164",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 274 customers; typical behaviour."
+  },
+  "165": {
+    "name": "Low-Risk Cluster 165",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 476 customers; typical behaviour."
+  },
+  "166": {
+    "name": "Low-Risk Cluster 166",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.08; 88 customers; typical behaviour."
+  },
+  "167": {
+    "name": "Low-Risk Cluster 167",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.08; 256 customers; typical behaviour."
+  },
+  "168": {
+    "name": "Low-Risk Cluster 168",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 189 customers; typical behaviour."
+  },
+  "169": {
+    "name": "Low-Risk Cluster 169",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.08; 340 customers; typical behaviour."
+  },
+  "170": {
+    "name": "Low-Risk Cluster 170",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 353 customers; typical behaviour."
+  },
+  "171": {
+    "name": "Low-Risk Cluster 171",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 436 customers; typical behaviour."
+  },
+  "172": {
+    "name": "Low-Risk Cluster 172",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 116 customers; typical behaviour."
+  },
+  "173": {
+    "name": "Low-Risk Cluster 173",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.08; 236 customers; typical behaviour."
+  },
+  "174": {
+    "name": "Low-Risk Cluster 174",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.08; 269 customers; typical behaviour."
+  },
+  "175": {
+    "name": "Low-Risk Cluster 175",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.08; 333 customers; typical behaviour."
+  },
+  "176": {
+    "name": "Low-Risk Cluster 176",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 247 customers; typical behaviour."
+  },
+  "177": {
+    "name": "Low-Risk Cluster 177",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.08; 689 customers; typical behaviour."
+  },
+  "178": {
+    "name": "Low-Risk Cluster 178",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 362 customers; typical behaviour."
+  },
+  "179": {
+    "name": "Low-Risk Cluster 179",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 371 customers; typical behaviour."
+  },
+  "180": {
+    "name": "Low-Risk Cluster 180",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 327 customers; typical behaviour."
+  },
+  "181": {
+    "name": "Low-Risk Cluster 181",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 263 customers; typical behaviour."
+  },
+  "182": {
+    "name": "Low-Risk Cluster 182",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.08; 206 customers; typical behaviour."
+  },
+  "183": {
+    "name": "Low-Risk Cluster 183",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 162 customers; typical behaviour."
+  },
+  "184": {
+    "name": "Low-Risk Cluster 184",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.08; 623 customers; typical behaviour."
+  },
+  "185": {
+    "name": "Low-Risk Cluster 185",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.08; 328 customers; typical behaviour."
+  },
+  "186": {
+    "name": "Low-Risk Cluster 186",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 421 customers; typical behaviour."
+  },
+  "187": {
+    "name": "Low-Risk Cluster 187",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 184 customers; typical behaviour."
+  },
+  "188": {
+    "name": "Low-Risk Cluster 188",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 403 customers; typical behaviour."
+  },
+  "189": {
+    "name": "Low-Risk Cluster 189",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 214 customers; typical behaviour."
+  },
+  "190": {
+    "name": "Low-Risk Cluster 190",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.08; 449 customers; typical behaviour."
+  },
+  "191": {
+    "name": "Low-Risk Cluster 191",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.08; 159 customers; typical behaviour."
+  },
+  "192": {
+    "name": "Low-Risk Cluster 192",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.08; 65 customers; typical behaviour."
+  },
+  "193": {
+    "name": "Low-Risk Cluster 193",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 163 customers; typical behaviour."
+  },
+  "194": {
+    "name": "Low-Risk Cluster 194",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 324 customers; typical behaviour."
+  },
+  "195": {
+    "name": "Low-Risk Cluster 195",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.08; 402 customers; typical behaviour."
+  },
+  "196": {
+    "name": "Low-Risk Cluster 196",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.08; 738 customers; typical behaviour."
+  },
+  "197": {
+    "name": "Low-Risk Cluster 197",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.08; 428 customers; typical behaviour."
+  },
+  "198": {
+    "name": "Low-Risk Cluster 198",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.09; 279 customers; typical behaviour."
+  },
+  "199": {
+    "name": "Low-Risk Cluster 199",
+    "risk": "LOW",
+    "logic": "Avg fraud prob 0.07; 203 customers; typical behaviour."
+  }
 }

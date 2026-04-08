@@ -11,7 +11,6 @@ def _hard_required() -> list[Path]:
         WEBAPP_OUTPUTS_DIR / "fraud_sage_model.pth",
         WEBAPP_OUTPUTS_DIR / "model_output.csv",
         WEBAPP_OUTPUTS_DIR / "meta_cluster_assignments.csv.gz",
-        WEBAPP_OUTPUTS_DIR / "rf_model_sage" / "rf_proxy.joblib",
         WEBAPP_OUTPUTS_DIR / "rf_model_sage" / "meta.json",
         WEBAPP_DATA_DIR / "kyc_industry_codes.csv.gz",
         WEBAPP_DATA_DIR / "card.csv.gz",
@@ -30,7 +29,7 @@ def _soft_required() -> list[Path]:
         WEBAPP_OUTPUTS_DIR / "meta_cluster_semantic_labels.json",
         WEBAPP_OUTPUTS_DIR / "meta_cluster_significant_deltas.json",
         WEBAPP_OUTPUTS_DIR / "meta_cluster_top3_categories.json",
-        WEBAPP_OUTPUTS_DIR / "rf_model_sage" / "shap_explainer.joblib",
+
     ]
 
 
@@ -264,7 +263,7 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-st.info("System initialized from local webapp_resources (no network download).")
+print("[INFO] System initialized from local webapp_resources (no network download).")
 
 st.divider()
 
@@ -468,4 +467,4 @@ st.markdown("""
     </div>
 </div>
 """, unsafe_allow_html=True)
-st.info("System initialized from local webapp_resources (no network download).")
+print("[INFO] System initialized from local webapp_resources (no network download).")

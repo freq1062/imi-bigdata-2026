@@ -12,6 +12,7 @@ Features:
 
 import sys
 import os
+import json
 import pickle
 
 import numpy as np
@@ -25,7 +26,7 @@ import pandas as pd
 
 from lib.resource_paths import resolve_output_path, resolve_data_path
 from lib.components import CustomerInfoCard, PrecomputedNarrative, GraphVisualizer, _load_industry_lookup
-import streamlit.components.v1 as st_components
+import streamlit.components.v1 as _stcomp
 
 st.set_page_config(
     page_title="Model Output",
@@ -50,8 +51,8 @@ def _load_output():
 @st.cache_data(show_spinner="Loading explanations…")
 def _load_explanations():
     for candidate in [
-        resolve_output_path("model_output_explanations.csv.gz"),
         resolve_output_path("model_output_explanations.csv"),
+        resolve_output_path("model_output_explanations.csv.gz"),
     ]:
         try:
             return pd.read_csv(candidate)
@@ -394,21 +395,54 @@ def _load_customer_transactions(cid: str) -> pd.DataFrame:
     result = result.sort_values("datetime", na_position="last").reset_index(drop=True)
     return result
 
+@st.cache_data(show_spinner=False)
+def _load_explainability_data() -> tuple[dict, dict]:
+    """Load GNN edge importance and LLM explanation lookups keyed by customer_id."""
+    from pathlib import Path
+    outputs_dir = Path(resolve_output_path())
+
+    def _read_jsonl(path):
+        if not path.exists():
+            return []
+        with open(path) as fh:
+            return [json.loads(line) for line in fh if line.strip()]
+
+    gnn_data = {
+        r["customer_id"]: r
+        for r in _read_jsonl(outputs_dir / "gnn_explainer_webapp.jsonl")
+    }
+    llm_data: dict = {}
+    for fname in ("customer_explanations_webapp.jsonl", "llm_explanations_batch.jsonl"):
+        for r in _read_jsonl(outputs_dir / fname):
+            llm_data[r["customer_id"]] = r
+    return gnn_data, llm_data
+
+
 output_df = _load_output()
 expl_df = _load_explanations()
 edge_count = _get_edge_count()
 graph_data = _load_graph_data()
+gnn_lookup, llm_lookup = _load_explainability_data()
 
 # Merge to include customer_id, predicted_label, risk_score, explanation
 output_df["risk_score"] = output_df.get("risk_score",
     output_df.get("fraud_score",
     output_df.get("lgb_fraud_prob",
     output_df.get("review_priority_score", 0.0))))
+if "explanation" not in expl_df.columns:
+    expl_df["explanation"] = ""
+if "llm_status" not in expl_df.columns:
+    expl_df["llm_status"] = ""
+_expl_merge_cols = ["customer_id", "explanation", "llm_status"]
+for _c in ["driver_1", "driver_1_shap", "driver_2", "driver_2_shap",
+           "driver_3", "driver_3_shap", "suspicious_transactions_json"]:
+    if _c in expl_df.columns:
+        _expl_merge_cols.append(_c)
 merged = pd.merge(
     output_df[["customer_id", "predicted_label", "risk_score"]],
-    expl_df[["customer_id", "explanation"]],
+    expl_df[_expl_merge_cols],
     on="customer_id",
-    how="inner"
+    how="left"
 )
 
 # Add risk_tier column
@@ -626,11 +660,12 @@ def _render_customer_card(row: pd.Series, key_prefix: str = ""):
     cid = str(row["customer_id"])
     risk_score = float(row["risk_score"])
     risk_tier = str(row.get("risk_tier", "LOW"))
-    narrative = str(row.get("explanation", ""))
+    _csv_llm_status = str(row.get("llm_status", ""))
+    _explanation_text = str(row.get("explanation", ""))
+    narrative = "" if _csv_llm_status == "ok" else _explanation_text
     drivers = _drivers_from_row(row)
     review_state = st.session_state["mo_reviews"].get(cid)
 
-    # Resolve actual graph neighborhood (with per-category/city transaction counts)
     cat_counts, city_counts = _get_customer_neighbors(cid, graph_data)
 
     card = CustomerInfoCard(narrative_engine=PrecomputedNarrative())
@@ -655,8 +690,9 @@ def _render_customer_card(row: pd.Series, key_prefix: str = ""):
     )
     card.render_risk_badge(risk_score, risk_tier)
 
-    # ── Side-by-side: graph (left) | narrative + drivers (right) ─────────────
+    # ── Side-by-side: graph (left) | narrative + AI explanation (right) ───────
     col_graph, col_info = st.columns([3, 2], gap="medium")
+    graph_h_px = 380
     with col_graph:
         if cat_counts or city_counts:
             n_cats = len(cat_counts)
@@ -667,86 +703,127 @@ def _render_customer_card(row: pd.Series, key_prefix: str = ""):
                 f"{n_cities} cit{'y' if n_cities == 1 else 'ies'}, "
                 f"{total_txns} transaction edge{'s' if total_txns != 1 else ''}"
             )
-            # Use fixed graph height (380px) and make the narrative column
-            # scrollable if it exceeds this height.
-            graph_h_px = 380
             nb_html = GraphVisualizer.build_neighborhood_graph(
                 cid, risk_score, cat_counts, city_counts, height=f"{graph_h_px}px"
             )
-            st_components.html(nb_html, height=graph_h_px, scrolling=False)
+            _stcomp.html(nb_html, height=graph_h_px, scrolling=False)
         else:
             st.caption("Customer not found in training graph — no neighborhood to display.")
     with col_info:
-        # Render narrative + drivers into one scrollable HTML block so that
-        # the right column gets a scrollbar if it exceeds the graph height.
-        # Narrative comes from `narrative` (precomputed by PrecomputedNarrative).
-        narr_html = f"""
-        <div style="max-height:{graph_h_px + 40}px; overflow:auto; padding-right:8px;">
-        """
+        # Priority: batch JSONL > webapp JSONL > CSV llm_status='ok' > template
+        llm_rec = llm_lookup.get(cid)
+        llm_text = (llm_rec.get("explanation_text", "") or "") if llm_rec else ""
+        llm_status = (llm_rec.get("llm_status", "") or "") if llm_rec else ""
+        if not llm_text and _csv_llm_status == "ok":
+            llm_text = _explanation_text
+            llm_status = "ok"
 
-        # Narrative block (reuse styles from CustomerInfoCard.render_narrative)
-        narr_html += (
-            f"<div style='background:#1e293b;border-left:4px solid {risk_color(risk_score)};"
-            "border-radius:6px;padding:14px 18px;margin-bottom:12px;color:#e2e8f0;"
-            "font-size:0.95rem;line-height:1.6;'>"
-            + (narrative or "")
-            + "</div>"
-        )
-
-        # Drivers block (replicating CustomerInfoCard.render_drivers styling)
-        if drivers:
-            narr_html += "<div><strong>Top Risk Drivers (SHAP)</strong></div>"
-            for d in drivers:
-                feat = d.get("feature", "")
-                desc = d.get("description", feat)
-                try:
-                    shap_val = float(d.get("shap_value", 0.0))
-                except Exception:
-                    shap_val = 0.0
-                bar_pct = min(100, int(abs(shap_val) * 1200))
-                bar_color = "#ef4444" if shap_val > 0 else "#3b82f6"
-                raw = d.get("raw_value", None)
-                raw_str = f" = {raw:.2f}" if raw is not None else ""
-
-                geo_badge = ""
-                if feat == "geo_velocity" and raw is not None:
-                    try:
-                        if float(raw) > 3.0:
-                            geo_badge = (
-                                " &nbsp;<span style='background:#7f1d1d;color:#fca5a5;"
-                                "border-radius:4px;padding:1px 6px;font-size:0.75rem;'>🌍 geo-impossible</span>"
-                            )
-                    except Exception:
-                        pass
-
-                narr_html += (
-                    "<div style='margin-bottom:8px;'>"
-                    "<div style='display:flex;justify-content:space-between;"
-                    "font-size:0.85rem;color:#94a3b8;margin-bottom:3px;'>"
-                    f"<span>{desc}{raw_str}{geo_badge}</span>"
-                    f"<span style='color:{bar_color};font-weight:600;'>{shap_val:+.4f}</span>"
-                    "</div>"
-                    "<div style='background:#334155;border-radius:4px;height:6px;'>"
-                    f"<div style='width:{bar_pct}%;background:{bar_color};height:6px;border-radius:4px;'></div>"
-                    "</div></div>"
-                )
-
+        narr_html = f"""<div style="max-height:{graph_h_px + 40}px; overflow:auto; padding-right:8px;">"""
+        if llm_text:
+            # LLM available → show it exclusively (no template alongside)
+            narr_html += (
+                "<div style='background:#0f2a1a;border-left:4px solid #22c55e;"
+                "border-radius:6px;padding:10px 14px;margin-bottom:10px;color:#bbf7d0;"
+                "font-size:0.88rem;line-height:1.55;'>"
+                "<div style='font-size:0.72rem;color:#4ade80;margin-bottom:5px;"
+                "font-weight:600;'>🤖 AI EXPLANATION</div>"
+                + llm_text
+                + "</div>"
+            )
+        else:
+            # No LLM → fall back to the rule-based template
+            narr_html += (
+                f"<div style='background:#1e293b;border-left:4px solid {risk_color(risk_score)};"
+                "border-radius:6px;padding:14px 18px;margin-bottom:12px;color:#e2e8f0;"
+                "font-size:0.95rem;line-height:1.6;'>"
+                + (narrative or "")
+                + "</div>"
+            )
         narr_html += "</div>"
         st.markdown(narr_html, unsafe_allow_html=True)
+
+    # ── Explainability Details expander ──────────────────────────────────────
+    with st.expander("Explainability Details", expanded=False):
+        shap_tab, gnn_tab, ae_tab = st.tabs(["SHAP Drivers", "GNN Evidence", "Anomalous Transactions"])
+
+        with shap_tab:
+            if drivers:
+                shap_df = pd.DataFrame([
+                    {
+                        "Feature": d.get("description", d.get("feature", "")),
+                        "SHAP Value": float(d.get("shap_value", 0.0)),
+                    }
+                    for d in drivers
+                    if d.get("shap_value") is not None
+                ])
+                if not shap_df.empty:
+                    shap_df = shap_df.sort_values("SHAP Value", key=abs, ascending=False)
+                    st.bar_chart(shap_df.set_index("Feature")["SHAP Value"], height=260)
+                    st.dataframe(shap_df, hide_index=True, use_container_width=True)
+                else:
+                    st.info("No SHAP driver data available.")
+            else:
+                st.info("No SHAP driver data available for this customer.")
+
+        with gnn_tab:
+            gnn_rec = gnn_lookup.get(cid)
+            if gnn_rec and gnn_rec.get("important_edges"):
+                edges = gnn_rec["important_edges"]
+                rel_scores: dict[str, list] = {}
+                for e in edges:
+                    raw_rel = e["relation"]
+                    rel = (
+                        raw_rel
+                        .replace("customer__purchases_at__category", "Cust \u2192 Category")
+                        .replace("customer__transacts_in__city", "Cust \u2192 City")
+                        .replace("__rev", " \u21a9")
+                        .replace("__", " \u2192 ")
+                    )
+                    rel_scores.setdefault(rel, []).append(float(e["score"]))
+                gnn_rows = [
+                    {"Relation": rel,
+                     "Avg Importance": round(sum(s) / len(s), 3),
+                     "Max Importance": round(max(s), 3)}
+                    for rel, s in sorted(rel_scores.items(), key=lambda kv: -sum(kv[1]) / len(kv[1]))
+                ]
+                styled = (
+                    pd.DataFrame(gnn_rows).set_index("Relation")
+                    .style.background_gradient(cmap="YlOrRd", axis=None)
+                    .format({"Avg Importance": "{:.3f}", "Max Importance": "{:.3f}"})
+                )
+                st.dataframe(styled, use_container_width=True)
+                ms = gnn_rec.get("mask_summary", {})
+                st.caption(
+                    f"Edges analysed: {ms.get('edge_count', 0)}  \u00b7  "
+                    f"Mean importance: {ms.get('edge_mean', 0):.3f}  \u00b7  "
+                    f"Max: {ms.get('edge_max', 0):.3f}"
+                )
+            else:
+                st.info("GNN explainability only available for pre-computed customers.")
+
+        with ae_tab:
+            susp_json = row.get("suspicious_transactions_json", None)
+            if susp_json and pd.notna(susp_json):
+                try:
+                    susp = json.loads(str(susp_json))
+                    if susp:
+                        st.dataframe(pd.DataFrame(susp), hide_index=True, use_container_width=True)
+                    else:
+                        st.info("No anomalous transactions flagged by autoencoder.")
+                except Exception:
+                    st.info("Anomalous transaction data unavailable.")
+            else:
+                st.info("Anomalous transaction data unavailable.")
 
     # ── Transactions section ─────────────────────────────────────────────────
     txns_df = _load_customer_transactions(cid)
     n_txns  = len(txns_df)
     amt_sum = txns_df["amount"].sum() if n_txns > 0 else 0.0
-
     sk_cats   = f"mo_txn_cats_{key_prefix}_{cid}"
     sk_cities = f"mo_txn_cities_{key_prefix}_{cid}"
-
-    has_filter = bool(
-        st.session_state.get(sk_cats) or st.session_state.get(sk_cities)
-    )
+    has_filter = bool(st.session_state.get(sk_cats) or st.session_state.get(sk_cities))
     expander_label = (
-        f"Transactions  ·  {n_txns:,} records  ·  ${amt_sum:,.2f} CAD total"
+        f"Transactions  \u00b7  {n_txns:,} records  \u00b7  ${amt_sum:,.2f} CAD total"
         if n_txns > 0
         else "Transactions (none found in source files)"
     )
@@ -861,14 +938,14 @@ with tab_topk:
         # Scroll to anchor if a pagination button was just pressed
         if st.session_state.get("mo_scroll"):
             st.session_state["mo_scroll"] = False
-            st_components.html(
+            st.html(
                 """<script>
 (function(){
   var el = window.parent.document.getElementById('cust-top');
   if (el) el.scrollIntoView({behavior:'smooth', block:'start'});
 })();
 </script>""",
-                height=0,
+                unsafe_allow_javascript=True,
             )
 
         # Summary leaderboard table

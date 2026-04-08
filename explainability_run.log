@@ -1,0 +1,235 @@
+[NbConvertApp] Converting notebook explainability.ipynb to notebook
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/jupyter_core/utils/__init__.py", line 154, in wrapped
+    asyncio.get_running_loop()
+RuntimeError: no running event loop
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/bin/jupyter-nbconvert", line 7, in <module>
+    sys.exit(main())
+  File "/usr/local/lib/python3.10/dist-packages/jupyter_core/application.py", line 284, in launch_instance
+    super().launch_instance(argv=argv, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/traitlets/config/application.py", line 1075, in launch_instance
+    app.start()
+  File "/usr/local/lib/python3.10/dist-packages/nbconvert/nbconvertapp.py", line 420, in start
+    self.convert_notebooks()
+  File "/usr/local/lib/python3.10/dist-packages/nbconvert/nbconvertapp.py", line 597, in convert_notebooks
+    self.convert_single_notebook(notebook_filename)
+  File "/usr/local/lib/python3.10/dist-packages/nbconvert/nbconvertapp.py", line 563, in convert_single_notebook
+    output, resources = self.export_single_notebook(
+  File "/usr/local/lib/python3.10/dist-packages/nbconvert/nbconvertapp.py", line 487, in export_single_notebook
+    output, resources = self.exporter.from_filename(
+  File "/usr/local/lib/python3.10/dist-packages/nbconvert/exporters/exporter.py", line 201, in from_filename
+    return self.from_file(f, resources=resources, **kw)
+  File "/usr/local/lib/python3.10/dist-packages/nbconvert/exporters/exporter.py", line 220, in from_file
+    return self.from_notebook_node(
+  File "/usr/local/lib/python3.10/dist-packages/nbconvert/exporters/notebook.py", line 36, in from_notebook_node
+    nb_copy, resources = super().from_notebook_node(nb, resources, **kw)
+  File "/usr/local/lib/python3.10/dist-packages/nbconvert/exporters/exporter.py", line 154, in from_notebook_node
+    nb_copy, resources = self._preprocess(nb_copy, resources)
+  File "/usr/local/lib/python3.10/dist-packages/nbconvert/exporters/exporter.py", line 353, in _preprocess
+    nbc, resc = preprocessor(nbc, resc)
+  File "/usr/local/lib/python3.10/dist-packages/nbconvert/preprocessors/base.py", line 48, in __call__
+    return self.preprocess(nb, resources)
+  File "/usr/local/lib/python3.10/dist-packages/nbconvert/preprocessors/execute.py", line 103, in preprocess
+    self.preprocess_cell(cell, resources, index)
+  File "/usr/local/lib/python3.10/dist-packages/nbconvert/preprocessors/execute.py", line 124, in preprocess_cell
+    cell = self.execute_cell(cell, index, store_history=True)
+  File "/usr/local/lib/python3.10/dist-packages/jupyter_core/utils/__init__.py", line 158, in wrapped
+    return loop.run_until_complete(inner)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/usr/local/lib/python3.10/dist-packages/nbclient/client.py", line 1062, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/usr/local/lib/python3.10/dist-packages/nbclient/client.py", line 918, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+def compute_component_profiles(component_df, component_stats, embeddings, gmm_model):
+    """
+    Compute detailed profiles for each component to understand what they represent.
+    
+    Returns:
+        dict: {component_id: profile_dict with statistics}
+    """
+    profiles = {}
+    component_proba = gmm_model.predict_proba(embeddings.cpu().numpy())
+    
+    for comp_id in range(gmm_model.n_components):
+        # Get all customers in this component
+        comp_mask = component_df['component'] == comp_id
+        comp_customers = component_df[comp_mask]
+        
+        # Basic statistics
+        comp_size = len(comp_customers)
+        comp_stats_row = component_stats[component_stats['component'] == comp_id].iloc[0]
+        
+        # Fraud characteristics
+        fraud_rate = comp_stats_row['train_fraud_rate']
+        is_fraud_component = comp_stats_row['fraud_component'] == 1
+        train_fraud_anchors = comp_stats_row['train_fraud_anchors']
+        
+        # GMM confidence
+        mean_gmm_prob = component_proba[comp_mask, comp_id].mean()
+        
+        # Customer characteristics
+        avg_ae_risk = comp_customers['customer_ae_risk'].mean()
+        avg_gmm_confidence = comp_customers['gmm_max_prob'].mean()
+        
+        # Embedding statistics (distance from component mean)
+        comp_embedding_indices = comp_customers['cust_idx'].values
+        comp_embeddings = embeddings[comp_embedding_indices]
+        embedding_variance = comp_embeddings.var(dim=0).mean().item()
+        embedding_norm_mean = comp_embeddings.norm(dim=1).mean().item()
+        
+        # Pseudo-label statistics
+        pseudo_positive_count = comp_customers['pseudo_label'].sum()
+        second_pass_positive_count = comp_customers['second_pass_positive'].sum()
+        
+        profiles[comp_id] = {
+            'component_id': comp_id,
+            'size': comp_size,
+            'fraud_rate': fraud_rate,
+            'is_fraud_component': is_fraud_component,
+            'train_fraud_anchors': int(train_fraud_anchors),
+            'mean_gmm_confidence': float(mean_gmm_prob),
+            'mean_ae_risk': float(avg_ae_risk),
+            'mean_customer_gmm_confidence': float(avg_gmm_confidence),
+            'embedding_variance': float(embedding_variance),
+            'embedding_norm_mean': float(embedding_norm_mean),
+            'pseudo_positive_count': int(pseudo_positive_count),
+            'second_pass_positive_count': int(second_pass_positive_count),
+            'members': comp_customers[['customer_id', 'gmm_max_prob', 'customer_ae_risk', 'pseudo_label']].to_dict('records')[:10]  # top 10 members
+        }
+    
+    return profiles
+
+
+# Compute profiles for all components
+print("\n5. Computing component profiles...")
+component_profiles = compute_component_profiles(
+    component_df, 
+    component_stats, 
+    all_customer_embeddings, 
+    gmm_model
+)
+
+print(f"   ✓ Computed profiles for {len(component_profiles)} components")
+
+# Show interesting components
+print("\n" + "="*100)
+print("COMPONENT ANALYSIS")
+print("="*100 + "\n")
+
+# High-risk components
+high_fraud_rate = [
+    (cid, prof['fraud_rate'], prof['size']) 
+    for cid, prof in component_profiles.items() 
+    if prof['fraud_rate'] > 0.2
+]
+high_fraud_rate.sort(key=lambda x: -x[1])
+
+if high_fraud_rate:
+    print(f"High-fraud-rate components (>20% fraud rate):")
+    for cid, fraud_rate, size in high_fraud_rate[:10]:
+        print(f"  Component {cid:3d}: {fraud_rate:6.1%} fraud rate, {size:4d} customers")
+else:
+    print("No components with >20% fraud rate")
+
+# Largest components with fraud
+largest_with_fraud = [
+    (cid, prof['size'], prof['fraud_rate'], prof['train_fraud_anchors']) 
+    for cid, prof in component_profiles.items() 
+    if prof['train_fraud_anchors'] > 0
+]
+largest_with_fraud.sort(key=lambda x: -x[1])
+
+print(f"\nLargest fraud components (by member count):")
+for cid, size, fraud_rate, anchors in largest_with_fraud[:10]:
+    print(f"  Component {cid:3d}: {size:4d} members, {fraud_rate:6.1%} fraud, {anchors:2d} labeled frauds")
+
+# Smallest components (potentially rare patterns)
+smallest = [
+    (cid, prof['size']) 
+    for cid, prof in component_profiles.items()
+]
+smallest.sort(key=lambda x: x[1])
+
+print(f"\nSmallest components (rare patterns):")
+for cid, size in smallest[:10]:
+    print(f"  Component {cid:3d}: {size:4d} members")
+------------------
+
+----- stdout -----
+
+5. Computing component profiles...
+------------------
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mKeyError[0m                                  Traceback (most recent call last)
+File [0;32m~/.local/lib/python3.10/site-packages/pandas/core/indexes/base.py:3812[0m, in [0;36mIndex.get_loc[0;34m(self, key)[0m
+[1;32m   3811[0m [38;5;28;01mtry[39;00m:
+[0;32m-> 3812[0m     [38;5;28;01mreturn[39;00m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43m_engine[49m[38;5;241;43m.[39;49m[43mget_loc[49m[43m([49m[43mcasted_key[49m[43m)[49m
+[1;32m   3813[0m [38;5;28;01mexcept[39;00m [38;5;167;01mKeyError[39;00m [38;5;28;01mas[39;00m err:
+
+File [0;32mpandas/_libs/index.pyx:167[0m, in [0;36mpandas._libs.index.IndexEngine.get_loc[0;34m()[0m
+
+File [0;32mpandas/_libs/index.pyx:196[0m, in [0;36mpandas._libs.index.IndexEngine.get_loc[0;34m()[0m
+
+File [0;32mpandas/_libs/hashtable_class_helper.pxi:7088[0m, in [0;36mpandas._libs.hashtable.PyObjectHashTable.get_item[0;34m()[0m
+
+File [0;32mpandas/_libs/hashtable_class_helper.pxi:7096[0m, in [0;36mpandas._libs.hashtable.PyObjectHashTable.get_item[0;34m()[0m
+
+[0;31mKeyError[0m: 'pseudo_label'
+
+The above exception was the direct cause of the following exception:
+
+[0;31mKeyError[0m                                  Traceback (most recent call last)
+Cell [0;32mIn[7], line 63[0m
+[1;32m     61[0m [38;5;66;03m# Compute profiles for all components[39;00m
+[1;32m     62[0m [38;5;28mprint[39m([38;5;124m"[39m[38;5;130;01m\n[39;00m[38;5;124m5. Computing component profiles...[39m[38;5;124m"[39m)
+[0;32m---> 63[0m component_profiles [38;5;241m=[39m [43mcompute_component_profiles[49m[43m([49m
+[1;32m     64[0m [43m    [49m[43mcomponent_df[49m[43m,[49m[43m [49m
+[1;32m     65[0m [43m    [49m[43mcomponent_stats[49m[43m,[49m[43m [49m
+[1;32m     66[0m [43m    [49m[43mall_customer_embeddings[49m[43m,[49m[43m [49m
+[1;32m     67[0m [43m    [49m[43mgmm_model[49m
+[1;32m     68[0m [43m)[49m
+[1;32m     70[0m [38;5;28mprint[39m([38;5;124mf[39m[38;5;124m"[39m[38;5;124m   ✓ Computed profiles for [39m[38;5;132;01m{[39;00m[38;5;28mlen[39m(component_profiles)[38;5;132;01m}[39;00m[38;5;124m components[39m[38;5;124m"[39m)
+[1;32m     72[0m [38;5;66;03m# Show interesting components[39;00m
+
+Cell [0;32mIn[7], line 39[0m, in [0;36mcompute_component_profiles[0;34m(component_df, component_stats, embeddings, gmm_model)[0m
+[1;32m     36[0m embedding_norm_mean [38;5;241m=[39m comp_embeddings[38;5;241m.[39mnorm(dim[38;5;241m=[39m[38;5;241m1[39m)[38;5;241m.[39mmean()[38;5;241m.[39mitem()
+[1;32m     38[0m [38;5;66;03m# Pseudo-label statistics[39;00m
+[0;32m---> 39[0m pseudo_positive_count [38;5;241m=[39m [43mcomp_customers[49m[43m[[49m[38;5;124;43m'[39;49m[38;5;124;43mpseudo_label[39;49m[38;5;124;43m'[39;49m[43m][49m[38;5;241m.[39msum()
+[1;32m     40[0m second_pass_positive_count [38;5;241m=[39m comp_customers[[38;5;124m'[39m[38;5;124msecond_pass_positive[39m[38;5;124m'[39m][38;5;241m.[39msum()
+[1;32m     42[0m profiles[comp_id] [38;5;241m=[39m {
+[1;32m     43[0m     [38;5;124m'[39m[38;5;124mcomponent_id[39m[38;5;124m'[39m: comp_id,
+[1;32m     44[0m     [38;5;124m'[39m[38;5;124msize[39m[38;5;124m'[39m: comp_size,
+[0;32m   (...)[0m
+[1;32m     55[0m     [38;5;124m'[39m[38;5;124mmembers[39m[38;5;124m'[39m: comp_customers[[[38;5;124m'[39m[38;5;124mcustomer_id[39m[38;5;124m'[39m, [38;5;124m'[39m[38;5;124mgmm_max_prob[39m[38;5;124m'[39m, [38;5;124m'[39m[38;5;124mcustomer_ae_risk[39m[38;5;124m'[39m, [38;5;124m'[39m[38;5;124mpseudo_label[39m[38;5;124m'[39m]][38;5;241m.[39mto_dict([38;5;124m'[39m[38;5;124mrecords[39m[38;5;124m'[39m)[:[38;5;241m10[39m]  [38;5;66;03m# top 10 members[39;00m
+[1;32m     56[0m }
+
+File [0;32m~/.local/lib/python3.10/site-packages/pandas/core/frame.py:4113[0m, in [0;36mDataFrame.__getitem__[0;34m(self, key)[0m
+[1;32m   4111[0m [38;5;28;01mif[39;00m [38;5;28mself[39m[38;5;241m.[39mcolumns[38;5;241m.[39mnlevels [38;5;241m>[39m [38;5;241m1[39m:
+[1;32m   4112[0m     [38;5;28;01mreturn[39;00m [38;5;28mself[39m[38;5;241m.[39m_getitem_multilevel(key)
+[0;32m-> 4113[0m indexer [38;5;241m=[39m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43mcolumns[49m[38;5;241;43m.[39;49m[43mget_loc[49m[43m([49m[43mkey[49m[43m)[49m
+[1;32m   4114[0m [38;5;28;01mif[39;00m is_integer(indexer):
+[1;32m   4115[0m     indexer [38;5;241m=[39m [indexer]
+
+File [0;32m~/.local/lib/python3.10/site-packages/pandas/core/indexes/base.py:3819[0m, in [0;36mIndex.get_loc[0;34m(self, key)[0m
+[1;32m   3814[0m     [38;5;28;01mif[39;00m [38;5;28misinstance[39m(casted_key, [38;5;28mslice[39m) [38;5;129;01mor[39;00m (
+[1;32m   3815[0m         [38;5;28misinstance[39m(casted_key, abc[38;5;241m.[39mIterable)
+[1;32m   3816[0m         [38;5;129;01mand[39;00m [38;5;28many[39m([38;5;28misinstance[39m(x, [38;5;28mslice[39m) [38;5;28;01mfor[39;00m x [38;5;129;01min[39;00m casted_key)
+[1;32m   3817[0m     ):
+[1;32m   3818[0m         [38;5;28;01mraise[39;00m InvalidIndexError(key)
+[0;32m-> 3819[0m     [38;5;28;01mraise[39;00m [38;5;167;01mKeyError[39;00m(key) [38;5;28;01mfrom[39;00m[38;5;250m [39m[38;5;21;01merr[39;00m
+[1;32m   3820[0m [38;5;28;01mexcept[39;00m [38;5;167;01mTypeError[39;00m:
+[1;32m   3821[0m     [38;5;66;03m# If we have a listlike key, _check_indexing_error will raise[39;00m
+[1;32m   3822[0m     [38;5;66;03m#  InvalidIndexError. Otherwise we fall through and re-raise[39;00m
+[1;32m   3823[0m     [38;5;66;03m#  the TypeError.[39;00m
+[1;32m   3824[0m     [38;5;28mself[39m[38;5;241m.[39m_check_indexing_error(key)
+
+[0;31mKeyError[0m: 'pseudo_label'
+

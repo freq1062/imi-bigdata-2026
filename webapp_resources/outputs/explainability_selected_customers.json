@@ -1,0 +1,17 @@
+[
+  {
+    "customer_id": "SYNID0106469074",
+    "risk_score": 0.0973294956756507,
+    "risk_band": "low"
+  },
+  {
+    "customer_id": "SYNID0109559694",
+    "risk_score": 0.3300466600900571,
+    "risk_band": "medium"
+  },
+  {
+    "customer_id": "SYNID0107746512",
+    "risk_score": 0.8320791843823764,
+    "risk_band": "high"
+  }
+]

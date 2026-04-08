@@ -22,11 +22,11 @@ if _ROOT not in sys.path:
     sys.path.insert(0, _ROOT)
 
 import streamlit as st
-import streamlit.components.v1 as st_components
 import pandas as pd
 import numpy as np
 
-from lib.components import CustomerInfoCard, RuleBasedNarrative, GraphVisualizer
+from lib.components import CustomerInfoCard, RuleBasedNarrative, PrecomputedNarrative, GraphVisualizer
+import requests
 from lib.explainability import (
     FEATURE_LABELS,
     global_verdict_explainer,
@@ -37,10 +37,8 @@ from lib.resource_paths import resolve_data_path, resolve_output_path
 from lib.model_utils import (
     load_artifacts,
     load_sage_model,
-    load_rf_model,
     load_lgb_bundle,
     score_new_customers,
-    explain_with_rf,
     compute_txn_aggregates,
     compute_ae_risk_from_transactions,
 )
@@ -69,11 +67,6 @@ def _load_model():
     arts = _load_artifacts()
     return load_sage_model(resolve_output_path("fraud_sage_model.pth"), artifacts=arts)
 
-@st.cache_resource(show_spinner="Loading RF proxy…")
-def _load_rf():
-    return load_rf_model(resolve_output_path())
-
-
 @st.cache_resource(show_spinner="Loading LGB scoring bundle…")
 def _load_lgb_bundle():
     return load_lgb_bundle(resolve_output_path())
@@ -83,11 +76,10 @@ def _try_load_all():
     try:
         arts = _load_artifacts()
         model = _load_model()
-        rf, expl, meta = _load_rf()
         lgb_bndl = _load_lgb_bundle()
-        return arts, model, rf, expl, meta, lgb_bndl, None
+        return arts, model, lgb_bndl, None
     except Exception as e:
-        return None, None, None, None, None, None, str(e)
+        return None, None, None, str(e)
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -109,6 +101,7 @@ def _init_state():
         "rm_temporal": None,
         "rm_spatial": None,
         "rm_verdict": None,
+        "rm_llm_explanation": None,
     }
     for k, v in defaults.items():
         if k not in st.session_state:
@@ -120,6 +113,8 @@ _init_state()
 # ─────────────────────────────────────────────────────────────────────────────
 # Common option lists
 # ─────────────────────────────────────────────────────────────────────────────
+
+OLLAMA_URL = os.environ.get("OLLAMA_URL", "http://132.145.111.57:11434")
 
 TRANSACTION_TYPES = ["CARD", "ATM_WITHDRAWAL", "CHEQUE", "EFT", "EMT", "WIRE"]
 
@@ -173,6 +168,67 @@ def _build_record():
     }
 
 
+# Fraud-positive LGB features (high value = more suspicious)
+_LGB_FRAUD_POS = [
+    "cluster_consensus_score", "dgi_anomaly_score", "mlp_fraud_prob",
+    "anchor_proximity_score", "customer_ae_risk_norm", "knn_suspicious_share",
+    "hdb_outlier_score", "knn_gold_fraud_count", "hdb_component_fraud_rate_labeled",
+]
+# Fraud-positive when LOW (closer to fraud centroid = more suspicious)
+_LGB_FRAUD_INV = ["dist_to_fraud_centroid", "min_dist_to_fraud_anchor", "mean_dist_to_fraud_anchor"]
+
+
+def _fetch_llm_explanation(result: dict, txns: list) -> str | None:
+    """Call the Ollama endpoint and return a one-paragraph investigator explanation."""
+    risk_score = float(result.get("risk_score", 0.0))
+    risk_tier = str(result.get("risk_tier", "LOW"))
+    lgb_feats: dict = st.session_state.get("rm_lgb_features") or {}
+
+    # Pick top 3 most fraud-indicative feature values
+    cands: list[tuple[str, float, float]] = []  # (feature, val, sort_key)
+    for f, v in lgb_feats.items():
+        try:
+            val = float(v)
+        except Exception:
+            continue
+        if f in _LGB_FRAUD_POS:
+            cands.append((f, val, val))
+        elif f in _LGB_FRAUD_INV:
+            cands.append((f, val, -val))  # low distance = more suspicious
+    cands.sort(key=lambda x: -x[2])
+    top_feats_text = "; ".join(
+        f"{FEATURE_LABELS.get(f, f)} ({val:.3f})"
+        for f, val, _ in cands[:3]
+    ) or "no feature data available"
+
+    gnn_score = float(result.get("gnn_score", 0.0))
+    prompt = (
+        "You are an AML analyst assistant. Write a concise investigator-facing AML risk explanation in 4-6 sentences. "
+        "Be specific and actionable — do not repeat the input data verbatim.\n"
+        f"Risk tier: {risk_tier}\n"
+        f"Model fraud probability: {risk_score:.4f} (GNN graph score: {gnn_score:.4f})\n"
+        f"Top suspicious feature signals: {top_feats_text}\n"
+        f"Number of transactions entered: {len(txns)}\n"
+        "State what specific patterns drove the flag and what the analyst should verify or escalate next."
+    )
+    try:
+        tags_r = requests.get(f"{OLLAMA_URL}/api/tags", timeout=6)
+        tags_r.raise_for_status()
+        models = [m.get("name") for m in tags_r.json().get("models", []) if m.get("name")]
+        if not models:
+            return None
+        resp = requests.post(
+            f"{OLLAMA_URL}/api/generate",
+            json={"model": models[0], "prompt": prompt, "stream": False,
+                  "options": {"temperature": 0.2, "num_predict": 220}},
+            timeout=45,
+        )
+        resp.raise_for_status()
+        return str(resp.json().get("response", "")).strip() or None
+    except Exception:
+        return None
+
+
 def _build_kyc_dict():
     return {
         "age": st.session_state["rm_age"],
@@ -214,7 +270,9 @@ def _run_scoring():
             k: v for k, v in row.to_dict().items() if k != "lgb_features"
         }
         lgb_features_for_shap: dict = row.get("lgb_features") or {}
+        st.session_state["rm_lgb_features"] = lgb_features_for_shap
     else:
+        st.session_state["rm_lgb_features"] = {}
         st.session_state["rm_last_result"] = {
             "customer_id": record["customer_id"],
             "risk_score": 0.0,
@@ -223,14 +281,48 @@ def _run_scoring():
             "predicted_label": 0,
         }
         lgb_features_for_shap = {}
-    # LGB SHAP explanation — use the actual LGB features from the pipeline
+    # LGB SHAP explanation — compute real SHAP values from the LGB model
     txns = st.session_state["rm_transactions"]
-    if rf_model is not None and rf_explainer is not None and lgb_features_for_shap:
-        st.session_state["rm_last_rf"] = explain_with_rf(
-            lgb_features_for_shap, rf_model, rf_explainer, rf_meta  # type: ignore
-        )
-    else:
-        st.session_state["rm_last_rf"] = None
+    lgb_feats_for_shap: dict = st.session_state.get("rm_lgb_features") or {}
+    shap_drivers: list[dict] = []
+    if lgb_bndl is not None and lgb_feats_for_shap and artifacts is not None:
+        try:
+            import shap as _shap
+            import numpy as _np_shap
+            import pandas as _pd_shap
+            _lgb_model = lgb_bndl[0]
+            _feat_names: list = artifacts.get("lgb_feature_names", [])
+            if _feat_names:
+                _X = _pd_shap.DataFrame(
+                    [[lgb_feats_for_shap.get(f, 0.0) for f in _feat_names]],
+                    columns=_feat_names,
+                )
+                _explainer = _shap.TreeExplainer(_lgb_model)
+                _sv = _explainer.shap_values(_X)
+                if isinstance(_sv, _np_shap.ndarray) and _sv.ndim == 3:
+                    _sv_fraud = _sv[0, :, 1]
+                elif isinstance(_sv, list):
+                    _sv_fraud = _sv[1][0] if len(_sv) > 1 else _sv[0][0]
+                else:
+                    _sv_fraud = _sv[0] if hasattr(_sv, "__getitem__") else _sv
+                _pairs = sorted(
+                    zip(_feat_names, _sv_fraud.tolist()),
+                    key=lambda x: abs(x[1]),
+                    reverse=True,
+                )[:5]
+                shap_drivers = [
+                    {
+                        "feature": _f,
+                        "description": FEATURE_LABELS.get(_f, _f),
+                        "shap_value": round(float(_s), 6),
+                        "raw_value": round(float(lgb_feats_for_shap.get(_f, 0.0)), 4),
+                    }
+                    for _f, _s in _pairs
+                    if abs(_s) > 1e-6
+                ]
+        except Exception:
+            pass
+    st.session_state["rm_last_rf"] = {"drivers": shap_drivers} if shap_drivers else None
 
     temporal = temporal_reconstruction_explainer(txns)
     spatial = spatial_cluster_explainer(record, txns)
@@ -245,13 +337,14 @@ def _run_scoring():
     st.session_state["rm_temporal"] = temporal
     st.session_state["rm_spatial"] = spatial
     st.session_state["rm_verdict"] = verdict
+    st.session_state["rm_llm_explanation"] = None  # signal that a fresh LLM fetch is needed
 
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Load models
 # ─────────────────────────────────────────────────────────────────────────────
 
-artifacts, model, rf_model, rf_explainer, rf_meta, lgb_bndl, load_err = _try_load_all()
+artifacts, model, lgb_bndl, load_err = _try_load_all()
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Page header
@@ -498,7 +591,8 @@ with col_result:
         else:
             st.info("Add a transaction to trigger risk scoring. Below is the customer node at 0% risk.")
         html = GraphVisualizer.build_live_graph(customer_id, 0.0, txns)
-        st_components.html(html, height=420, scrolling=False)
+        import streamlit.components.v1 as _stcomp_rm
+        _stcomp_rm.html(html, height=420, scrolling=False)
         st.markdown(
             "<div style='text-align:center;color:#64748b;font-size:0.85rem;margin-top:-8px;'>"
             "Graph grows as you add transactions.</div>",
