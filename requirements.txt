@@ -1,12 +1,6 @@
-# ============================================================================
-# FRAUD DETECTION NOTEBOOK - ROBUST MULTI-VERSION REQUIREMENTS
-# ============================================================================
-
-# --- Core Data Science Libraries ---
 numpy==1.26.4
 pandas>=2.0.0
 
-# --- Deep Learning Foundation ---
 --extra-index-url https://download.pytorch.org/whl/cu121
 torch==2.1.0+cu121; python_version < '3.12'
 torch==2.2.0; python_version >= '3.12'
@@ -20,23 +14,16 @@ https://data.pyg.org/whl/torch-2.1.0%2Bcu121/torch_sparse-0.6.18%2Bpt21cu121-cp3
 https://data.pyg.org/whl/torch-2.2.0%2Bcu121/torch_scatter-2.1.2%2Bpt22cu121-cp312-cp312-linux_x86_64.whl; python_version >= '3.12'
 https://data.pyg.org/whl/torch-2.2.0%2Bcu121/torch_sparse-0.6.18%2Bpt22cu121-cp312-cp312-linux_x86_64.whl; python_version >= '3.12'
 
-# --- Remaining Project Requirements ---
 torch-geometric>=2.3.0
-
-# --- Machine Learning & Explainability ---
 scikit-learn>=1.3.0
 lightgbm>=4.0.0
 shap>=0.44.0
 joblib>=1.3.0
-
-# --- Visualization & Apps ---
 streamlit>=1.32.0
 matplotlib>=3.7.0
 seaborn>=0.12.0
 networkx>=3.1.0
 pyvis>=0.3.2
-
-# --- Utilities & Environment ---
 tqdm>=4.65.0
 gdown>=4.7.1
 kagglehub>=0.2.0
