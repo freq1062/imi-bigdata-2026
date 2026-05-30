@@ -25,7 +25,7 @@ def _hard_required() -> list[Path]:
 def _soft_required() -> list[Path]:
     return [
         WEBAPP_OUTPUTS_DIR / "transaction_autoencoder.pt",
-        WEBAPP_OUTPUTS_DIR / "model_output_explanations.csv.gz",
+        WEBAPP_OUTPUTS_DIR / "model_output_explanations.csv",
         WEBAPP_OUTPUTS_DIR / "meta_cluster_semantic_labels.json",
         WEBAPP_OUTPUTS_DIR / "meta_cluster_significant_deltas.json",
         WEBAPP_OUTPUTS_DIR / "meta_cluster_top3_categories.json",
