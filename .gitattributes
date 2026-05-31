@@ -1,9 +1,9 @@
-# webapp_resources large files — stored in git lfs
-webapp_resources/**/*.csv    filter=lfs diff=lfs merge=lfs -text
-webapp_resources/**/*.csv.gz filter=lfs diff=lfs merge=lfs -text
-webapp_resources/**/*.gz     filter=lfs diff=lfs merge=lfs -text
-webapp_resources/**/*.joblib filter=lfs diff=lfs merge=lfs -text
-webapp_resources/**/*.pt     filter=lfs diff=lfs merge=lfs -text
-webapp_resources/**/*.pth    filter=lfs diff=lfs merge=lfs -text
-webapp_resources/**/*.npy    filter=lfs diff=lfs merge=lfs -text
-webapp_resources/**/*.pkl    filter=lfs diff=lfs merge=lfs -text
+# resources large files — stored in git lfs
+resources/**/*.csv    filter=lfs diff=lfs merge=lfs -text
+resources/**/*.csv.gz filter=lfs diff=lfs merge=lfs -text
+resources/**/*.gz     filter=lfs diff=lfs merge=lfs -text
+resources/**/*.joblib filter=lfs diff=lfs merge=lfs -text
+resources/**/*.pt     filter=lfs diff=lfs merge=lfs -text
+resources/**/*.pth    filter=lfs diff=lfs merge=lfs -text
+resources/**/*.npy    filter=lfs diff=lfs merge=lfs -text
+resources/**/*.pkl    filter=lfs diff=lfs merge=lfs -text

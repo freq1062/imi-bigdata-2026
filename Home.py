@@ -2,33 +2,33 @@ import streamlit as st
 import os
 from pathlib import Path
 
-from lib.resource_paths import WEBAPP_DATA_DIR, WEBAPP_OUTPUTS_DIR
+from lib.resource_paths import DATA_DIR, OUTPUTS_DIR
 
 # Files required for ANY page to function (inference + review)
 def _hard_required() -> list[Path]:
     return [
-        WEBAPP_OUTPUTS_DIR / "sage_artifacts.pkl",
-        WEBAPP_OUTPUTS_DIR / "fraud_sage_model.pth",
-        WEBAPP_OUTPUTS_DIR / "model_output.csv",
-        WEBAPP_OUTPUTS_DIR / "meta_cluster_assignments.csv.gz",
-        WEBAPP_OUTPUTS_DIR / "rf_model_sage" / "meta.json",
-        WEBAPP_DATA_DIR / "kyc_industry_codes.csv.gz",
-        WEBAPP_DATA_DIR / "card.csv.gz",
-        WEBAPP_DATA_DIR / "abm.csv.gz",
-        WEBAPP_DATA_DIR / "eft.csv.gz",
-        WEBAPP_DATA_DIR / "emt.csv.gz",
-        WEBAPP_DATA_DIR / "wire.csv.gz",
-        WEBAPP_DATA_DIR / "cheque.csv.gz",
+        OUTPUTS_DIR / "sage_artifacts.pkl",
+        OUTPUTS_DIR / "fraud_sage_model.pth",
+        OUTPUTS_DIR / "model_output.csv",
+        OUTPUTS_DIR / "meta_cluster_assignments.csv.gz",
+        OUTPUTS_DIR / "rf_model_sage" / "meta.json",
+        DATA_DIR / "kyc_industry_codes.csv.gz",
+        DATA_DIR / "card.csv.gz",
+        DATA_DIR / "abm.csv.gz",
+        DATA_DIR / "eft.csv.gz",
+        DATA_DIR / "emt.csv.gz",
+        DATA_DIR / "wire.csv.gz",
+        DATA_DIR / "cheque.csv.gz",
     ]
 
 # Files that enhance explanations but are not needed to load the app
 def _soft_required() -> list[Path]:
     return [
-        WEBAPP_OUTPUTS_DIR / "transaction_autoencoder.pt",
-        WEBAPP_OUTPUTS_DIR / "model_output_explanations.csv",
-        WEBAPP_OUTPUTS_DIR / "meta_cluster_semantic_labels.json",
-        WEBAPP_OUTPUTS_DIR / "meta_cluster_significant_deltas.json",
-        WEBAPP_OUTPUTS_DIR / "meta_cluster_top3_categories.json",
+        OUTPUTS_DIR / "transaction_autoencoder.pt",
+        OUTPUTS_DIR / "model_output_explanations.csv",
+        OUTPUTS_DIR / "meta_cluster_semantic_labels.json",
+        OUTPUTS_DIR / "meta_cluster_significant_deltas.json",
+        OUTPUTS_DIR / "meta_cluster_top3_categories.json",
 
     ]
 
@@ -263,7 +263,7 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-print("[INFO] System initialized from local webapp_resources (no network download).")
+print("[INFO] System initialized from local resources (no network download).")
 
 st.divider()
 
@@ -467,4 +467,4 @@ st.markdown("""
     </div>
 </div>
 """, unsafe_allow_html=True)
-print("[INFO] System initialized from local webapp_resources (no network download).")
+print("[INFO] System initialized from local resources (no network download).")

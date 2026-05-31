@@ -46,7 +46,7 @@ Thumbs.db
 
 # Secrets
 
-# webapp_resources is tracked via git lfs — override the above ignores
-!webapp_resources/
-!webapp_resources/**
+# resources is tracked via git lfs — override the above ignores
+!resources/
+!resources/**
 .env
