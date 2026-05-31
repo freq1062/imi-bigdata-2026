@@ -1,8 +1,4 @@
 {
-  "url": "http://132.145.111.57:11434",
-  "success": true,
-  "model": "gemma2:2b",
-  "latency_sec": 0.619,
-  "error": null,
-  "sample": "ok \n"
+  "success": false,
+  "error": "LLM not enabled"
 }

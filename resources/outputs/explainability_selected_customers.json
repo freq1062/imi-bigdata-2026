@@ -1,17 +1,47 @@
 [
   {
-    "customer_id": "SYNID0106469074",
-    "risk_score": 0.0973294956756507,
+    "customer_id": "SYNID0109328399",
+    "risk_score": 0.0989193237523551,
     "risk_band": "low"
   },
   {
-    "customer_id": "SYNID0109559694",
-    "risk_score": 0.3300466600900571,
+    "customer_id": "SYNID0103153328",
+    "risk_score": 0.0993711582629998,
+    "risk_band": "low"
+  },
+  {
+    "customer_id": "SYNID0106469074",
+    "risk_score": 0.0995888850375961,
+    "risk_band": "low"
+  },
+  {
+    "customer_id": "SYNID0101670059",
+    "risk_score": 0.3300421596830521,
     "risk_band": "medium"
   },
   {
-    "customer_id": "SYNID0107746512",
-    "risk_score": 0.8320791843823764,
+    "customer_id": "SYNID0104621293",
+    "risk_score": 0.3300753713232634,
+    "risk_band": "medium"
+  },
+  {
+    "customer_id": "SYNID0106905299",
+    "risk_score": 0.3301387958337513,
+    "risk_band": "medium"
+  },
+  {
+    "customer_id": "SYNID0103485082",
+    "risk_score": 0.8382874689625405,
+    "risk_band": "high"
+  },
+  {
+    "customer_id": "SYNID0108675019",
+    "risk_score": 0.8361411386282611,
+    "risk_band": "high"
+  },
+  {
+    "customer_id": "SYNID0106514772",
+    "risk_score": 0.834526061455949,
     "risk_band": "high"
   }
 ]

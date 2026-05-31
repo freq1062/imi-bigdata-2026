@@ -1,0 +1,62 @@
+# LLM Configuration for Explainability
+# =====================================
+# Set enabled: true and provide your endpoint details to use LLM-generated
+# explanations. When disabled, a deterministic rule-based fallback is used.
+#
+# For Ollama (local), use:
+#   endpoint: "http://localhost:11434"
+#   request_template:
+#     format: ollama-generate
+#
+# For OpenAI-compatible API (e.g., Proxmox endpoint, OpenAI, vLLM), use:
+#   endpoint: "https://your-endpoint.com/v1/chat/completions"
+#   api_key: "sk-..."
+#   request_template:
+#     format: openai-chat
+#
+# For raw Hugging Face inference endpoint or custom, use:
+#   endpoint: "https://your-endpoint.com/generate"
+#   request_template:
+#     format: raw-json
+#     body:
+#       inputs: "{prompt}"
+#       parameters:
+#         max_new_tokens: 220
+#         temperature: 0.2
+
+llm:
+  enabled: false
+
+  # Endpoint URL (required if enabled)
+  endpoint: "http://localhost:11434"
+
+  # API key (leave empty if not needed)
+  api_key: ""
+
+  # Request format: "ollama-generate" | "openai-chat" | "raw-json"
+  #   ollama-generate: POST /api/generate with {"model","prompt","stream":false,"options":{...}}
+  #   openai-chat:     POST /v1/chat/completions with {"model","messages","temperature"}
+  #   raw-json:        POST to endpoint with a custom JSON body (define below)
+  request_format: "ollama-generate"
+
+  # Model name to use (ollama-generate and openai-chat)
+  model: "llama3.2"
+
+  # System prompt for the investigator-facing explanation
+  system_prompt: |
+    You are an AML (Anti-Money Laundering) investigator analysing a flagged customer.
+    Write a concise 4-6 sentence explanation of why this customer was flagged.
+    Mention the most important checks the analyst should do next.
+    Use clear, factual language. Do not invent data.
+
+  # Generation parameters
+  temperature: 0.2
+  max_tokens: 220
+
+  # For raw-json format: custom request body template
+  # Use {prompt} as placeholder for the assembled prompt text
+  request_body:
+    inputs: "{prompt}"
+    parameters:
+      max_new_tokens: 220
+      temperature: 0.2

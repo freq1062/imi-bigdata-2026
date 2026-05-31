@@ -1,0 +1,35 @@
+# LLM Configuration for Explainability
+# =====================================
+# Set enabled: true and configure your endpoint to use LLM-generated
+# explanations for medium/high-risk customers.
+#
+# When disabled, all customers get deterministic explanations
+# (accurate, instant, no hallucination risk).
+#
+# Supported request_format values:
+#   "ollama-generate" — for local Ollama (POST /api/generate)
+#   "openai-chat"     — for OpenAI-compatible APIs (POST /v1/chat/completions)
+#   "raw-json"        — for custom endpoints with arbitrary JSON body
+
+llm:
+  enabled: false
+  endpoint: "http://localhost:11434"
+  api_key: ""
+  request_format: "ollama-generate"
+  model: "llama3.2:1b"
+  temperature: 0.2
+  max_tokens: 250
+
+  system_prompt: |
+    You are an AML (Anti-Money Laundering) investigator analysing a flagged customer.
+    Write a concise 4-6 sentence explanation of why this customer was flagged based on the evidence provided.
+    Suggest one concrete next step for the analyst.
+    Use clear, factual language. Do not invent data.
+
+  # For raw-json format: custom request body template using {prompt} as placeholder
+  request_body:
+    model: "llama3.2:1b"
+    messages:
+      - role: "user"
+        content: "{prompt}"
+    stream: false

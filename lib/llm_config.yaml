@@ -1,0 +1,26 @@
+# LLM Configuration for Explainability
+# =====================================
+# Uses the Proxmox ML endpoint (Ollama-compatible chat API).
+
+llm:
+  enabled: true
+  endpoint: "https://ml.nrjrkoniw.win/v1/chat"
+  api_key: "aa7bad0e4b9d650088e5d28ab822135472a50cdb22f12db03829c64051e6668b"
+  request_format: "raw-json"
+  model: "qwen2.5:1.5b"
+  temperature: 0.2
+  max_tokens: 250
+
+  system_prompt: |
+    You are an AML (Anti-Money Laundering) investigator analysing a flagged customer.
+    Write a concise 4-6 sentence explanation of why this customer was flagged based on the evidence provided.
+    Mention what specific behavioural patterns, transaction anomalies, or risk indicators triggered the flag.
+    Suggest one concrete next step for the analyst.
+    Use clear, factual language. Do not invent data.
+
+  request_body:
+    model: "qwen2.5:1.5b"
+    messages:
+      - role: "user"
+        content: "{prompt}"
+    stream: false
